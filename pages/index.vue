@@ -32,6 +32,7 @@
       :logos="partners" />
     <testimonials
       :testimonials="testimonials" />
+    <closingstatement/>
   </div>
 </template>
 
@@ -41,6 +42,7 @@ import weojumbotron from "@/components/general/weojumbotron";
 import brands from "@/components/general/brands";
 import wwdjumbotron from "@/components/general/wwdjumbotron";
 import testimonials from "@/components/general/testimonials";
+import closingstatement from "@/components/general/closingstatement";
 import mainbutton from "@/components/utilities/mainbutton";
 import altcard from "@/components/utilities/altcard";
 
@@ -72,6 +74,7 @@ export default {
     brands,
     wwdjumbotron,
     testimonials,
+    closingstatement,
     mainbutton,
     altcard
   },

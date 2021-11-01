@@ -5,13 +5,13 @@
         <p class="testimonials-jumbo-header">OUR CLIENTS SPEAK</p>
         <p class="testimonials-jumbo-title">Feedback from our customers</p>
         <div class="testimonials-jumbo-image">
-            <img :src="require(`~/assets/images/${testimonials[this.step-1].image}`)" alt="testimonial photo">
+            <img :src="require(`~/assets/images/${testimonials[step-1].image}`)" alt="testimonial photo">
         </div>
-        <p class="testimonials-jumbo-name">{{testimonials[this.step-1].name}}</p>
-        <p class="testimonials-jumbo-role">{{testimonials[this.step-1].role}}</p>
+        <p class="testimonials-jumbo-name">{{testimonials[step-1].name}}</p>
+        <p class="testimonials-jumbo-role">{{testimonials[step-1].role}}</p>
         <div class="testimonials-jumbo-card-content">
             <p class="testimonials-brace-open">“</p>
-            <p class="testimonials-main-text">{{testimonials[this.step-1].content}}</p>
+            <p class="testimonials-main-text">{{testimonials[step-1].content}}</p>
             <p class="testimonials-brace-close">“</p>
         </div>
     </div>

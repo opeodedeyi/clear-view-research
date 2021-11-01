@@ -12,7 +12,7 @@
       </ul>
     </div>
     <div class="header-menu-bar mob" @click="showMenuBar = true">
-      <img src="~/assets/svg/menubar.svg" alt="" />
+      <img src="~/assets/svg/menubar.svg" alt="+" />
     </div>
   </header>
 </template>
