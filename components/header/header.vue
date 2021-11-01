@@ -1,6 +1,6 @@
 <template>
   <header class="header" :class="{ extraStyling: page != 'index' || ses }">
-    <nuxt-link to="/" class="header-logo mob">
+    <nuxt-link to="/" class="header-logo">
       <img src="~/assets/images/logo.png" alt="" />
     </nuxt-link>
     <div class="header-content desk">
@@ -10,6 +10,9 @@
         <nuxt-link to="/blog" tag="li" class="pl32 pr48" ><a>Hot Of The Press</a></nuxt-link>
         <mainbutton type="li" to="/contactus" size="small">Contact Us</mainbutton>
       </ul>
+    </div>
+    <div class="header-menu-bar mob" @click="showMenuBar = true">
+      <img src="~/assets/svg/menubar.svg" alt="" />
     </div>
   </header>
 </template>
@@ -23,7 +26,8 @@ export default {
   },
   data() {
     return {
-      ses: false
+      ses: false,
+      showMenuBar: false
     }
   },
   computed: {
@@ -108,6 +112,14 @@ a {
   color: var(--color-white);
 }
 
+.header-menu-bar {
+  height: 16px;
+}
+
+.header-menu-bar img {
+  height: 100%;
+}
+
 .extraStyling {
   background-color: var(--color-dark);
 }
@@ -115,6 +127,10 @@ a {
 .extraStyling a {
   color: var(--color-white);
   text-decoration: none;
+}
+
+.mob {
+  display: none;
 }
 
 /* small screen */
@@ -125,6 +141,14 @@ a {
 
   .desk {
     display: none;
+  }
+
+  .mob {
+    display: block;
+  }
+
+  .header-logo {
+    height: 40px;
   }
 }
 </style>

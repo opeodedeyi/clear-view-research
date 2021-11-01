@@ -1,15 +1,17 @@
 <template>
     <div class="testimonials-jumbotron">
+        <div class="testimonials-jumbo-lefticon desk" @click="previousTestimony"><img src="~/assets/svg/lefticon.svg" alt=""></div> <!-- lefticon -->
+        <div class="testimonials-jumbo-righticon desk" @click="nextTestimony"><img src="~/assets/svg/righticon.svg" alt=""></div> <!-- righticon -->
         <p class="testimonials-jumbo-header">OUR CLIENTS SPEAK</p>
         <p class="testimonials-jumbo-title">Feedback from our customers</p>
         <div class="testimonials-jumbo-image">
-            <img src="~/assets/images/dpfemale.png" alt="testimonial photo">
+            <img :src="require(`~/assets/images/${testimonials[this.step-1].image}`)" alt="testimonial photo">
         </div>
-        <p class="testimonials-jumbo-name">Kate Goodman</p>
-        <p class="testimonials-jumbo-role">Senior Campaigns Manager, Bite Back 2030</p>
+        <p class="testimonials-jumbo-name">{{testimonials[this.step-1].name}}</p>
+        <p class="testimonials-jumbo-role">{{testimonials[this.step-1].role}}</p>
         <div class="testimonials-jumbo-card-content">
             <p class="testimonials-brace-open">“</p>
-            <p class="testimonials-main-text">CVR were great to work with, bringing unique and valuable insight to the team - which really helped steer our strategic direction on how to engage teenagers with the tricky topic of childhood obesity.</p>
+            <p class="testimonials-main-text">{{testimonials[this.step-1].content}}</p>
             <p class="testimonials-brace-close">“</p>
         </div>
     </div>
@@ -17,7 +19,31 @@
 
 <script>
 export default {
-    
+    data() {
+        return {
+            step: 1
+        }
+    },
+    props: {
+        testimonials: {
+            type: Array,
+            required: true
+        }
+    },
+    methods: {
+        previousTestimony() {
+            if (this.step == 1) {
+                return this.step = 4
+            }
+            this.step--
+        },
+        nextTestimony() {
+            if (this.step == 4) {
+                return this.step = 1
+            }
+            this.step++
+        }
+    },
 }
 </script>
 
@@ -28,6 +54,41 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.testimonials-jumbo-lefticon,
+.testimonials-jumbo-righticon {
+    position: absolute;
+    top: 50%;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.testimonials-jumbo-lefticon:hover,
+.testimonials-jumbo-righticon:hover {
+    background-color: var(--color-text-header);
+}
+
+.testimonials-jumbo-lefticon {
+    left: 100px;
+}
+
+.testimonials-jumbo-righticon {
+    right: 100px;
+}
+
+.testimonials-jumbo-lefticon img,
+.testimonials-jumbo-righticon img {
+    width: 100%;
 }
 
 .testimonials-jumbo-header {
@@ -90,7 +151,8 @@ export default {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    padding: 0 20px 20px;
+    padding: 10px 20px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .testimonials-main-text {
@@ -99,6 +161,12 @@ export default {
     font-weight: normal;
     font-size: 18px;
     line-height: 32px;
+    min-height: 190px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .testimonials-brace-open,
@@ -128,6 +196,10 @@ export default {
 
     .testimonials-jumbo-card-content {
         padding: 20px 0;
+    }
+
+    .desk {
+        display: none;
     }
 }
 
