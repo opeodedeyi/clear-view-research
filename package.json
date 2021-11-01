@@ -1,0 +1,21 @@
+{
+  "name": "clear-view-research",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@contentful/rich-text-html-renderer": "^15.4.0",
+    "@contentful/rich-text-types": "^15.3.6",
+    "contentful-module": "^0.1.14",
+    "core-js": "^3.9.1",
+    "nuxt": "^2.15.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/dotenv": "^1.4.1"
+  }
+}
