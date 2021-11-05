@@ -9,14 +9,14 @@
                     <img
                         v-for="(logo, index) in logos"
                         :key="index"
-                        :src="require(`@/assets/svg/${logo}`)" 
+                        :src="require(`@/assets/logos/${logo}`)" 
                         :alt="logo"
                     >
 
                     <img
                         v-for="(logo, index) in logos"
                         :key="index+1*111"
-                        :src="require(`@/assets/svg/${logo}`)" 
+                        :src="require(`@/assets/logos/${logo}`)" 
                         :alt="logo"
                     >
                 </div>

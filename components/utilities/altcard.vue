@@ -3,17 +3,32 @@
         <div class="soop-card-image">
             <img :src="featuredImage" alt="ima"/>
         </div>
-        <div class="soop-card-content">
-            <p class="soop-card-content-date">{{getCustomDate()}}</p>
-            <p class="soop-card-content-header">{{title}}</p>
-            <p class="soop-card-content-description">{{description}}</p>
-            <div class="soop-card-content-link"><nuxt-link :to="`casestudies/${slug}`">Read Casetudy <img src="~/assets/svg/arrowright.svg" class="soopml" alt=""></nuxt-link></div>
+        <div class="soop-card-overlay">
+            <div class="soop-card-overlay-inner">
+                <p class="soop-card-text">{{title}}</p>
+                <mainbutton mode="special" class="soop-card-btn" :to="`casestudies/${slug}`">Read casestudy <img src="~/assets/svg/rightarrowfff.svg" alt="right arrow"/></mainbutton>
+            </div>
+        </div>
+    </div>
+    <div v-else-if="typeofcard === 'blog'" class="blog-card">
+        <div class="blog-card-image">
+            <img :src="featuredImage" alt="ima"/>
+        </div>
+        <div class="blog-card-content">
+            <p class="blog-card-content-date">{{getCustomDate()}}</p>
+            <p class="blog-card-content-header">{{title}}</p>
+            <p class="blog-card-content-description">{{description}}</p>
+            <div class="blog-card-content-link"><nuxt-link :to="`blog/${slug}`">Read Blog <img src="~/assets/svg/arrowright.svg" class="blogml" alt=""></nuxt-link></div>
         </div>
     </div>
 </template>
 
 <script>
+import mainbutton from "@/components/utilities/mainbutton";
 export default {
+    components: {
+        mainbutton
+    },
     props: {
         typeofcard: {
             type: String,
@@ -30,7 +45,7 @@ export default {
         },
         description: {
             type: String,
-            required: true,
+            required: false,
         },
         slug: {
             type: String,
@@ -57,22 +72,103 @@ export default {
 </script>
 
 <style scoped>
+.blog-card,
 .soop-card {
     grid-column: span 6;
 }
 
-.soop-card-image{
+.soop-card {
+    height: 500px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.soop-card-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.soop-card-image img {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.soop-card-overlay {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.soop-card-overlay-inner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.soop-card-btn,
+.soop-card-text {
+    display: none;
+    color: var(--color-white);
+}
+
+.soop-card-btn img {
+    margin-left: 10px;
+}
+
+.soop-card-text {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.soop-card:hover .soop-card-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.soop-card:hover img {
+    transform: scale(1.2);
+}
+
+.soop-card:hover .soop-card-overlay .soop-card-overlay-inner {
+    border: 2px var(--color-white) solid;
+}
+
+.soop-card:hover .soop-card-overlay .soop-card-overlay-inner .soop-card-btn {
+    cursor: pointer;
+    display: flex;
+}
+
+.soop-card:hover .soop-card-overlay .soop-card-overlay-inner .soop-card-text {
+    display: flex;
+}
+
+.blog-card-image{
     width: 100%;
     height: 366px;
 }
 
-.soop-card-image img{
+.blog-card-image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 
-.soop-card-content-date {
+.blog-card-content-date {
     font-weight: normal;
     font-size: 14px;
     line-height: 26px;
@@ -81,7 +177,7 @@ export default {
     margin-top: 24px;
 }
 
-.soop-card-content-header {
+.blog-card-content-header {
     font-weight: bold;
     font-size: 20px;
     line-height: 28px;
@@ -89,7 +185,7 @@ export default {
     margin-top: 8px;
 }
 
-.soop-card-content-description {
+.blog-card-content-description {
     margin-top: 16px;
     font-weight: normal;
     font-size: 16px;
@@ -97,11 +193,11 @@ export default {
     color: var(--color-dark);
 }
 
-.soop-card-content-link {
+.blog-card-content-link {
     margin-top: 24px;
 }
 
-.soop-card-content-link a {
+.blog-card-content-link a {
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
@@ -109,23 +205,48 @@ export default {
     color: var(--color-danger);
 }
 
-.soopml {
+.blogml {
     margin-left: 6px;
+}
+
+@media only screen and (max-width: 1040px) {
+    .soop-card-overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .soop-card-overlay-inner {
+        border: 2px var(--color-white) solid;
+    }
+
+    .soop-card-btn,
+    .soop-card-text {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .soop-card {
+        height: 400px;
+    }
 }
 
 /* small screen */
 @media only screen and (max-width: 800px) {
-    .soop-card-content-date {
+    .soop-card {
+        height: 300px;
+    }
+
+    .blog-card-content-date {
         font-size: 14px;
         line-height: 24px;
     }
 
-    .soop-card-content-header {
+    .blog-card-content-header {
         font-size: 18px;
         line-height: 28px;
     }
 
-    .soop-card-content-link {
+    .blog-card-content-link {
         margin-top: 16px;
     }
 }

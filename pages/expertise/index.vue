@@ -1,11 +1,20 @@
 <template>
-    <div>
-        get all team members
+    <div class="expertise">
+        <genpagetitle
+            jumbotitle="CLEARVIEW RESEARCH"
+            jumbodescription="EXPERTISE"
+            jumboimage="jumboimg1.webp"
+        />
+        
     </div>
 </template>
 
 <script>
+import genpagetitle from "@/components/utilities/genpagetitle";
 export default {
+    components: {
+        genpagetitle
+    },
     data() {
         return {
             team: null,
@@ -39,5 +48,7 @@ export default {
 </script>
 
 <style>
-/* styling goes here */
+.expertise {
+    margin-top: 72px;
+}
 </style>

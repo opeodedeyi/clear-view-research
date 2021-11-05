@@ -1,13 +1,13 @@
 <template>
     <nuxt-link v-if="type==='li'" :to="to" tag="li">
-        <a :class="[size]">
+        <a :class="[size, mode]">
             <slot/>
         </a>
     </nuxt-link>
-    <nuxt-link v-else-if="type==='link'" :to="to" :class="[size]">
+    <nuxt-link v-else-if="type==='link'" :to="to" :class="[size, mode]">
         <slot/>
     </nuxt-link>
-    <button v-else :class="[size]" @click.prevent="onClick">
+    <button v-else :class="[size, mode]" @click.prevent="onClick">
         <slot/>
     </button>
 </template>
@@ -47,12 +47,10 @@ export default {
     button,
     a {
         text-decoration: none;
-        border: 1px solid var(--color-company);
         cursor: pointer;
         text-decoration: none;
         font-weight: 500;
-        background-color: var(--color-company);
-        color: var(--color-white) !important;
+        
     }
 
     button {
@@ -63,9 +61,36 @@ export default {
         align-items: center;
     }
 
-    button:hover,
-    a:hover {
+    .normal {
+        border: 1px solid var(--color-company);
         background-color: var(--color-company);
+        color: var(--color-white) !important;
+    }
+
+    .normal:hover {
+        background-color: var(--color-company);
+        text-decoration: none;
+    }
+
+    .inverse {
+        border: 1px solid var(--color-white);
+        background-color: var(--color-white);
+        color: var(--color-company) !important;
+    }
+
+    .inverse:hover {
+        background-color: var(--color-white);
+        text-decoration: none;
+    }
+
+    .special {
+        border: 1px solid var(--color-white);
+        /* background-color: var(--color-dark); */
+        color: var(--color-white) !important;
+    }
+
+    .special:hover {
+        /* background-color: var(--color-white); */
         text-decoration: none;
     }
 

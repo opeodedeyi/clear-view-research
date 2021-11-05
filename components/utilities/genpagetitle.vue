@@ -77,4 +77,17 @@ export default {
     text-align: center;
     color: var(--color-white);
 }
+
+/* small screen */
+@media only screen and (max-width: 950px) {
+    .gen-jumbo {
+        height: 160px;
+        margin-bottom: 32px;
+    }
+
+    .gen-jumbo-overlay-description {
+        font-size: 24px;
+        line-height: 32px
+    }
+}
 </style>

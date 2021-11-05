@@ -16,6 +16,7 @@
           :description="result.description"
           :date="result.createdAt" />
       </div>
+      <loadingcard v-else/>
       <div class="soop-jumbo-cta">
           <mainbutton type="link" to="/casestudies" size="medium">Read more casestudies</mainbutton>
       </div>
@@ -45,13 +46,14 @@ import testimonials from "@/components/general/testimonials";
 import closingstatement from "@/components/general/closingstatement";
 import mainbutton from "@/components/utilities/mainbutton";
 import altcard from "@/components/utilities/altcard";
+import loadingcard from "@/components/utilities/loadingcard";
 
 export default {
   data() {
     return {
       caseStudies: null,
       refrences: ['bbcradio.svg','glamour.svg','metro.svg','skynews.svg','theguardian.svg','theindependent.svg','thesun.svg','thetelegraph.svg'],
-      partners: ['m&c.svg','artscouncil.svg','uber.svg','tinder.svg','starbucks.svg','kingscollege.svg','kpmg.svg'],
+      partners: ['m&c.svg','artscouncil.svg','uber.svg','tinder.png','starbucks.svg','kingscollege.svg','kpmg.svg','nhs.svg', 'ms.png'],
       whatwedo: [
         {id: 1, image: 'ccc.svg', title: 'Create Clear Communication', content:'To engage diverse communities and make strong and authentic connections and strong connections'},
         {id: 2, image: 'dgu.svg', title: 'Develop Greater Understanding', content:'Using innovative research approaches we help you to uncover real insight from those who often go unheard'},
@@ -76,7 +78,8 @@ export default {
     testimonials,
     closingstatement,
     mainbutton,
-    altcard
+    altcard,
+    loadingcard
   },
   methods: {
     async getCaseStudies(limit = 2, skip = 0) {
@@ -144,7 +147,7 @@ export default {
 .soop-jumbo-cards {
   display: grid;
   grid-template-columns: repeat(12, minmax(auto, 200px));
-  gap: 48px 24px;
+  gap: 24px;
   width: 100%;
 }
 
@@ -176,7 +179,7 @@ export default {
 
   .soop-jumbo-cards {
     grid-template-columns: repeat(6, minmax(auto, 150px));
-    gap: 32px 24px;
+    gap: 24px;
   }
 }
 </style>

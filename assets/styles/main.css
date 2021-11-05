@@ -55,12 +55,28 @@ html, body {
     margin: 0;
 }
 
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+}
+
 .mb-20 {
     margin-bottom: 20px;
 }
 
+.mb-25 {
+    margin-bottom: 25px;
+}
+
 .mb-30 {
     margin-bottom: 30px;
+}
+
+.mb-35 {
+    margin-bottom: 35px;
 }
 
 .mb-40 {

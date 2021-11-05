@@ -7,7 +7,8 @@
       <ul class="header-content-links">
         <nuxt-link to="/expertise" tag="li" ><a>Expertise</a></nuxt-link>
         <nuxt-link to="/casestudies" tag="li" class="pl32" ><a>Our Work</a></nuxt-link>
-        <nuxt-link to="/blog" tag="li" class="pl32 pr48" ><a>Hot Of The Press</a></nuxt-link>
+        <nuxt-link to="/blog" tag="li" class="pl32" ><a>Hot Of The Press</a></nuxt-link>
+        <nuxt-link to="/aboutus" tag="li" class="pl32 pr48" ><a>About</a></nuxt-link>
         <mainbutton type="li" to="/contactus" size="small">Contact Us</mainbutton>
       </ul>
     </div>
