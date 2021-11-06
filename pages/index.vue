@@ -1,8 +1,9 @@
 <template>
   <div class="homepage">
     <videojumbotron/>
-    <weojumbotron/> <!-- WE EMPOWER ORGANIZATIONS SECTION -->
-    <div class="soop-jumbotron">
+    <weojumbotron 
+      :weempowerorganizations="weempowerorganizations"/> <!-- WE EMPOWER ORGANIZATIONS SECTION -->
+    <div class="soop-jumbotron"> <!-- SOME OF OUR PROJECTS SECTION -->
       <p class="soop-jumbo-header">SOME OF OUR PROJECTS</p>
       <p class="soop-jumbo-title">Read some of our casestudies</p>
       <div class="soop-jumbo-cards" v-if="caseStudies != null">
@@ -24,15 +25,15 @@
     <brands
       header="REFRENCES"
       title="Our insights and projects have been refrenced in"
-      :logos="refrences" />
+      :logos="refrences" /> <!-- REFRENCES SECTION -->
     <wwdjumbotron
-      :whatWeDo="whatwedo" />
+      :whatWeDo="whatwedo" /> <!-- WHAT WE DO SECTION -->
     <brands
       header="PARTNERS"
       title="Some of our clients and friends"
-      :logos="partners" />
+      :logos="partners" /> <!-- PARTNERS SECTION -->
     <testimonials
-      :testimonials="testimonials" />
+      :testimonials="testimonials" /> <!-- TESTIMONIALS SECTION -->
     <closingstatement/>
   </div>
 </template>
@@ -54,6 +55,11 @@ export default {
       caseStudies: null,
       refrences: ['bbcradio.svg','glamour.svg','metro.svg','skynews.svg','theguardian.svg','theindependent.svg','thesun.svg','thetelegraph.svg'],
       partners: ['m&c.svg','artscouncil.svg','uber.svg','tinder.png','starbucks.svg','kingscollege.svg','kpmg.svg','nhs.svg', 'ms.png'],
+      weempowerorganizations: [
+          {id: 1, image: 'ccc.svg', title: 'Create Clear Communication', content:'To engage diverse communities and make strong and authentic connections and strong connections'},
+          {id: 2, image: 'dgu.svg', title: 'Develop Greater Understanding', content:'Using innovative research approaches we help you to uncover real insight from those who often go unheard'},
+          {id: 3, image: 'eli.svg', title: 'Ensure Lasting Impact', content:'We provide critical and strategic support to enable you to make a meaningful difference'},
+      ],
       whatwedo: [
         {id: 1, image: 'ccc.svg', title: 'Create Clear Communication', content:'To engage diverse communities and make strong and authentic connections and strong connections'},
         {id: 2, image: 'dgu.svg', title: 'Develop Greater Understanding', content:'Using innovative research approaches we help you to uncover real insight from those who often go unheard'},
@@ -110,7 +116,7 @@ export default {
 
 <style scoped>
 .soop-jumbotron {
-  padding: 100px 64px;
+  padding: 100px 64px 100px;
 }
 
 .soop-jumbo-header {
@@ -163,7 +169,8 @@ export default {
 /* small screen */
 @media only screen and (max-width: 800px) {
   .soop-jumbotron {
-    padding: 48px 20px;
+    padding: 48px 20px 48px;
+    border-top: 1px solid var(--color-form-border);
   }
 
   .soop-jumbo-title {

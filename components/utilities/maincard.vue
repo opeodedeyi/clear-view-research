@@ -54,13 +54,18 @@ export default {
 }
 
 .weo-card {
-    width: 395px;
+    grid-column: span 4;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
 }
+/* 
+.weo-card:nth-child(3) {
+    align-self: center;
+    justify-self: center;
+} */
 
 .wwd-card {
     grid-column: span 4;
@@ -123,14 +128,12 @@ export default {
 /* small screen */
 @media only screen and (max-width: 1300px) {
     .weo-card {
-        max-width: 370px !important;
+        grid-column: span 6;
         flex-direction: column;
         justify-content: center;
         align-content: center;
         align-items: center;
         margin-bottom: 0;
-        margin-left: 10px;
-        margin-right: 10px;
     }
 
     .weo-card-image {
@@ -158,18 +161,20 @@ export default {
     .wwd-card {
         grid-column: span 6;
     }
+
+    .weo-card {
+        grid-column: span 6;
+    }
 }
 
 /* small screen */
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 800px) {
     .weo-card {
-        width: 100%;
-        max-width: 370px !important;
+        grid-column: span 6;
         flex-direction: column;
         justify-content: center;
         align-content: center;
         align-items: center;
-        margin-bottom: 24px;
         margin-left: 0;
         margin-right: 0;
     }

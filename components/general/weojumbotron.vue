@@ -5,7 +5,7 @@
         <div class="weo-jumbo-content">
             <maincard
                 typeofcard="weo"
-                v-for="(result, index) in result"
+                v-for="(result, index) in weempowerorganizations"
                 :key="index"
                 :id="result.id"
                 :image="result.image"
@@ -19,13 +19,11 @@
 import maincard from "@/components/utilities/maincard";
 
 export default {
-    data() {
-        return {
-            result : [
-                {id: 1, image: 'ccc.svg', title: 'Create Clear Communication', content:'To engage diverse communities and make strong and authentic connections and strong connections'},
-                {id: 2, image: 'dgu.svg', title: 'Develop Greater Understanding', content:'Using innovative research approaches we help you to uncover real insight from those who often go unheard'},
-                {id: 3, image: 'eli.svg', title: 'Ensure Lasting Impact', content:'We provide critical and strategic support to enable you to make a meaningful difference'},
-            ]
+    props: {
+        weempowerorganizations: {
+            type: Array,
+            required: false,
+            default: "soop"
         }
     },
     components: {
@@ -65,34 +63,37 @@ export default {
 }
 
 .weo-jumbo-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 200px));
+    gap: 40px 20px;
+    /* justify-items: center; */
+    justify-content: center;
     align-content: center;
-    align-items: flex-start;
 }
 
 /* smaller screen */
 @media only screen and (max-width: 730px) {
     .weo-jumbo-content {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-content: center;
-        align-items: center;
+        grid-template-columns: repeat(6, minmax(auto, 200px));
+        gap: 40px 20px;
     }
 }
 
 /* small screen */
 @media only screen and (max-width: 950px) {
     .weo-jumbotron {
-        padding: 48px 20px 0;
+        padding: 48px 20px 48px;
     }
 
     .weo-jumbo-title {
         font-size: 24px;
         line-height: 32px;
         margin-bottom: 32px;
+    }
+
+    .weo-jumbo-content {
+        grid-template-columns: repeat(6, minmax(auto, 200px));
+        gap: 40px 20px;
     }
 }
 </style>
