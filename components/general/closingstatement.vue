@@ -97,6 +97,7 @@ export default {
     .cs-jumbo-content {
         padding: 48px 20px;
         width: 100%;
+        align-items: center;
     }
 
     .cs-jumbo-image {
@@ -126,16 +127,18 @@ export default {
 
     .cs-jumbo-image-title {
         margin-bottom: 24px;
+        text-align: center;
     }
 
     .cs-jumbo-image-line {
         width: 100%;
-        border-bottom: 1px solid #FFFFFF;
+        border-bottom: 1px solid var(--color-white);
     }
 
     .cs-jumbo-content-text {
         font-size: 14px;
         line-height: 24px;
+        text-align: center;
     }
 }
 

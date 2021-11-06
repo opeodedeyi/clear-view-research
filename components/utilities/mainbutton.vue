@@ -50,7 +50,6 @@ export default {
         cursor: pointer;
         text-decoration: none;
         font-weight: 500;
-        
     }
 
     button {
@@ -112,8 +111,14 @@ export default {
         border-radius: 25px;
     }
 
-    /* .large {
+    .large {
+        font-style: normal;
+        font-weight: normal;
         font-size: 16px;
-        padding: 12px 20px;
-    } */
+        text-align: center;
+        width: 100%;
+        height: 50px;
+        border-radius: 25px;
+        max-width: 500px;
+    }
 </style>
