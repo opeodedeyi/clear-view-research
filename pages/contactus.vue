@@ -4,7 +4,8 @@
         <div class="contact-main">
             <div class="contact-main-content">
                 <p class="contact-main-title">Whether you’d like to discuss a project or say hi, we always love to hear from you.</p>
-                <form action="https://formsubmit.co/opeyemiodedeyi@gmail.com" ref="form">
+                <p v-if="errorMessage" class="contact-error">{{ errorMessage }}</p>
+                <form action="https://formsubmit.co/opeyemiodedeyi@gmail.com" method="POST" ref="form">
                     <maininput name="Name" placeholder="Full Name" inputType="text" controlType="input" v-model="form.name"/>
                     <maininput name="Subject" placeholder="Subject" inputType="text" controlType="input" v-model="form.subject"/>
                     <maininput name="Email" placeholder="Email Address" inputType="email" controlType="input" v-model="form.email"/>
@@ -33,6 +34,7 @@ export default {
     },
     data() {
         return {
+            errorMessage: null,
             form: {
                 name: null,
                 subject: null,
@@ -43,9 +45,14 @@ export default {
     },
     methods: {
         submitForm() {
-            if (this.form.name) {
-                
+            if (!this.form.name || !this.form.subject || !this.form.message) {
+                return this.errorMessage = "please make user your 'fullname', 'subject' and 'message' fields are filled"
+            } else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.form.email)) {
+                return this.errorMessage = "please fill in a valid 'email'"
+            } else if (this.form.message.length<20) {
+                return this.errorMessage = "please add some more context to the 'message'"
             }
+            console.log("submitted");
             this.$refs.form.submit()
         }
     },
@@ -68,7 +75,7 @@ export default {
 }
 
 .contact-image {
-    background-image: url('~assets/images/contactus.png');
+    background-image: url('~assets/images/contactus.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -99,6 +106,14 @@ export default {
     line-height: 32px;
     /* text-align: center; */
     margin: 34px 0;
+}
+
+.contact-error {
+    font-weight: normal;
+    color: var(--color-danger);
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 16px;
 }
 
 .empty-space{

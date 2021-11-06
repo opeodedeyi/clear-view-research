@@ -25,8 +25,7 @@
         <div class="textarea" v-if="controlType === 'textarea'">
             <textarea  
                 :name="name" 
-                :placeholder="placeholder" 
-                :maxlength="maxLength"
+                :placeholder="placeholder"
                 :value="value"
                 @input="$emit('input', $event.target.value) ">
             </textarea>

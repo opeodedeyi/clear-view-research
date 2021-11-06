@@ -99,7 +99,6 @@ export default {
             id, slug, title, description, featuredImage, createdAt
         }
       })
-      console.log(caseStudies);
       this.caseStudies = caseStudies
     }
   },
