@@ -3,6 +3,7 @@
 :root {
     font-size: 16px;
     --color-white: #ffffff;
+    --color-blog-gray: #979797;
     --color-text-header: #F2F4F6;
     --color-gray-form: #F3F4F6;
     --color-form-border: #D1D5DB;
@@ -56,6 +57,14 @@ html, body {
 *::after {
     box-sizing: border-box;
     margin: 0;
+}
+
+.plr16 { 
+    padding: 0 16px;
+}
+
+.pl16 { 
+    padding-left: 16px;
 }
 
 .mb-10 {

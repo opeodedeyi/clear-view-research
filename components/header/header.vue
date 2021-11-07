@@ -5,10 +5,10 @@
     </nuxt-link>
     <div class="header-content desk">
       <ul class="header-content-links">
-        <nuxt-link to="/expertise" tag="li"><a class="nuxt-link-active">Expertise</a></nuxt-link>
-        <nuxt-link to="/casestudies" tag="li" class="pl32" ><a>Our Work</a></nuxt-link>
-        <nuxt-link to="/blog" tag="li" class="pl32" ><a>Hot Of The Press</a></nuxt-link>
-        <nuxt-link to="/aboutus" tag="li" class="pl32 pr48" ><a>About</a></nuxt-link>
+        <li class="nav-item"><nuxt-link to="/expertise" class="plr16">Expertise</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/casestudies" class="plr16">Our Work</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/blog" class="plr16">Hot Of The Press</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/aboutus" class="plr16">About</nuxt-link></li>
         <mainbutton type="li" to="/contactus" size="small">Contact Us</mainbutton>
       </ul>
     </div>
@@ -58,8 +58,22 @@ export default {
 </script>
 
 <style scoped>
-.nuxt-link-active {
-  color: red;
+.nav-item a {
+  position: relative;
+}
+
+.nav-item a.nuxt-link-exact-active:after,
+.nav-item a:hover:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--color-white);
 }
 
 .header {
@@ -84,18 +98,6 @@ a {
 .header-content ul {
   list-style: none;
   padding: 0;
-}
-
-.pl32 {
-  padding-left: 32px;
-}
-
-.pr48 {
-  padding-right: 48px;
-}
-
-.pr64 {
-  padding-right: 64px;
 }
 
 .header-logo {

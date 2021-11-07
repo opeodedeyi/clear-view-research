@@ -1,5 +1,5 @@
 <template>
-    <nuxt-link v-if="type==='li'" :to="to" tag="li">
+    <nuxt-link v-if="type==='li'" :to="to" tag="li" class="pl16">
         <a :class="[size, mode]">
             <slot/>
         </a>

@@ -26,10 +26,10 @@
             </div>
         </div>
         <div class="testimonials-control"  ref="indicator">
-            <div class="testimonials-control-b" :class="{ selected: step===0 }"></div>
-            <div class="testimonials-control-b" :class="{ selected: step===1 }"></div>
-            <div class="testimonials-control-b" :class="{ selected: step===2 }"></div>
-            <div class="testimonials-control-b" :class="{ selected: step===3 }"></div>
+            <div class="testimonials-control-b" :class="{ selected: step===0 }" @click="gotoCarousel(0)"></div>
+            <div class="testimonials-control-b" :class="{ selected: step===1 }" @click="gotoCarousel(1)"></div>
+            <div class="testimonials-control-b" :class="{ selected: step===2 }" @click="gotoCarousel(2)"></div>
+            <div class="testimonials-control-b" :class="{ selected: step===3 }" @click="gotoCarousel(3)"></div>
         </div>
 
     </div>
@@ -68,6 +68,10 @@ export default {
         },
         nextTestimony() {
             this.step = (this.step < 3) ? this.step + 1 : 3
+            this.$refs.slider.style.transform = "translate(" + (this.step) * -25 + "%)"
+        },
+        gotoCarousel(num) {
+            this.step = num
             this.$refs.slider.style.transform = "translate(" + (this.step) * -25 + "%)"
         }
     },

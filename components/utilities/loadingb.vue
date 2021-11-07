@@ -13,12 +13,13 @@ export default {
 <style scoped>
 .loading {
     width: 100%;
-    padding: 50px 64px;
+    padding: 72px 0 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     align-content: center;
+    margin: 150px 0 150px;
 }
 
 @-webkit-keyframes rotate-forever {
@@ -96,7 +97,7 @@ export default {
 @media only screen and (max-width: 950px) {
     .loading {
         padding: 0 20px;
-        margin: 0;
+        margin: 150px 0 150px;
     }
 }
 </style>

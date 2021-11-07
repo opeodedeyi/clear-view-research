@@ -1,12 +1,21 @@
 <template>
-    <div>
-        <div  v-if="projectDetails" v-html="projectDetails[0].details"></div>
+    <div class="project-main">
+        <div v-if="projectDetails!=null" class="project-main-cont">
+            <div class="project-main-image">
+                <img :src="projectDetails[0].featuredImage" alt="">
+            </div>
+            <p class="project-main-title">{{projectDetails[0].title}}</p>
+            <p class="project-main-date">{{projectDetails[0].formattedDate}}</p>
+            <div class="project-main-content" v-html="projectDetails[0].details"></div>
+        </div>
+        <loadingb v-else-if="projectDetails===null"/>
     </div>
 </template>
 
 <script>
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
+import loadingb from "@/components/utilities/loadingb";
 
 export default {
     data() {
@@ -14,7 +23,20 @@ export default {
             projectDetails: null,
         }
     },
+    components: {
+        loadingb
+    },
     methods: {
+        getCustomDate(passedDate) {
+            const date = new Date(passedDate);
+            let year = date.getFullYear();
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            let month = months[date.getMonth()];
+            let dt = date.getDate();
+
+            let newDate = `${month} ${dt}, ${year}`
+            return newDate
+        },
         async getOneProject(slug) {
             var response = await this.$contentful.client.getEntries({
                 content_type: 'projects',
@@ -86,9 +108,10 @@ export default {
                 const featuredImage = item.fields.featuredImage.fields.file.url
                 const content = item.fields.details;
                 const details = documentToHtmlString(content, renderOptions)
+                const formattedDate = this.getCustomDate(createdAt)
 
                 return{
-                    id, slug, title, details, featuredImage, createdAt
+                    id, slug, title, details, featuredImage, formattedDate
                 }
             })
             this.projectDetails = project
@@ -102,5 +125,84 @@ export default {
 </script>
 
 <style>
-/* styling goes here */
+.project-main {
+    margin-top: 104px;
+    padding: 0 64px;
+    margin-bottom: 82px;
+}
+
+.project-main-cont {
+    width: 100%;
+}
+
+.project-main-image {
+    width: 100%;
+    height: 500px;
+}
+
+.project-main-image img {
+    /* position: absolute; */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-main-title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 54px;
+    color: var(--color-company);
+    margin-top: 32px;
+}
+
+.project-main-date {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 20px;
+    color: var(--color-blog-gray);
+}
+
+.project-main-content {
+    margin-top: 24px;
+}
+
+.project-main-content p {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--color-dark);
+}
+
+.project-main-content a {
+    text-decoration: none;
+    color: var(--color-danger);
+}
+
+.project-main-content a:hover {
+    color: var(--color-company);
+    text-decoration: underline;
+}
+
+/* small screen */
+@media only screen and (max-width: 950px) {
+    .project-main {
+        margin-top: 96px;
+        padding: 0 20px;
+        margin-bottom: 41px;
+    }
+
+    .project-main-image {
+        height: 360px;
+    }
+
+    .project-main-title {
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 24px;
+    }
+
+    .project-main-date {
+        margin-top: 8px;
+    }
+}
 </style>
