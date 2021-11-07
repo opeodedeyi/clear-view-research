@@ -1,14 +1,14 @@
 <template>
     <div class="nav" :class="{ open: isvisible }">
         <div class="nav-header">
-            <div class="nav-header-logo" @click="cancel">
+            <nuxt-link to="/" class="nav-header-logo">
                 <img src="~/assets/images/logo.png" alt="" />
-            </div>
-            <div class="nav-header-cancle" @click="cancel">
+            </nuxt-link>
+            <div class="nav-header-cancle">
                 <img src="~/assets/svg/cancelwhite.svg" alt="" />
             </div>
         </div>
-        <ul class="nav-main" @click="cancel">
+        <ul class="nav-main">
             <li class="nav-item"><nuxt-link to="/expertise"><div  class="nav-item-image"><img src="~/assets/svg/people.svg" alt=""></div> <div>Expertise</div></nuxt-link></li>
             <li class="nav-item"><nuxt-link to="/casestudies"><div class="nav-item-image"><img src="~/assets/svg/briefcase.svg" alt=""></div> <div>Our Works</div></nuxt-link></li>
             <li class="nav-item"><nuxt-link to="/blog"><div class="nav-item-image"><img src="~/assets/svg/book.svg" alt=""></div> <div>Hot Of The Press</div></nuxt-link></li>
@@ -24,14 +24,6 @@ export default {
         isvisible: {
             type: Boolean,
             required: false
-        }
-    },
-    methods: {
-        cancel() {
-            this.$emit("hide-nav");
-        },
-        goHome() {
-            this.$emit("go-home");
         }
     }
 }
@@ -136,6 +128,45 @@ export default {
     justify-content: flex-start;
     align-content: center;
     align-items: center;
+}
+
+/* -- slideRight -- */
+@-webkit-keyframes vodal-slideRight-enter {
+    from {
+        -webkit-transform: translate3d(150px, 0, 0);
+        transform: translate3d(150px, 0, 0);
+    }
+}
+
+@keyframes vodal-slideRight-enter {
+    from {
+        -webkit-transform: translate3d(150px, 0, 0);
+        transform: translate3d(150px, 0, 0);
+    }
+}
+
+.vodal-slideRight-enter-active {
+    -webkit-animation: vodal-slideRight-enter both cubic-bezier(0.4, 0, 0, 1.5);
+    animation: vodal-slideRight-enter both cubic-bezier(0.4, 0, 0, 1.5);
+}
+
+@-webkit-keyframes vodal-slideRight-leave {
+    to {
+        -webkit-transform: translate3d(150px, 0, 0);
+        transform: translate3d(150px, 0, 0);
+    }
+}
+
+@keyframes vodal-slideRight-leave {
+    to {
+        -webkit-transform: translate3d(150px, 0, 0);
+        transform: translate3d(150px, 0, 0);
+    }
+}
+
+.vodal-slideRight-leave-active {
+    -webkit-animation: vodal-slideRight-leave both;
+    animation: vodal-slideRight-leave both;
 }
 
 /* small screen */

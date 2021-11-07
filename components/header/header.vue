@@ -15,7 +15,7 @@
     <div class="header-menu-bar mob" @click="showMenuBar = true">
       <img src="~/assets/svg/menubar.svg" alt="+" />
     </div>
-    <mobilenav v-if="showMenuBar" @hide-nav="hideNav()" @go-home="goHome()" :isvisible="showMenuBar"/>
+    <mobilenav v-if="showMenuBar" :isvisible="showMenuBar"/>
   </header>
 </template>
 
@@ -27,6 +27,11 @@ export default {
   components: {
     mainbutton,
     mobilenav
+  },
+  watch: {
+    '$route' () {
+      this.showMenuBar = false;
+    }
   },
   data() {
     return {
@@ -40,13 +45,6 @@ export default {
     }  
   },
   methods: {
-    hideNav() {
-      this.showMenuBar = false
-    },
-    goHome() {
-      this.$router.push('/')
-      // this.showMenuBar = false
-    },
     onScroll () {
       const currentScrollPosition = window.pageYOffset
       if (currentScrollPosition < 0) {
