@@ -16,7 +16,7 @@
                 :description="result.description"
                 :date="result.createdAt" />
         </div>
-        <loadingcard v-if="loading"/>
+        <loadingb v-if="loading"/>
         <div class="blog-loadmore" v-if="loading==false & limit*page<total & blogs!=null"><mainbutton type="button" size="medium" :onClick="loadMoreBlogs">Load more Blogs</mainbutton></div>
     </div>
 </template>
@@ -25,14 +25,14 @@
 import genpagetitle from "@/components/utilities/genpagetitle";
 import altcard from "@/components/utilities/altcard";
 import mainbutton from "@/components/utilities/mainbutton";
-import loadingcard from "@/components/utilities/loadingcard";
+import loadingb from "@/components/utilities/loadingb";
 
 export default {
     components: {
         genpagetitle,
         altcard,
         mainbutton,
-        loadingcard
+        loadingb
     },
     data() {
         return {
