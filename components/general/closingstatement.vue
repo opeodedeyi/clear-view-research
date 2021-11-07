@@ -3,9 +3,9 @@
         <div class="cs-jumbo-content">
             <p class="cs-jumbo-content-title desk">You can’t make a great decision without, a clear view</p>
             <div class="cs-jumbo-content-text mb-20">
-                <p class="mb-20">We help businesses, lifestyle brands, charities and governments to access unique and trustworthy audience insights, and make great decisions that solve complex business problems, and benefit society at large.</p>
-                <p class="mb-20">We engage and gather consumer insight from various audiences such as: children, Generation Z, millennials, under-represented groups (e.g. people from Black, Asian or other ethnic minority groups) and vulnerable groups.</p>
-                <p class="mb-20">We have worked on projects across 4 continents and in countries such as Australia, Brazil and Spain. We have worked on project briefs for the likes of Starbucks UK, NHS England, the Vodafone Foundation, Unicef UK, and Tinder.</p>
+                <p class="mb-20">ClearView is a research agency that focuses on dealing with people of color, Asians, and other ethnic groups.</p>
+                <p class="mb-20">We assist organizations in understanding them because they are referred to as "hard to reach" and their voices are not well represented in research.</p>
+                <p class="mb-20">We seek to fill that research void by bringing together organizations and members of the black, Asian, and ethnic minority communities.</p>
             </div>
             <mainbutton type="link" to="/aboutus" size="medium" mode="inverse">Learn more about us</mainbutton>
         </div>

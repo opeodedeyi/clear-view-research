@@ -56,9 +56,9 @@ export default {
       refrences: ['bbcradio.svg','glamour.svg','metro.svg','skynews.svg','theguardian.svg','theindependent.svg','thesun.svg','thetelegraph.svg'],
       partners: ['m&c.svg','artscouncil.svg','uber.svg','tinder.png','starbucks.svg','kingscollege.svg','kpmg.svg','nhs.svg', 'ms.png'],
       weempowerorganizations: [
-          {id: 1, image: 'ccc.svg', title: 'Create Clear Communication', content:'To engage diverse communities and make strong and authentic connections and strong connections'},
-          {id: 2, image: 'dgu.svg', title: 'Develop Greater Understanding', content:'Using innovative research approaches we help you to uncover real insight from those who often go unheard'},
-          {id: 3, image: 'eli.svg', title: 'Ensure Lasting Impact', content:'We provide critical and strategic support to enable you to make a meaningful difference'},
+          {id: 1, image: 'ccc.svg', title: 'Create Clear Communication', content:'We work with a variety of communities to build strong and meaningful connections.'},
+          {id: 2, image: 'dgu.svg', title: 'Develop Greater Understanding', content:'We help you discover actual information from folks who are typically unheard by using creative research methods.'},
+          {id: 3, image: 'eli.svg', title: 'Ensure Lasting Impact', content:'We give vital and strategic support so that you can have a significant impact.'},
       ],
       whatwedo: [
         {id: 1, image: 'audienceinsight.svg', title: 'Audience Insight', content:'Learn more about the aaudience you seek to  understand and gather relevant and culturally informed insight'},
