@@ -63,13 +63,14 @@ export default {
     right: -420px;
     bottom: 0;
     z-index: 10;
-    overflow-y: auto;
     width: 100%;
     max-width: 420px;
     padding: 0 20px;
     background: var(--color-company);
     color: var(--color-white);
     transition: all 3s;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .open {
