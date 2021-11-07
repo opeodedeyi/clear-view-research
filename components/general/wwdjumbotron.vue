@@ -41,8 +41,8 @@ export default {
     color: var(--color-danger);
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 28px;
     text-align: center;
     letter-spacing: 2px;
     text-transform: uppercase;

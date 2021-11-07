@@ -30,7 +30,7 @@
       :whatWeDo="whatwedo" /> <!-- WHAT WE DO SECTION -->
     <brands
       header="PARTNERS"
-      title="Some of our clients and friends"
+      title="Our clients and friends"
       :logos="partners" /> <!-- PARTNERS SECTION -->
     <testimonials
       :testimonials="testimonials" /> <!-- TESTIMONIALS SECTION -->
@@ -123,8 +123,8 @@ export default {
   color: var(--color-danger);
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 28px;
   text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;

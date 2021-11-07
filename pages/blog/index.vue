@@ -2,7 +2,7 @@
     <div class="blog">
         <genpagetitle
             jumbotitle="CLEARVIEW RESEARCH"
-            jumbodescription="HOT OFF THE PRESS"
+            jumbodescription="Our Blog"
             jumboimage="jumboimg1.webp"
         />
         <div class="blog-jumbo-cards" v-if="blogs != null">

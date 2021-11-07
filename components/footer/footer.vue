@@ -55,8 +55,8 @@ export default {
 
 .footer-top-text {
     font-weight: bold;
-    font-size: 42px;
-    line-height: 60px;
+    font-size: 28px;
+    line-height: 40px;
     width: 80%;
 }
 

@@ -127,8 +127,8 @@ export default {
     color: var(--color-danger);
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 28px;
     text-align: center;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -191,8 +191,8 @@ export default {
     text-align: center;
     margin-bottom: 32px;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 28px;
     color: var(--color-dark);
     opacity: 0.5;
 }
@@ -213,8 +213,8 @@ export default {
     padding: 0 18px;
     text-align: center;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 16px;
+    line-height: 28px;
     min-height: 190px;
     display: flex;
     flex-direction: row;

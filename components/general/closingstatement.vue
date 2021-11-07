@@ -63,8 +63,8 @@ export default {
 
 .cs-jumbo-content-title {
     font-weight: bold;
-    font-size: 42px;
-    line-height: 60px;
+    font-size: 28px;
+    line-height: 40px;
     /* text-align: center; */
     color: var(--color-white);
     margin-bottom: 45px;
