@@ -31,7 +31,7 @@ export default {
 .footer {
     background-color: var(--color-dark);
     color: var(--color-white);
-    padding: 48px 64px;
+    padding: 62px 64px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,15 +55,20 @@ export default {
 
 .footer-top-text {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 42px;
     line-height: 60px;
     width: 80%;
 }
 
 .footer-bottom {
     font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.footer-bottom p {
+    font-size: 16px;
+    line-height: 28px;
 }
 
 .break {
@@ -73,7 +78,7 @@ export default {
 .footer-hl {
     border-bottom: 1px solid var(--color-white);
     width: 100%;
-    margin: 32px 0;
+    margin: 48px 0;
 }
 
 /* small screen */
