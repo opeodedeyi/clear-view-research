@@ -100,13 +100,13 @@ export default {
 }
 
 .nav-main {
-    margin-top: 80px;
+    margin-top: 120px;
     padding: 0;
     list-style: none;
 }
 
 .nav-item {
-    margin-bottom: 32px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
