@@ -271,11 +271,19 @@ export default {
     .testimonials-jumbo-title {
         font-size: 22px;
         line-height: 32px;
-        margin-bottom: 32px;
+        margin-bottom: 16px;
+    }
+
+    .testimonials-jumbo-image {
+        margin-bottom: 24px;
+    }
+
+    .testimonials-jumbo-role {
+        margin-bottom: 16px;
     }
 
     .testimonials-jumbo-card-content {
-        padding: 20px 0;
+        padding: 10px 0;
         min-height: 500px;
     }
 

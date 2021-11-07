@@ -5,7 +5,7 @@
     </nuxt-link>
     <div class="header-content desk">
       <ul class="header-content-links">
-        <nuxt-link to="/expertise" tag="li" ><a>Expertise</a></nuxt-link>
+        <nuxt-link to="/expertise" tag="li"><a class="nuxt-link-active">Expertise</a></nuxt-link>
         <nuxt-link to="/casestudies" tag="li" class="pl32" ><a>Our Work</a></nuxt-link>
         <nuxt-link to="/blog" tag="li" class="pl32" ><a>Hot Of The Press</a></nuxt-link>
         <nuxt-link to="/aboutus" tag="li" class="pl32 pr48" ><a>About</a></nuxt-link>
@@ -58,6 +58,10 @@ export default {
 </script>
 
 <style scoped>
+.nuxt-link-active {
+  color: red;
+}
+
 .header {
   height: 72px; /* 5.5rem */
   position: fixed;
