@@ -69,7 +69,7 @@ export default {
 
 .wwd-card {
     grid-column: span 4;
-    padding: 84px 20px 28px;
+    padding: 32px 20px 28px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -88,7 +88,7 @@ export default {
 .wwd-card-image {
     width: 100px;
     height: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 32px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -182,6 +182,10 @@ export default {
     .wwd-card {
         grid-column: span 6;
         background: var(--color-text-header);
+    }
+
+    .wwd-card-image {
+        margin-bottom: 16px;
     }
 
     .weo-card-image {

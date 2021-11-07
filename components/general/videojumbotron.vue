@@ -3,8 +3,8 @@
         <video src="~/assets/videos/main-video2.mp4" muted loop autoplay playsinline></video> <!-- poster="~/assets/images/video.png" -->
         <div class="video-jumbotron-overlay">
             <div class="jumbo-over-empty mb"></div>
-            <h1 class="jumbo-over-header plr">A clear view on complex, new and "so called" hard to reach audiences</h1>
-            <div class="jumbo-over-explanation plr pb">For organisations that want to make an impact - and give a damn.</div>
+            <h1 class="jumbo-over-header plr">Leverage the power of research</h1>
+            <div class="jumbo-over-explanation plr pb">Giving mirority audiences a voice and providing organizations the opportunity to hear them</div>
             <mainbutton type="link" to="/contactus" size="medium">More about Clearview</mainbutton>
         </div>
     </div>

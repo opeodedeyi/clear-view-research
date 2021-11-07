@@ -1,27 +1,58 @@
 <template>
     <div class="testimonials-jumbotron">
-        <div class="testimonials-jumbo-lefticon desk" @click="previousTestimony"><img src="~/assets/svg/lefticon.svg" alt=""></div> <!-- lefticon -->
-        <div class="testimonials-jumbo-righticon desk" @click="nextTestimony"><img src="~/assets/svg/righticon.svg" alt=""></div> <!-- righticon -->
+        <div v-if="step>0" class="testimonials-jumbo-lefticon desk" @click="previousTestimony"><img src="~/assets/svg/lefticon.svg" alt=""></div> <!-- lefticon -->
+        <div v-if="step<3" class="testimonials-jumbo-righticon desk" @click="nextTestimony"><img src="~/assets/svg/righticon.svg" alt=""></div> <!-- righticon -->
         <p class="testimonials-jumbo-header">OUR CLIENTS SPEAK</p>
         <p class="testimonials-jumbo-title">Feedback from our customers</p>
-        <div class="testimonials-jumbo-image">
-            <img :src="require(`~/assets/images/${testimonials[step-1].image}`)" alt="testimonial photo">
+
+        <div class="testimonials-wrapper"  v-touch:swipe.left="nextTestimony" v-touch:swipe.right="previousTestimony">
+            <div class="testimonials-wrapper-inner" ref="slider">
+                <!-- card -->
+                <div class="testimonials-jumbo-card" 
+                    v-for="(testimony, index) in testimonials"
+                    :key="index">
+                    <div class="testimonials-jumbo-image">
+                        <img :src="require(`~/assets/images/${testimony.image}`)" alt="testimonial photo">
+                    </div>
+                    <p class="testimonials-jumbo-name">{{testimony.name}}</p>
+                    <p class="testimonials-jumbo-role">{{testimony.role}}</p>
+                    <div class="testimonials-jumbo-card-content">
+                        <p class="testimonials-brace-open">“</p>
+                        <p class="testimonials-main-text">{{testimony.content}}</p>
+                        <p class="testimonials-brace-close">“</p>
+                    </div>
+                </div>
+                <!-- card -->
+            </div>
         </div>
-        <p class="testimonials-jumbo-name">{{testimonials[step-1].name}}</p>
-        <p class="testimonials-jumbo-role">{{testimonials[step-1].role}}</p>
-        <div class="testimonials-jumbo-card-content">
-            <p class="testimonials-brace-open">“</p>
-            <p class="testimonials-main-text">{{testimonials[step-1].content}}</p>
-            <p class="testimonials-brace-close">“</p>
+        <div class="testimonials-control"  ref="indicator">
+            <div class="testimonials-control-b" :class="{ selected: step===0 }"></div>
+            <div class="testimonials-control-b" :class="{ selected: step===1 }"></div>
+            <div class="testimonials-control-b" :class="{ selected: step===2 }"></div>
+            <div class="testimonials-control-b" :class="{ selected: step===3 }"></div>
         </div>
+
     </div>
 </template>
 
 <script>
+import Vue from 'vue'
+import Vue2TouchEvents from 'vue2-touch-events'
+
+Vue.use(Vue2TouchEvents, {
+    disableClick: false,
+    touchClass: '',
+    tapTolerance: 10,
+    touchHoldTolerance: 400,
+    swipeTolerance: 30,
+    longTapTimeInterval: 400,
+    namespace: 'touch'
+})
+
 export default {
     data() {
         return {
-            step: 1
+            step: 0
         }
     },
     props: {
@@ -32,16 +63,12 @@ export default {
     },
     methods: {
         previousTestimony() {
-            if (this.step == 1) {
-                return this.step = 4
-            }
-            this.step--
+            this.step = (this.step > 0) ? this.step - 1 : 0
+            this.$refs.slider.style.transform = "translate(" + (this.step) * -25 + "%)"
         },
         nextTestimony() {
-            if (this.step == 4) {
-                return this.step = 1
-            }
-            this.step++
+            this.step = (this.step < 3) ? this.step + 1 : 3
+            this.$refs.slider.style.transform = "translate(" + (this.step) * -25 + "%)"
         }
     },
 }
@@ -60,6 +87,7 @@ export default {
 .testimonials-jumbo-lefticon,
 .testimonials-jumbo-righticon {
     position: absolute;
+    z-index: 2;
     top: 50%;
     height: 60px;
     width: 60px;
@@ -112,6 +140,28 @@ export default {
     margin-bottom: 48px;
 }
 
+/* extra */
+.testimonials-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.testimonials-wrapper-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 400%;
+    transition: all 0.3s;
+}
+
+.testimonials-jumbo-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .testimonials-jumbo-image {
     width: 300px;
     height: 300px;
@@ -152,7 +202,7 @@ export default {
     flex-wrap: nowrap;
     justify-content: center;
     padding: 10px 20px 20px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    /* box-shadow: 0 4px 2px -2px rgba(0,0,0,0.12); */
 }
 
 .testimonials-main-text {
@@ -182,8 +232,38 @@ export default {
 .testimonials-brace-close {
     transform: rotate(-180deg);
 }
+
+.testimonials-control {
+    width: 100%;
+    display: flex; /* none */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 10px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+
+.testimonials-control-b {
+    height: 10px;
+    width: 10px;
+    margin: 0 6px;
+    border-radius: 100%;
+    background-color: var(--color-carousel);
+    cursor: pointer;
+}
+
+.testimonials-control-b.selected {
+    background-color: var(--color-company);
+}
 /* small screen */
 @media only screen and (max-width: 800px) {
+    .testimonials-control {
+        display: flex;
+    }
+
     .testimonials-jumbotron {
         padding: 48px 20px;
     }
@@ -196,6 +276,7 @@ export default {
 
     .testimonials-jumbo-card-content {
         padding: 20px 0;
+        min-height: 500px;
     }
 
     .desk {
