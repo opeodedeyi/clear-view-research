@@ -5,7 +5,7 @@
       :weempowerorganizations="weempowerorganizations"/> <!-- WE EMPOWER ORGANIZATIONS SECTION -->
     <div class="soop-jumbotron"> <!-- SOME OF OUR PROJECTS SECTION -->
       <p class="soop-jumbo-header">SOME OF OUR PROJECTS</p>
-      <p class="soop-jumbo-title">Read some of our casestudies</p>
+      <p class="soop-jumbo-title">Read some of our case studies</p>
       <div class="soop-jumbo-cards" v-if="caseStudies != null">
         <altcard
           typeofcard="soop"
@@ -163,7 +163,7 @@ export default {
   align-items: center;
   justify-content: center;
   align-content: center;
-  margin-top: 48px;
+  margin-top: 60px;
 }
 
 /* small screen */

@@ -1,7 +1,7 @@
 <template>
     <div class="weo-jumbotron">
-        <p class="weo-jumbo-header">WE EMPOWER ORGANIZATIONS</p>
-        <p class="weo-jumbo-title">Empowering  organizations</p>
+        <p class="weo-jumbo-header">EMPOWERING ORGANIZATIONS</p>
+        <p class="weo-jumbo-title">We empower organizations to</p>
         <div class="weo-jumbo-content">
             <maincard
                 typeofcard="weo"
@@ -38,7 +38,7 @@ export default {
 }
 
 .weo-jumbotron {
-    padding: 100px 64px 0;
+    padding: 100px 64px 50px;
 }
 
 .weo-jumbo-header {
@@ -59,13 +59,13 @@ export default {
     font-weight: bold;
     font-size: 28px;
     line-height: 40px;
-    margin-bottom: 48px;
+    margin-bottom: 60px;
 }
 
 .weo-jumbo-content {
     display: grid;
     grid-template-columns: repeat(12, minmax(auto, 200px));
-    gap: 40px 20px;
+    gap: 60px 40px;
     /* justify-items: center; */
     justify-content: center;
     align-content: center;
@@ -75,7 +75,7 @@ export default {
 @media only screen and (max-width: 730px) {
     .weo-jumbo-content {
         grid-template-columns: repeat(6, minmax(auto, 200px));
-        gap: 40px 20px;
+        gap: 50px 20px;
     }
 }
 
@@ -93,7 +93,7 @@ export default {
 
     .weo-jumbo-content {
         grid-template-columns: repeat(6, minmax(auto, 200px));
-        gap: 40px 20px;
+        gap: 50px 20px;
     }
 }
 </style>

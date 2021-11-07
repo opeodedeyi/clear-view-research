@@ -6,7 +6,7 @@
         <div class="soop-card-overlay">
             <div class="soop-card-overlay-inner">
                 <p class="soop-card-text">{{title}}</p>
-                <mainbutton mode="special" class="soop-card-btn" :to="`casestudies/${slug}`">Read casestudy <img src="~/assets/svg/rightarrowfff.svg" alt="right arrow"/></mainbutton>
+                <mainbutton mode="special" class="soop-card-btn" :to="`casestudies/${slug}`">Read case study <img src="~/assets/svg/rightarrowfff.svg" alt="right arrow"/></mainbutton>
             </div>
         </div>
     </div>
