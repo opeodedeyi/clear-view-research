@@ -47,7 +47,7 @@ export default {
 
 <style scoped>
 .ref-jumbotron {
-    padding: 62px 0 80px;
+    padding: 36px 0 80px;
     background: rgba(65, 77, 92, 0.05);
 }
 
@@ -69,14 +69,14 @@ export default {
     font-weight: bold;
     font-size: 28px;
     line-height: 40px;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
     padding: 0 64px;
 }
 
 .ref-jumbo-content {
     position: relative;
     width: 100%;
-    height: 40px;
+    height: 90px;
 }
 
 .ref-jumbo-content-container {
@@ -114,7 +114,6 @@ export default {
 
 .ref-jumbo-content-layout img {
     padding: 0 40px;
-    height: 100%;
 }
 
 .ref-jumbo-content-overlay1 {
@@ -159,13 +158,13 @@ export default {
 /* small screen */
 @media only screen and (max-width: 950px) {
     .ref-jumbotron {
-        padding: 62px 0 62px;
+        padding: 48px 0 32px;
     }
 
     .ref-jumbo-title {
         font-size: 22px;
         line-height: 32px;
-        margin-bottom: 42px;
+        margin-bottom: 32px;
         padding: 0 20px;
     }
 
