@@ -15,7 +15,7 @@
     <div class="header-menu-bar mob" @click="showMenuBar = true">
       <img src="~/assets/svg/menubar.svg" alt="+" />
     </div>
-    <mobilenav v-if="showMenuBar" :isvisible="showMenuBar"/>
+    <mobilenav v-show="showMenuBar" @hide-nav="hideNav()" :isvisible="showMenuBar"/>
   </header>
 </template>
 
@@ -45,6 +45,9 @@ export default {
     }  
   },
   methods: {
+    hideNav() {
+      this.showMenuBar = false
+    },
     onScroll () {
       const currentScrollPosition = window.pageYOffset
       if (currentScrollPosition < 0) {

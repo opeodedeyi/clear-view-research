@@ -4,7 +4,7 @@
             <nuxt-link to="/" class="nav-header-logo">
                 <img src="~/assets/images/logo.png" alt="" />
             </nuxt-link>
-            <div class="nav-header-cancle">
+            <div class="nav-header-cancle" @click="cancel">
                 <img src="~/assets/svg/cancelwhite.svg" alt="" />
             </div>
         </div>
@@ -24,6 +24,11 @@ export default {
         isvisible: {
             type: Boolean,
             required: false
+        }
+    },
+    methods: {
+        cancel() {
+            this.$emit("hide-nav");
         }
     }
 }
