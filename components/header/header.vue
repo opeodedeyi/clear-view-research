@@ -5,25 +5,28 @@
     </nuxt-link>
     <div class="header-content desk">
       <ul class="header-content-links">
-        <li class="nav-item"><nuxt-link to="/expertise" class="plr16">Expertise</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/casestudies" class="plr16">Our Work</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/blog" class="plr16">Hot Of The Press</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/aboutus" class="plr16">About</nuxt-link></li>
+        <li class="header-item"><nuxt-link to="/expertise" class="plr16">Expertise</nuxt-link></li>
+        <li class="header-item"><nuxt-link to="/casestudies" class="plr16">Our Works</nuxt-link></li>
+        <li class="header-item"><nuxt-link to="/blog" class="plr16">Hot Of The Press</nuxt-link></li>
+        <li class="header-item"><nuxt-link to="/aboutus" class="plr16">About Us</nuxt-link></li>
         <mainbutton type="li" to="/contactus" size="small">Contact Us</mainbutton>
       </ul>
     </div>
     <div class="header-menu-bar mob" @click="showMenuBar = true">
       <img src="~/assets/svg/menubar.svg" alt="+" />
     </div>
+    <mobilenav v-if="showMenuBar" @hide-nav="hideNav()" @go-home="goHome()" :isvisible="showMenuBar"/>
   </header>
 </template>
 
 <script>
 import mainbutton from "@/components/utilities/mainbutton";
+import mobilenav from "@/components/mobile/mobilenav";
 
 export default {
   components: {
-    mainbutton
+    mainbutton,
+    mobilenav
   },
   data() {
     return {
@@ -37,6 +40,13 @@ export default {
     }  
   },
   methods: {
+    hideNav() {
+      this.showMenuBar = false
+    },
+    goHome() {
+      this.$router.push('/')
+      // this.showMenuBar = false
+    },
     onScroll () {
       const currentScrollPosition = window.pageYOffset
       if (currentScrollPosition < 0) {
@@ -58,12 +68,12 @@ export default {
 </script>
 
 <style scoped>
-.nav-item a {
+.header-item a {
   position: relative;
 }
 
-.nav-item a.nuxt-link-exact-active:after,
-.nav-item a:hover:after {
+.header-item a.nuxt-link-exact-active:after,
+.header-item a:hover:after {
   content: "";
   display: block;
   position: absolute;
