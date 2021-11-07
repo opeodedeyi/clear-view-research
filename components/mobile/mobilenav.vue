@@ -13,6 +13,7 @@
             <li class="nav-item"><nuxt-link to="/casestudies"><div class="nav-item-image"><img src="~/assets/svg/briefcase.svg" alt=""></div> <div>Our Works</div></nuxt-link></li>
             <li class="nav-item"><nuxt-link to="/blog"><div class="nav-item-image"><img src="~/assets/svg/book.svg" alt=""></div> <div>Hot Of The Press</div></nuxt-link></li>
             <li class="nav-item"><nuxt-link to="/aboutus"><div class="nav-item-image"><img src="~/assets/svg/bars.svg" alt=""></div> <div>About Us</div></nuxt-link></li>
+            <li class="nav-item"><nuxt-link to="/contactus"><div class="nav-item-image"><img src="~/assets/svg/message.svg" alt=""></div> <div>Contact Us</div></nuxt-link></li>
         </ul>
     </div>
 </template>
@@ -68,7 +69,7 @@ export default {
     padding: 0 20px;
     background: var(--color-company);
     color: var(--color-white);
-    transition: all 3s;
+    transition: right .3s;
     height: 100vh;
     overflow: hidden;
 }
