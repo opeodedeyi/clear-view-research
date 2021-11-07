@@ -2,7 +2,7 @@
     <div class="casestudies">
         <genpagetitle
             jumbotitle="CLEARVIEW RESEARCH"
-            jumbodescription="OUR WORKS"
+            jumbodescription="CASE STUDIES"
             jumboimage="jumboimg1.webp"
         />
         <div class="casestudies-jumbo-cards" v-if="projects != null">

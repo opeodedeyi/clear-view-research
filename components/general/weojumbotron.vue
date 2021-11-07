@@ -82,13 +82,13 @@ export default {
 /* small screen */
 @media only screen and (max-width: 950px) {
     .weo-jumbotron {
-        padding: 48px 20px 48px;
+        padding: 62px 20px;
     }
 
     .weo-jumbo-title {
         font-size: 24px;
         line-height: 32px;
-        margin-bottom: 32px;
+        margin-bottom: 48px;
     }
 
     .weo-jumbo-content {
