@@ -158,7 +158,7 @@ export default {
 /* small screen */
 @media only screen and (max-width: 950px) {
     .ref-jumbotron {
-        padding: 48px 0 32px;
+        padding: 48px 0 48px;
     }
 
     .ref-jumbo-title {

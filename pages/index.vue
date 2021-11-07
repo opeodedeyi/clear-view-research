@@ -169,7 +169,7 @@ export default {
 /* small screen */
 @media only screen and (max-width: 800px) {
   .soop-jumbotron {
-    padding: 48px 20px 48px;
+    padding: 60px 20px;
     border-top: 1px solid var(--color-form-border);
   }
 
