@@ -5,7 +5,7 @@
             <div class="jumbo-over-empty mb"></div>
             <h1 class="jumbo-over-header plr">Leverage the power of research</h1>
             <div class="jumbo-over-explanation plr pb">Giving mirority audiences a voice and providing organizations the opportunity to hear them</div>
-            <mainbutton type="link" to="/contactus" size="medium">More about Clearview</mainbutton>
+            <mainbutton type="link" to="/aboutus" size="medium">More about Clearview</mainbutton>
         </div>
     </div>
 </template>
