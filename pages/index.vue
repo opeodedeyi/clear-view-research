@@ -19,7 +19,7 @@
       </div>
       <loadingcard v-else/>
       <div class="soop-jumbo-cta">
-          <mainbutton type="link" to="/casestudies" size="medium">Read more casestudies</mainbutton>
+          <mainbutton type="link" to="/casestudies" size="medium">Read more case studies</mainbutton>
       </div>
     </div>
     <brands
