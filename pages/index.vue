@@ -63,7 +63,7 @@ export default {
       whatwedo: [
         {id: 1, image: 'audienceinsight.svg', title: 'Audience Insight', content:'Learn more about the audience you seek to understand and gather relevant and culturally informed insight'},
         {id: 2, image: 'advisory.svg', title: 'Advisory', content:'We share our expertise with you to help you in developing effective strategies to make a huge social impact'},
-        {id: 3, image: 'comms.svg', title: 'Comms & Marketing', content:'Want to create bold campaigns that make an impact and hit close to home? We help you do just that'},
+        {id: 3, image: 'comms.svg', title: 'Communications & Marketing', content:'Want to create bold campaigns that make an impact and hit close to home? We help you do just that'},
         {id: 4, image: 'learningpartner.svg', title: 'Learning Partner', content:'Team work makes the dream work. We collaborate with organizations that are truly about solving problems in the society'},
         {id: 5, image: 'monitoring.svg', title: 'Monitoring & Evaluation', content:'We have the experience in monitoring diverse and excluded communities, and evaluating initiatives targeted at them'},
         {id: 6, image: 'strategicplanning.svg', title: 'Strategic Planning', content:'Crush those business goals with our actionable strategies based on relevant insights'},
