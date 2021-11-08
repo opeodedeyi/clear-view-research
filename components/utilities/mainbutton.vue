@@ -67,6 +67,7 @@ export default {
     }
 
     .normal:hover {
+        border: 1px solid var(--color-company-light);
         background-color: var(--color-company-light);
         text-decoration: none;
     }
@@ -78,7 +79,9 @@ export default {
     }
 
     .inverse:hover {
-        background-color: var(--color-white);
+        border: 1px solid var(--color-white);
+        background-color: var(--color-company);
+        color: var(--color-white) !important;
         text-decoration: none;
     }
 
