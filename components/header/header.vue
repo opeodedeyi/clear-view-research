@@ -78,12 +78,12 @@ export default {
   content: "";
   display: block;
   position: absolute;
-  bottom: -7px;
+  bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
-  width: 3px;
-  height: 3px;
-  border-radius: 3px;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
   background: var(--color-white);
 }
 
