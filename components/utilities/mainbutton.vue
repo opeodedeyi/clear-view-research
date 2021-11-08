@@ -67,7 +67,7 @@ export default {
     }
 
     .normal:hover {
-        background-color: var(--color-company);
+        background-color: var(--color-company-light);
         text-decoration: none;
     }
 
@@ -89,7 +89,8 @@ export default {
     }
 
     .special:hover {
-        /* background-color: var(--color-white); */
+        background-color: var(--color-white);
+        color: var(--color-dark) !important;
         text-decoration: none;
     }
 

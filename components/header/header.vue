@@ -6,10 +6,10 @@
     <div class="header-content desk">
       <ul class="header-content-links">
         <li class="header-item"><nuxt-link to="/expertise" class="plr16">Expertise</nuxt-link></li>
-        <li class="header-item"><nuxt-link to="/casestudies" class="plr16">Case Studies</nuxt-link></li>
+        <li class="header-item"><nuxt-link to="/casestudies" class="plr16">Case studies</nuxt-link></li>
         <li class="header-item"><nuxt-link to="/blog" class="plr16">Blog</nuxt-link></li>
-        <li class="header-item"><nuxt-link to="/aboutus" class="plr16">About Us</nuxt-link></li>
-        <mainbutton type="li" to="/contactus" size="small">Contact Us</mainbutton>
+        <li class="header-item"><nuxt-link to="/aboutus" class="plr16">About us</nuxt-link></li>
+        <mainbutton type="li" to="/contactus" size="small">Contact us</mainbutton>
       </ul>
     </div>
     <div class="header-menu-bar mob" @click="showMenuBar = true">

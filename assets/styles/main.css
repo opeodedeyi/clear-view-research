@@ -11,9 +11,9 @@
     --color-gray: #C4C4C4;
     --color-dark: #000000;
     --color-danger: #E35326;
-    --color-company-light: #496F9D;
+    --color-company-light: #2B4566;
     --color-company: #002047;
-    --color-testimonial-brace: #2EC5CE;
+    --color-testimonial-brace: #E35326; /* #2EC5CE */
     --rgba-backdrop: 0, 0, 0;
 }
 
