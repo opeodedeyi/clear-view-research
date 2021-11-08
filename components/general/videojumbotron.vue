@@ -1,6 +1,8 @@
 <template>
     <div class="video-jumbotron">
-        <video src="~/assets/videos/main-video2.mp4" muted loop autoplay playsinline></video> <!-- poster="~/assets/images/video.png" -->
+        <video autoplay loop muted playsinline>
+            <source src="~/assets/videos/main-video2.mp4" type="video/mp4">
+        </video> <!-- poster="~/assets/images/video.png" -->
         <div class="video-jumbotron-overlay">
             <div class="jumbo-over-empty mb"></div>
             <h1 class="jumbo-over-header plr">Leverage the power of research</h1>
