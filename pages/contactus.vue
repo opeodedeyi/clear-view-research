@@ -112,7 +112,7 @@ export default {
     font-weight: normal;
     color: var(--color-danger);
     font-size: 16px;
-    line-height: 20px;
+    line-height: 28px;
     margin-bottom: 16px;
 }
 
@@ -136,8 +136,6 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        /* align-content: center;
-        align-items: center; */
         padding: 0 20px;
     }
 

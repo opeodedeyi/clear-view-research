@@ -16,17 +16,20 @@
       <img src="~/assets/svg/menubar.svg" alt="+" />
     </div>
     <mobilenav v-show="showMenuBar" @hide-nav="hideNav()" :isvisible="showMenuBar"/>
+    <mobileoverlay v-show="showMenuBar" @hide-nav="hideNav()"/>
   </header>
 </template>
 
 <script>
 import mainbutton from "@/components/utilities/mainbutton";
 import mobilenav from "@/components/mobile/mobilenav";
+import mobileoverlay from "@/components/mobile/mobileoverlay";
 
 export default {
   components: {
     mainbutton,
-    mobilenav
+    mobilenav,
+    mobileoverlay
   },
   watch: {
     '$route' () {

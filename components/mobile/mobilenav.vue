@@ -60,7 +60,7 @@ export default {
     top: 0;
     right: -420px;
     bottom: 0;
-    z-index: 10;
+    z-index: 101;
     width: 100%;
     max-width: 420px;
     padding: 0 20px;
