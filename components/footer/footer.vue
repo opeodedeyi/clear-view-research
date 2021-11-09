@@ -6,7 +6,7 @@
         </div>
         <div class="footer-hl"></div>
         <div class="footer-bottom">
-            <p>ClearView Research Ltd,</p>
+            <h4>Clearview Research Ltd,</h4>
             <p class="mb-15">86-90 Paul Street, London, EC2A 4NE</p>
             <p>ClearView Research Ltd © 2021 <span class="break mob"><br></span> All Rights Reserved | Privacy Policy</p>
         </div>
@@ -66,7 +66,8 @@ export default {
     line-height: 28px;
 }
 
-.footer-bottom p {
+.footer-bottom p,
+.footer-bottom h4 {
     font-size: 16px;
     line-height: 28px;
 }

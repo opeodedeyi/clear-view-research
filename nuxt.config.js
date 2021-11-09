@@ -11,7 +11,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Leverage the power of research. Giving minority audiences a voice and providing organizations the opportunity to hear them' },
-      { hid: 'keywords', name: 'keywords', content: 'research, minority' }
+      { hid: 'keywords', name: 'keywords', content: 'research, minority, clearview' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

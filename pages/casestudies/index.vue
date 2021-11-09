@@ -110,7 +110,7 @@ export default {
     gap: 24px;
     width: 100%;
     padding: 0 64px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .casestudies-loadmore {
