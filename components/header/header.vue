@@ -15,7 +15,7 @@
     <div class="header-menu-bar mob" @click="showMenuBar = true">
       <img src="~/assets/svg/menubar.svg" alt="+" />
     </div>
-    <mobilenav v-show="showMenuBar" @hide-nav="hideNav()" :isvisible="showMenuBar"/>
+    <mobilenav @hide-nav="hideNav()" :isvisible="showMenuBar"/>
     <mobileoverlay v-show="showMenuBar" @hide-nav="hideNav()"/>
   </header>
 </template>
