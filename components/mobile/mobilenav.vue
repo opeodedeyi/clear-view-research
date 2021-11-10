@@ -10,8 +10,8 @@
         </div>
         <ul class="nav-main">
             <li class="nav-item"><nuxt-link to="/expertise"><div  class="nav-item-image"><img src="~/assets/svg/people.svg" alt=""></div> <div>Expertise</div></nuxt-link></li>
-            <li class="nav-item"><nuxt-link to="/casestudies"><div class="nav-item-image"><img src="~/assets/svg/briefcase.svg" alt=""></div> <div>Our Works</div></nuxt-link></li>
-            <li class="nav-item"><nuxt-link to="/blog"><div class="nav-item-image"><img src="~/assets/svg/book.svg" alt=""></div> <div>Hot Of The Press</div></nuxt-link></li>
+            <li class="nav-item"><nuxt-link to="/casestudies"><div class="nav-item-image"><img src="~/assets/svg/briefcase.svg" alt=""></div> <div>Case studies</div></nuxt-link></li>
+            <li class="nav-item"><nuxt-link to="/blog"><div class="nav-item-image"><img src="~/assets/svg/book.svg" alt=""></div> <div>Blog</div></nuxt-link></li>
             <li class="nav-item"><nuxt-link to="/aboutus"><div class="nav-item-image"><img src="~/assets/svg/bars.svg" alt=""></div> <div>About Us</div></nuxt-link></li>
             <li class="nav-item"><nuxt-link to="/contactus"><div class="nav-item-image"><img src="~/assets/svg/message.svg" alt=""></div> <div>Contact Us</div></nuxt-link></li>
         </ul>
