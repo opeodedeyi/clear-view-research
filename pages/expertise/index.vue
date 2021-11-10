@@ -8,7 +8,7 @@
         <div class="expertise-explanation">
             <div class="expertise-card">
                 <div class="expertise-card-image">
-                    <img :src="require(`@/assets/svg/${image}`)" alt="">
+                    <!-- <img :src="require(`@/assets/svg/${image}`)" alt=""> -->
                 </div>
                 <div class="expertise-card-explain"></div>
             </div>
