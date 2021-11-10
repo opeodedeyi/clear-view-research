@@ -3,7 +3,7 @@
         <genpagetitle
             jumbotitle="CLEARVIEW RESEARCH"
             jumbodescription="CASE STUDIES"
-            jumboimage="jumboimg1.webp"
+            jumboimage="casestudy.png"
         />
         <div class="casestudies-jumbo-cards" v-if="projects != null">
             <altcard
@@ -32,6 +32,9 @@ export default {
         altcard,
         mainbutton,
         loadingb
+    },
+    head: {
+        title: 'Clearview research case studies',
     },
     data() {
         return {

@@ -3,7 +3,7 @@
         <genpagetitle
             jumbotitle="CLEARVIEW RESEARCH"
             jumbodescription="Our Blog"
-            jumboimage="jumboimg1.webp"
+            jumboimage="blog.png"
         />
         <div class="blog-jumbo-cards" v-if="blogs != null">
             <altcard
@@ -33,6 +33,9 @@ export default {
         altcard,
         mainbutton,
         loadingb
+    },
+    head: {
+        title: 'Clearview research blogs',
     },
     data() {
         return {

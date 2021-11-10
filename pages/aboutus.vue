@@ -31,6 +31,9 @@ export default {
     components: {
         genpagetitle
     },
+    head: {
+        title: 'About Clearview research',
+    },
     data() {
         return {
             form: null

@@ -32,6 +32,9 @@ export default {
         mainbutton,
         maininput
     },
+    head: {
+        title: 'Contact Clearview research',
+    },
     data() {
         return {
             errorMessage: null,

@@ -22,6 +22,9 @@ export default {
     components: {
         genpagetitle
     },
+    head: {
+        title: 'Clearview research expertise',
+    },
     data() {
         return {
             whatwedo: [
@@ -65,5 +68,12 @@ export default {
 <style>
 .expertise {
     margin-top: 72px;
+}
+
+.expertise-explanation {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 200px));
+    gap: 24px;
 }
 </style>

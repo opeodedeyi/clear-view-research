@@ -21,7 +21,11 @@ export default {
     data() {
         return {
             projectDetails: null,
+            title: 'case study'
         }
+    },
+    head: {
+        title: `Clearview research casestudy`,
     },
     components: {
         loadingb

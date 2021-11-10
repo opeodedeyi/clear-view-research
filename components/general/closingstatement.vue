@@ -55,7 +55,7 @@ export default {
 
 .cs-jumbo-image {
     width: 40%;
-    background: url('~assets/images/outrojumbotron.webp');
+    background: url('~assets/images/decision.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
