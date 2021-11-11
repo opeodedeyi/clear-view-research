@@ -113,6 +113,10 @@ export default {
     margin-right: 24px;
 }
 
+.expertise-card-image img {
+    height: 100%;
+}
+
 .expertise-card-explain-title {
     font-weight: bold;
     font-size: 20px;
@@ -127,10 +131,19 @@ export default {
 
 /* small screen */
 @media only screen and (max-width: 900px) {
-    .expertise-explanation {
+    .expertise-section {
         padding: 0 20px;
+    }
+
+    .expertise-explanation {
         grid-template-columns: repeat(6, minmax(auto, 150px));
         gap: 48px 24px;
+    }
+
+    .expertise-card-image {
+        width: 48px;
+        height: 48px;
+        margin-right: 16px;
     }
 }
 </style>
