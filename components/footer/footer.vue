@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="footer-top">
             <p class="footer-top-text">Whether you’d like to discuss a project or say hi, we always love to hear from you.</p>
-            <mainbutton mode="special" type="link" to="/contactus" size="medium">Contact us</mainbutton>
+            <mainbutton mode="special" type="link" to="/contactus" size="medium">Contact Us</mainbutton>
         </div>
         <div class="footer-hl"></div>
         <div class="footer-bottom">

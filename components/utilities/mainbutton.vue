@@ -39,61 +39,92 @@ export default {
 </script>
 
 <style scoped>
-    button,
-    a {
-        text-decoration: none;
-        cursor: pointer;
-        text-decoration: none;
-        font-weight: 500;
-    }
+button,
+a {
+    text-decoration: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.5s ease;
+}
 
-    button {
-        border: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
+button {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
-    .btn {
-        border: 1px solid var(--color-danger);
-        background-color: var(--color-danger);
-        color: var(--color-white) !important;
-    }
+.btn {
+    border: 1px solid var(--color-danger);
+    background-color: var(--color-danger);
+    color: var(--color-white) !important;
+}
 
-    .btn:hover {
-        border: 1px solid var(--color-danger-dark);
-        background-color: var(--color-danger-dark);
-        color: var(--color-white) !important;
-        text-decoration: none;
-    }
+.btn:hover {
+    border: 1px solid var(--color-danger-dark);
+    background-color: var(--color-danger-dark);
+    color: var(--color-white) !important;
+    text-decoration: none;
+}
 
-    .small {
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
-        padding: 10.6px 24px;
-        border-radius: 20px;
-    }
+.small {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10.6px 24px;
+    border-radius: 20px;
+}
 
+.medium {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    padding: 22px 55px;
+    border-radius: 31px;
+}
+
+.more {
+    height: 62px;
+    width: 189px;
+    border-radius: 31px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.header {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14.54px;
+    padding: 16px 40px;
+    text-align: center;
+    border-radius: 27px;
+}
+
+/* small screen */
+@media only screen and (max-width: 1080px) {
     .medium {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        text-align: center;
-        padding: 14.4px 32px;
-        border-radius: 25px;
+        font-size: 12px;
+        line-height: 15px;
+        padding: 16px 40px;
+        border-radius: 31px;
     }
 
-    .header {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 0.8rem;
-        line-height: 14.54px;
-        padding: 16px 40px;
-        text-align: center;
+    .more {
+        height: 47px;
+        width: 144px;
         border-radius: 27px;
-        max-width: 500px;
+        font-size: 12px;
+        line-height: 15px;
     }
+}
+
 </style>

@@ -14,7 +14,7 @@
                 :date="result.createdAt" />
         </div>
         <loadingb v-if="loading"/>
-        <div class="blog-loadmore" v-if="loading==false & limit*page<total & blogs!=null"><mainbutton type="button" size="medium" :onClick="loadMoreBlogs">Load more Blogs</mainbutton></div>
+        <div class="blog-loadmore" v-if="loading==false & limit*page<total & blogs!=null"><mainbutton type="button" size="medium" :onClick="loadMoreBlogs">Load More Blogs</mainbutton></div>
     </div>
 </template>
 

@@ -1,13 +1,11 @@
 <template>
-    <div class="blog-card">
-        <div class="blog-card-image">
+    <div class="casestudy-card">
+        <div class="casestudy-card-image">
             <img :src="featuredImage" alt="ima"/>
         </div>
-        <div class="blog-card-content">
-            <p class="blog-card-content-date">{{getCustomDate()}}</p>
-            <p class="blog-card-content-header">{{title}}</p>
-            <p class="blog-card-content-description">{{description}}</p>
-            <button class="blog-card-content-button" @click.prevent="goToBlog">Read Post</button>
+        <div class="casestudy-card-content">
+            <p class="casestudy-card-content-title">{{title}}</p>
+            <button class="casestudy-card-content-button" @click.prevent="goTocasestudy">Read Case Study</button>
         </div>
     </div>
 </template>
@@ -51,64 +49,59 @@ export default {
             let newDate = `${dt} ${month}, ${year}`
             return newDate
         },
-        goToBlog() {
-            this.$router.push(`/blog/${this.slug}`)
+        goTocasestudy() {
+            this.$router.push(`/casestudies/${this.slug}`)
         }
     },
 }
 </script>
 
 <style scoped>
-.blog-card {
+.casestudy-card {
     grid-column: span 6;
-}
-
-.blog-card-image {
-    width: 100%;
-    height: 390px;
-}
-
-.blog-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     border-radius: 20px;
 }
 
-.blog-card-content-date {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 227.7%;
-    color: var(--color-dark);
-    opacity: 0.5;
-    margin-top: 26px;
+.casestudy-card-image {
+    width: 100%;
+    height: 377px;
 }
 
-.blog-card-content-header {
-    margin-top: 5px;
+.casestudy-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.casestudy-card-content {
+    padding: 43px 60px 47px;
+    background-color: var(--color-white);
+    border-radius: 0 0 20px 20px;
+}
+
+.casestudy-card:hover .casestudy-card-content {
+    background-color: var(--color-company);
+}
+
+.casestudy-card-content-title {
     font-style: normal;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 143.2%;
     color: var(--color-company);
+    margin-bottom: 20px;
 }
 
-.blog-card-content-description {
-    margin-top: 15px;
-    margin-bottom: 30px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 227.7%;
-    color: var(--color-dark);
+.casestudy-card:hover .casestudy-card-content-title {
+    color: var(--color-white);
 }
 
-.blog-card-content-button {
+.casestudy-card-content-button {
     text-decoration: none;
     border: 1px solid var(--color-danger);
-    background: var(--color-gray);
     color: var(--color-danger);
+    background-color: var(--color-white);
     border-radius: 31px;
     font-style: normal;
     font-weight: normal;
@@ -119,39 +112,50 @@ export default {
     cursor: pointer;
 }
 
-.blog-card-content-button:hover {
+.casestudy-card:hover .casestudy-card-content-button {
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    background-color: var(--color-company);
+}
+
+.casestudy-card-content-button:hover {
     text-decoration: none;
     background: var(--color-danger);
     color: var(--color-white);
 }
 
-.blogml {
+.casestudy-card:hover .casestudy-card-content-button:hover {
+    border: 1px solid var(--color-white);
+    color: var(--color-company);
+    background-color: var(--color-white);
+}
+
+.casestudyml {
     margin-left: 6px;
 }
 
 /* small screen */
 @media only screen and (max-width: 800px) {
-    .blog-card-image {
-        height: 270px;
+    .casestudy-card-image {
+        height: 245px;
     }
 
-    .blog-card-content-date {
+    .casestudy-card-content {
+        padding: 28px 32px 32px;
+    }
+
+    .casestudy-card-content-date {
         font-size: 12px;
         line-height: 227.7%;
         margin-top: 20px;
     }
 
-    .blog-card-content-header {
+    .casestudy-card-content-title {
         font-size: 22px;
         line-height: 143.2%;
     }
 
-    .blog-card-content-description {
-        font-size: 12px;
-        line-height: 227.7%;
-    }
-
-    .blog-card-content-button {
+    .casestudy-card-content-button {
         width: 157px;
         height: 51.5px;
     }

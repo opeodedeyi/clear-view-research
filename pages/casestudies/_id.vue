@@ -8,6 +8,26 @@
                 <img :src="projectDetails[0].featuredImage" alt="">
             </div>
             <div class="project-main-content" v-html="projectDetails[0].details"></div>
+ 
+            <div class="project-learn-more" v-if="projectDetails[0].learnMore!=null">
+                <div class="project-hl"></div>
+                <p class="project-learn-more-title">Please find out more about our YE2030</p>
+                <div class="project-readmore"><mainbutton size="more" type="btn" :onClick="readMore">Read More</mainbutton></div>
+            </div>
+
+            <div class="project-read-more" v-if="moreProjects!=null">
+                <div class="project-hl2"></div>
+                <p class="project-read-more-title">Other Case Studies</p>
+                <div class="project-jumbo-cards">
+                    <casestudycard
+                        v-for="(result, index) in moreProjects"
+                        :key="index"
+                        :slug="result.slug"
+                        :featuredImage="result.featuredImage"
+                        :title="result.title"
+                        :date="result.createdAt" />
+                </div>
+            </div>
         </div>
         <loadingb v-else-if="projectDetails===null"/>
     </div>
@@ -17,21 +37,50 @@
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import loadingb from "@/components/utilities/loadingb";
+import casestudycard from "@/components/utilities/casestudycard";
+import mainbutton from "@/components/utilities/mainbutton";
 
 export default {
     data() {
         return {
             projectDetails: null,
-            title: 'case study'
+            title: 'case study',
+            moreProjects: null,
+            limit: 2
         }
     },
     head: {
         title: `Clearview research casestudy`,
     },
     components: {
-        loadingb
+        loadingb,
+        mainbutton,
+        casestudycard
     },
     methods: {
+        async getTwoProjects(limit = this.limit, skip = 0) {
+            this.loading = true
+            var response = await this.$contentful.client.getEntries({
+                content_type: 'projects',
+                order: '-sys.createdAt',
+                limit,
+                skip
+            })
+            let projects = response.items;
+
+            projects = projects.map((item) => {
+                const { id, createdAt } = item.sys;
+                const { slug, title } = item.fields;
+                const featuredImage = item.fields.featuredImage.fields.file.url
+                return{
+                    id, slug, title, featuredImage, createdAt
+                }
+            })
+            this.total = response.total
+            this.loading = false
+            console.log(projects);
+            return this.moreProjects = projects;
+        },
         getCustomDate(passedDate) {
             const date = new Date(passedDate);
             let year = date.getFullYear();
@@ -108,22 +157,26 @@ export default {
                 }
 
                 const { id, createdAt } = item.sys;
-                const { slug, title } = item.fields;
+                const { slug, title, learnMore } = item.fields;
                 const featuredImage = item.fields.featuredImage.fields.file.url
                 const content = item.fields.details;
                 const details = documentToHtmlString(content, renderOptions)
                 const formattedDate = this.getCustomDate(createdAt)
 
                 return{
-                    id, slug, title, details, featuredImage, formattedDate
+                    id, slug, title, details, featuredImage, formattedDate, learnMore
                 }
             })
             this.projectDetails = project
             console.log(project);
+        },
+        async readMore() {
+            document.location.href = this.projectDetails[0].learnMore;
         }
     },
     mounted() {
         this.getOneProject(this.$route.params.id)
+        this.getTwoProjects()
     }
 }
 </script>
@@ -186,6 +239,66 @@ export default {
     text-decoration: underline;
 }
 
+.project-learn-more {
+    width: 100%;
+    padding: 0 200px;
+    margin-bottom: 76px;
+}
+
+.project-hl {
+    height: 1px;
+    background-color: var(--color-danger);
+    width: 100%;
+    margin-bottom: 91px;
+}
+
+.project-learn-more-title {
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 118%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.project-readmore {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.project-read-more {
+    padding: 0 78px;
+}
+
+.project-hl2 {
+    height: 1px;
+    background-color: var(--color-danger);
+    width: 100%;
+    margin-bottom: 61px;
+}
+
+.project-read-more-title {
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 118%;
+    margin-bottom: 35px;
+}
+
+.project-jumbo-cards {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 200px));
+    gap: 48px 24px;
+    width: 100%;
+    margin-bottom: 101px;
+}
+
 /* small screen */
 @media only screen and (max-width: 1080px) {
     .project-main {
@@ -216,6 +329,46 @@ export default {
 
     .project-main-image {
         height: 424px;
+    }
+
+    .project-learn-more {
+        padding: 0 30px;
+        margin-bottom: 66px;
+    }
+
+    .project-hl {
+        margin-bottom: 53px;
+    }
+
+    .project-learn-more-title {
+        font-size: 20px;
+        line-height: 168.5%;
+        margin-bottom: 26px;
+    }
+
+    .project-read-more {
+        padding: 0 30px;
+    }
+
+    .project-hl2 {
+        margin-bottom: 56px;
+    }
+
+    .project-read-more-title {
+        font-size: 25px;
+        line-height: 26px;
+        margin-bottom: 38px;
+    }
+
+    .project-jumbo-cards {
+        margin-bottom: 77px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .project-jumbo-cards {
+        grid-template-columns: repeat(6, minmax(auto, 150px));
+        gap: 50px 24px;
     }
 }
 </style>

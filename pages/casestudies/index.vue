@@ -1,19 +1,16 @@
 <template>
     <div class="casestudies">
-        <genpagetitle
-            jumbotitle="CLEARVIEW RESEARCH"
-            jumbodescription="CASE STUDIES"
-            jumboimage="casestudy.png"
-        />
+        <div class="casestudies-title">
+            Case Studies
+        </div>
         <div class="casestudies-jumbo-cards" v-if="projects != null">
-            <!-- <altcard
-                typeofcard="soop"
+            <casestudycard
                 v-for="(result, index) in projects"
                 :key="index"
                 :slug="result.slug"
                 :featuredImage="result.featuredImage"
                 :title="result.title"
-                :date="result.createdAt" /> -->
+                :date="result.createdAt" />
         </div>
         <loadingb v-if="loading"/>
         <div class="casestudies-loadmore" v-if="loading==false & limit*page<total & projects!=null"><mainbutton type="button" size="medium" :onClick="loadMoreProjects">Load more Casestudies</mainbutton></div>
@@ -22,14 +19,14 @@
 
 <script>
 import genpagetitle from "@/components/utilities/genpagetitle";
-// import altcard from "@/components/utilities/altcard";
+import casestudycard from "@/components/utilities/casestudycard";
 import mainbutton from "@/components/utilities/mainbutton";
 import loadingb from "@/components/utilities/loadingb";
 
 export default {
     components: {
         genpagetitle,
-        // altcard,
+        casestudycard,
         mainbutton,
         loadingb
     },
@@ -105,16 +102,27 @@ export default {
 
 <style>
 .casestudies {
-    margin-top: 72px;
+    margin-top: 138px;
+}
+
+.casestudies-title {
+    width: 100%;
+    padding: 70px 78px 80px;
+    text-align: center;
+    font-family: "Questrial";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 65px;
+    line-height: 77px;
 }
 
 .casestudies-jumbo-cards {
     display: grid;
     grid-template-columns: repeat(12, minmax(auto, 200px));
-    gap: 24px;
+    gap: 48px 24px;
     width: 100%;
-    padding: 0 64px;
-    margin-bottom: 80px;
+    padding: 0 78px;
+    margin-bottom: 84px;
 }
 
 .casestudies-loadmore {
@@ -128,17 +136,40 @@ export default {
     padding: 0 64px;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1080px) {
+    .casestudies {
+        margin-top: 110px;
+    }
+
     .casestudies-jumbo-cards {
-        padding: 0 20px;
+        padding: 0 30px;
+        margin-bottom: 78px;
+    }
+
+    .casestudies-title {
+        width: 100%;
+        padding: 40px 30px 60px;
+        font-size: 45px;
+        line-height: 128.5%;
     }
 }
 
-/* small screen */
+@media only screen and (max-width: 950px) {
+    .casestudies-jumbo-cards {
+        padding: 0 30px;
+        margin-bottom: 78px;
+    }
+
+    .casestudies-loadmore {
+        padding: 0 20px;
+        margin-bottom: 32px;
+    }
+}
+
 @media only screen and (max-width: 800px) {
     .casestudies-jumbo-cards {
         grid-template-columns: repeat(6, minmax(auto, 150px));
-        gap: 24px;
+        gap: 50px 24px;
     }
 }
 </style>
