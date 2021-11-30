@@ -1,11 +1,12 @@
 <template>
     <div class="project-main">
         <div v-if="projectDetails!=null" class="project-main-cont">
+            <div class="project-title">
+                <div class="project-titlee">{{projectDetails[0].title}}</div>
+            </div>
             <div class="project-main-image">
                 <img :src="projectDetails[0].featuredImage" alt="">
             </div>
-            <p class="project-main-title">{{projectDetails[0].title}}</p>
-            <p class="project-main-date">{{projectDetails[0].formattedDate}}</p>
             <div class="project-main-content" v-html="projectDetails[0].details"></div>
         </div>
         <loadingb v-else-if="projectDetails===null"/>
@@ -99,8 +100,7 @@ export default {
                         [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
                         return `<div class="content-img"><img
                             src="https:${node.data.target.fields.file.url}"
-                            height="${node.data.target.fields.file.details.image.height}"
-                            width="${node.data.target.fields.file.details.image.width}"
+                            width='100%'
                             alt="${node.data.target.fields.description}"
                             /></div>`;
                         },
@@ -130,51 +130,50 @@ export default {
 
 <style>
 .project-main {
-    margin-top: 104px;
-    padding: 0 64px;
-    margin-bottom: 82px;
+    margin-top: 138px;
 }
 
 .project-main-cont {
     width: 100%;
 }
 
+.project-title {
+    width: 100%;
+    padding: 70px 78px 80px;
+}
+
+.project-titlee {
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 118%;
+    text-align: center;
+}
+
 .project-main-image {
     width: 100%;
-    height: 500px;
+    height: 439px;
 }
 
 .project-main-image img {
-    /* position: absolute; */
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.project-main-title {
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 54px;
-    color: var(--color-company);
-    margin-top: 32px;
-}
-
-.project-main-date {
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 26px;
-    margin-top: 20px;
-    color: var(--color-blog-gray);
-}
-
 .project-main-content {
-    margin-top: 24px;
+    margin-top: 66px;
+    padding: 0 200px 42px;
 }
 
 .project-main-content p {
-    font-size: 16px;
-    line-height: 26px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 227.7%;
     color: var(--color-dark);
+    padding: 20px 0;
 }
 
 .project-main-content a {
@@ -188,25 +187,35 @@ export default {
 }
 
 /* small screen */
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1080px) {
     .project-main {
-        margin-top: 96px;
-        padding: 0 20px;
+        margin-top: 110px;
         margin-bottom: 41px;
     }
 
+    .project-title {
+        width: 100%;
+        padding: 41px 30px 70px;
+    }
+
+    .project-titlee {
+        font-size: 35px;
+        line-height: 118%;
+    }
+
+    .project-main-content {
+        margin-top: 59px;
+        padding: 0 30px 31px;
+    }
+
+    .project-main-content p {
+        font-size: 12px;
+        line-height: 227.7%;
+        padding: 12px 0;
+    }
+
     .project-main-image {
-        height: 360px;
-    }
-
-    .project-main-title {
-        font-size: 18px;
-        line-height: 28px;
-        margin-top: 24px;
-    }
-
-    .project-main-date {
-        margin-top: 8px;
+        height: 424px;
     }
 }
 </style>
