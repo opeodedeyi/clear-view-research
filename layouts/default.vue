@@ -1,8 +1,8 @@
 <template>
   <div>
-    <app-header/>
+    <app-header />
     <Nuxt />
-    <app-footer/>
+    <app-footer @show-menu="showMenu()"/>
   </div>
 </template>
 
@@ -11,9 +11,21 @@ import header from "~/components/header/header";
 import footer from "~/components/footer/footer";
 
 export default {
+  props: {
+    isvisible: {
+      type: Boolean,
+      required: false
+    }
+  },
   components: {
     'app-header': header,
     'app-footer': footer
+  },
+  props: ['onAppSend'],
+  methods: {
+    showMenu() {
+      console.log("clicked");
+    }
   }
 }
 </script>

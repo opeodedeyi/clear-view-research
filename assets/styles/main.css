@@ -1,26 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,600;1,400;1,600&family=Questrial&display=swap');
 
 :root {
     font-size: 16px;
     --color-white: #ffffff;
-    --color-blog-gray: #979797;
-    --color-text-header: #F2F4F6;
-    --color-gray-form: #F3F4F6;
-    --color-form-border: #D1D5DB;
-    --color-carousel: #D9DBE1;
-    --color-gray: #C4C4C4;
+    --color-gray: #F2F4F6;
     --color-dark: #000000;
     --color-danger: #E35326;
-    --color-company-light: #2B4566;
+    --color-danger-dark: #D5481C;
     --color-company: #002047;
-    --color-testimonial-brace: #E35326; /* #2EC5CE */
+    --color-company-dark: #001A3A;
     --rgba-backdrop: 0, 0, 0;
 }
 
 html {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
     font-size: 16px;
-    word-spacing: 1px;
+    font-weight: 400;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
@@ -29,9 +24,9 @@ html {
 }
 
 html, body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Libre Franklin', sans-serif;
     margin: 0;
-    background-color: var(--color-white);
+    background-color: var(--color-gray);
 }
 
 /* width */
@@ -63,8 +58,20 @@ html, body {
     padding: 0 16px;
 }
 
+.plr-header { 
+    padding: 0 25px;
+}
+
+.plr-footer-bottom-header {
+    padding: 0 25px;
+}
+
 .pl16 { 
     padding-left: 16px;
+}
+
+.pl25 { 
+    padding-left: 25px;
 }
 
 .mb-10 {

@@ -1,13 +1,10 @@
 <template>
     <div class="blog">
-        <genpagetitle
-            jumbotitle="CLEARVIEW RESEARCH"
-            jumbodescription="Our Blog"
-            jumboimage="blog.png"
-        />
+        <div class="blog-title">
+            Blog
+        </div>
         <div class="blog-jumbo-cards" v-if="blogs != null">
-            <altcard
-                typeofcard="blog"
+            <blogcard
                 v-for="(result, index) in blogs"
                 :key="index"
                 :slug="result.slug"
@@ -23,14 +20,14 @@
 
 <script>
 import genpagetitle from "@/components/utilities/genpagetitle";
-import altcard from "@/components/utilities/altcard";
+import blogcard from "@/components/utilities/blogcard";
 import mainbutton from "@/components/utilities/mainbutton";
 import loadingb from "@/components/utilities/loadingb";
 
 export default {
     components: {
         genpagetitle,
-        altcard,
+        blogcard,
         mainbutton,
         loadingb
     },
@@ -107,7 +104,18 @@ export default {
 
 <style>
 .blog {
-    margin-top: 72px;
+    margin-top: 138px;
+}
+
+.blog-title {
+    width: 100%;
+    padding: 70px 78px 80px;
+    text-align: center;
+    font-family: "Questrial";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 65px;
+    line-height: 77px;
 }
 
 .blog-jumbo-cards {
@@ -115,8 +123,8 @@ export default {
     grid-template-columns: repeat(12, minmax(auto, 200px));
     gap: 48px 24px;
     width: 100%;
-    padding: 0 64px;
-    margin-bottom: 80px;
+    padding: 0 78px;
+    margin-bottom: 84px;
 }
 
 .blog-loadmore {
@@ -130,24 +138,40 @@ export default {
     padding: 0 64px;
 }
 
-/* small screen */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1080px) {
+    .blog {
+        margin-top: 110px;
+    }
+
     .blog-jumbo-cards {
-        grid-template-columns: repeat(6, minmax(auto, 150px));
-        gap: 32px 24px;
+        padding: 0 30px;
+        margin-bottom: 78px;
+    }
+
+    .blog-title {
+        width: 100%;
+        padding: 40px 30px 60px;
+        font-size: 45px;
+        line-height: 128.5%;
     }
 }
 
-/* small screen */
 @media only screen and (max-width: 950px) {
     .blog-jumbo-cards {
-        padding: 0 20px;
-        margin-bottom: 32px;
+        padding: 0 30px;
+        margin-bottom: 78px;
     }
 
     .blog-loadmore {
         padding: 0 20px;
         margin-bottom: 32px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .blog-jumbo-cards {
+        grid-template-columns: repeat(6, minmax(auto, 150px));
+        gap: 50px 24px;
     }
 }
 </style>

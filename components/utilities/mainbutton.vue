@@ -1,13 +1,13 @@
 <template>
-    <nuxt-link v-if="type==='li'" :to="to" tag="li" class="pl16">
-        <a :class="[size, mode]">
+    <nuxt-link v-if="type==='li'" :to="to" tag="li" class="pl25 spc">
+        <a :class="size" class="btn">
             <slot/>
         </a>
     </nuxt-link>
-    <nuxt-link v-else-if="type==='link'" :to="to" :class="[size, mode]">
+    <nuxt-link v-else-if="type==='link'" :to="to" :class="size" class="btn">
         <slot/>
     </nuxt-link>
-    <button v-else :class="[size, mode]" @click.prevent="onClick">
+    <button v-else :class="size" class="btn" @click.prevent="onClick">
         <slot/>
     </button>
 </template>
@@ -19,11 +19,6 @@ export default {
             type: String,
             required: false,
             default: "small"
-        },
-        mode: {
-            type: String,
-            required: false,
-            default: "normal"
         },
         type: {
             type: String,
@@ -60,40 +55,16 @@ export default {
         align-items: center;
     }
 
-    .normal {
-        border: 1px solid var(--color-company);
-        background-color: var(--color-company);
+    .btn {
+        border: 1px solid var(--color-danger);
+        background-color: var(--color-danger);
         color: var(--color-white) !important;
     }
 
-    .normal:hover {
-        border: 1px solid var(--color-company-light);
-        background-color: var(--color-company-light);
-        text-decoration: none;
-    }
-
-    .inverse {
-        border: 1px solid var(--color-white);
-        background-color: var(--color-white);
-        color: var(--color-company) !important;
-    }
-
-    .inverse:hover {
-        border: 1px solid var(--color-white);
-        background-color: var(--color-company);
+    .btn:hover {
+        border: 1px solid var(--color-danger-dark);
+        background-color: var(--color-danger-dark);
         color: var(--color-white) !important;
-        text-decoration: none;
-    }
-
-    .special {
-        border: 1px solid var(--color-white);
-        /* background-color: var(--color-dark); */
-        color: var(--color-white) !important;
-    }
-
-    .special:hover {
-        background-color: var(--color-white);
-        color: var(--color-dark) !important;
         text-decoration: none;
     }
 
@@ -115,14 +86,14 @@ export default {
         border-radius: 25px;
     }
 
-    .large {
+    .header {
         font-style: normal;
         font-weight: normal;
-        font-size: 16px;
+        font-size: 0.8rem;
+        line-height: 14.54px;
+        padding: 16px 40px;
         text-align: center;
-        width: 100%;
-        height: 50px;
-        border-radius: 25px;
+        border-radius: 27px;
         max-width: 500px;
     }
 </style>

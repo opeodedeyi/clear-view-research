@@ -6,14 +6,14 @@
             jumboimage="casestudy.png"
         />
         <div class="casestudies-jumbo-cards" v-if="projects != null">
-            <altcard
+            <!-- <altcard
                 typeofcard="soop"
                 v-for="(result, index) in projects"
                 :key="index"
                 :slug="result.slug"
                 :featuredImage="result.featuredImage"
                 :title="result.title"
-                :date="result.createdAt" />
+                :date="result.createdAt" /> -->
         </div>
         <loadingb v-if="loading"/>
         <div class="casestudies-loadmore" v-if="loading==false & limit*page<total & projects!=null"><mainbutton type="button" size="medium" :onClick="loadMoreProjects">Load more Casestudies</mainbutton></div>
@@ -22,14 +22,14 @@
 
 <script>
 import genpagetitle from "@/components/utilities/genpagetitle";
-import altcard from "@/components/utilities/altcard";
+// import altcard from "@/components/utilities/altcard";
 import mainbutton from "@/components/utilities/mainbutton";
 import loadingb from "@/components/utilities/loadingb";
 
 export default {
     components: {
         genpagetitle,
-        altcard,
+        // altcard,
         mainbutton,
         loadingb
     },

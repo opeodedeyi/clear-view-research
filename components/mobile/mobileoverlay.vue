@@ -26,13 +26,8 @@
         background-color: rgba(var(--rgba-backdrop), 0.6);
     }
 
-    /* Small screens */
-    @media only screen and (max-width: 999px) {
-        
-    }
-
     /* Large screens */
-    @media only screen and (min-width: 1000px) {
+    @media only screen and (min-width: 1081px) {
         .container {
             display: none;
         }

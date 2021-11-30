@@ -1,19 +1,23 @@
 <template>
     <div class="nav" :class="{ open: isvisible }">
         <div class="nav-header">
-            <nuxt-link to="/" class="nav-header-logo">
-                <img src="~/assets/images/logo.png" alt="" />
-            </nuxt-link>
+            <p class="nav-header-logo">Menu</p>
             <div class="nav-header-cancle" @click="cancel">
                 <img src="~/assets/svg/cancelwhite.svg" alt="" />
             </div>
         </div>
         <ul class="nav-main">
-            <li class="nav-item"><nuxt-link to="/expertise"><div  class="nav-item-image"><img src="~/assets/svg/people.svg" alt=""></div> <div>Expertise</div></nuxt-link></li>
-            <li class="nav-item"><nuxt-link to="/casestudies"><div class="nav-item-image"><img src="~/assets/svg/briefcase.svg" alt=""></div> <div>Case studies</div></nuxt-link></li>
-            <li class="nav-item"><nuxt-link to="/blog"><div class="nav-item-image"><img src="~/assets/svg/book.svg" alt=""></div> <div>Blog</div></nuxt-link></li>
-            <li class="nav-item"><nuxt-link to="/aboutus"><div class="nav-item-image"><img src="~/assets/svg/bars.svg" alt=""></div> <div>About Us</div></nuxt-link></li>
-            <li class="nav-item"><nuxt-link to="/contactus"><div class="nav-item-image"><img src="~/assets/svg/message.svg" alt=""></div> <div>Contact Us</div></nuxt-link></li>
+            <li class="nav-item"><nuxt-link to="/">Home</nuxt-link></li>
+            <li class="nav-item"><nuxt-link to="/aboutus">About Us</nuxt-link></li>
+            <li class="nav-item"><nuxt-link to="/expertise">Our Expertise</nuxt-link></li>
+            <li class="nav-item"><nuxt-link to="/casestudies">Case Studies</nuxt-link></li>
+            <li class="nav-item"><nuxt-link to="/blog">Blog</nuxt-link></li>
+        </ul>
+        <ul class="nav-social">
+            <li class="nav-social-item mlrico"><a href="http://google.com"><img src="~/assets/svg/instagramicon.svg" alt="" /></a></li>
+            <li class="nav-social-item mlrico"><a href="http://google.com"><img src="~/assets/svg/twittericon.svg" alt="" /></a></li>
+            <li class="nav-social-item mlrico"><a href="http://google.com"><img src="~/assets/svg/facebookicon.svg" alt="" /></a></li>
+            <li class="nav-social-item mlrico"><a href="http://google.com"><img src="~/assets/svg/linkedinicon.svg" alt="" /></a></li>
         </ul>
     </div>
 </template>
@@ -35,23 +39,33 @@ export default {
 </script>
 
 <style scoped>
-.nav-item a {
-  position: relative;
+.mlrico {
+    margin: 0 3.5px;
+}
+.nav {
+    font-family: 'Questrial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* .nav-item a {
+    position: relative;
 }
 
 .nav-item a.nuxt-link-exact-active:after,
 .nav-item a:hover:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: -20px;
-  transform: translateY(-50%);
-  width: 6px;
-  height: 6px;
-  border-radius: 3px;
-  background: var(--color-white);
-}
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--color-white);
+} */
 
 .nav {
     display: none;
@@ -63,7 +77,7 @@ export default {
     z-index: 101;
     width: 100%;
     max-width: 420px;
-    padding: 0 20px;
+    padding: 0 30px;
     background: var(--color-company);
     color: var(--color-white);
     transition: right .3s;
@@ -76,7 +90,7 @@ export default {
 }
 
 .nav-header {
-    height: 72px;
+    height: 110px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -85,32 +99,36 @@ export default {
     align-items: center;
 }
 
-.nav-header-logo {
-    height: 40px;
+.nav-header p,
+.nav-main li a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5625rem;
 }
 
 .nav-header-cancle {
     height: 20px;
 }
 
-.nav-header-logo img,
 .nav-header-cancle img {
     height: 100%;
 }
 
 .nav-main {
-    margin-top: 120px;
     padding: 0;
     list-style: none;
+    text-align: center;
+    width: 100%;
 }
 
 .nav-item {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .nav-item-image {
@@ -133,6 +151,21 @@ export default {
     justify-content: flex-start;
     align-content: center;
     align-items: center;
+}
+
+.nav-social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    height: 88px;
+    padding: 0;
+}
+
+.nav-social-item {
+    text-decoration: none;
+    list-style: none;
 }
 
 /* -- slideRight -- */
@@ -175,7 +208,7 @@ export default {
 }
 
 /* small screen */
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1080px) {
     .nav {
         display: flex;
     }

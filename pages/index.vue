@@ -1,53 +1,11 @@
 <template>
   <div class="homepage">
     <videojumbotron/>
-    <weojumbotron 
-      :weempowerorganizations="weempowerorganizations"/> <!-- WE EMPOWER ORGANIZATIONS SECTION -->
-    <div class="soop-jumbotron"> <!-- SOME OF OUR PROJECTS SECTION -->
-      <p class="soop-jumbo-header">SOME OF OUR PROJECTS</p>
-      <p class="soop-jumbo-title">Read some of our case studies</p>
-      <div class="soop-jumbo-cards" v-if="caseStudies != null">
-        <altcard
-          typeofcard="soop"
-          v-for="(result, index) in caseStudies"
-          :key="index"
-          :slug="result.slug"
-          :featuredImage="result.featuredImage"
-          :title="result.title"
-          :description="result.description"
-          :date="result.createdAt" />
-      </div>
-      <loadingcard v-else/>
-      <div class="soop-jumbo-cta">
-          <mainbutton type="link" to="/casestudies" size="medium">Read more case studies</mainbutton>
-      </div>
-    </div>
-    <brands
-      header="REFRENCES"
-      title="Our insights and projects have been refrenced in"
-      :logos="refrences" /> <!-- REFRENCES SECTION -->
-    <wwdjumbotron
-      :whatWeDo="whatwedo" /> <!-- WHAT WE DO SECTION -->
-    <brands
-      header="PARTNERS"
-      title="Our clients and friends"
-      :logos="partners" /> <!-- PARTNERS SECTION -->
-    <testimonials
-      :testimonials="testimonials" /> <!-- TESTIMONIALS SECTION -->
-    <closingstatement/>
   </div>
 </template>
 
 <script>
 import videojumbotron from "@/components/general/videojumbotron";
-import weojumbotron from "@/components/general/weojumbotron";
-import brands from "@/components/general/brands";
-import wwdjumbotron from "@/components/general/wwdjumbotron";
-import testimonials from "@/components/general/testimonials";
-import closingstatement from "@/components/general/closingstatement";
-import mainbutton from "@/components/utilities/mainbutton";
-import altcard from "@/components/utilities/altcard";
-import loadingcard from "@/components/utilities/loadingcard";
 
 export default {
   data() {
@@ -77,15 +35,7 @@ export default {
     }
   },
   components: {
-    videojumbotron,
-    weojumbotron,
-    brands,
-    wwdjumbotron,
-    testimonials,
-    closingstatement,
-    mainbutton,
-    altcard,
-    loadingcard
+    videojumbotron
   },
   methods: {
     async getCaseStudies(limit = 2, skip = 0) {

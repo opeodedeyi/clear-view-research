@@ -27,7 +27,6 @@ import footertwo from "~/components/footer/footertwo";
 
 export default {
     components: {
-        footertwo,
         genpagetitle,
         mainbutton,
         maininput
@@ -58,8 +57,7 @@ export default {
             console.log("submitted");
             this.$refs.form.submit()
         }
-    },
-    layout: 'contact'
+    }
 }
 </script>
 

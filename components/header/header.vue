@@ -1,15 +1,15 @@
 <template>
   <header class="header" :class="{ extraStyling: page != 'index' || ses }">
     <nuxt-link to="/" class="header-logo">
-      <img src="~/assets/images/logo.png" alt="" />
+      <img src="~/assets/svg/logo.svg" class="logo-color" alt="" />
     </nuxt-link>
     <div class="header-content desk">
       <ul class="header-content-links">
-        <li class="header-item"><nuxt-link to="/expertise" class="plr16">Expertise</nuxt-link></li>
-        <li class="header-item"><nuxt-link to="/casestudies" class="plr16">Case studies</nuxt-link></li>
-        <li class="header-item"><nuxt-link to="/blog" class="plr16">Blog</nuxt-link></li>
-        <li class="header-item"><nuxt-link to="/aboutus" class="plr16">About us</nuxt-link></li>
-        <mainbutton type="li" to="/contactus" size="small">Contact us</mainbutton>
+        <li class="header-item"><nuxt-link to="/aboutus" class="plr-header">About Us</nuxt-link></li>
+        <li class="header-item"><nuxt-link to="/expertise" class="plr-header">Our Expertise</nuxt-link></li>
+        <li class="header-item"><nuxt-link to="/casestudies" class="plr-header">Case Studies</nuxt-link></li>
+        <li class="header-item"><nuxt-link to="/blog" class="plr-header">Blog</nuxt-link></li>
+        <mainbutton type="li" to="/contactus" size="header">Contact Us</mainbutton>
       </ul>
     </div>
     <div class="header-menu-bar mob" @click="showMenuBar = true">
@@ -72,31 +72,13 @@ export default {
 </script>
 
 <style scoped>
-.header-item a {
-  position: relative;
-}
-
-.header-item a.nuxt-link-exact-active:after,
-.header-item a:hover:after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 4px;
-  border-radius: 2px;
-  background: var(--color-white);
-}
-
 .header {
-  height: 72px; /* 5.5rem */
+  height: 138px; /* 5.5rem */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0 64px;
+  padding: 0 78px;
   z-index: 99;
   display: flex;
   flex-direction: row;
@@ -107,6 +89,10 @@ export default {
 
 a {
   text-decoration: none;
+}
+
+.logo-color {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(305deg) brightness(103%) contrast(103%);
 }
 
 .header-content ul {
@@ -128,13 +114,14 @@ a {
 }
 
 .header-content-links a {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-weight: 400;
   color: var(--color-white);
 }
 
 .header-menu-bar {
-  height: 16px;
+  height: 45px;
+  cursor: pointer;
 }
 
 .header-menu-bar img {
@@ -142,12 +129,16 @@ a {
 }
 
 .extraStyling {
-  background-color: var(--color-dark);
+  background-color: var(--color-gray);
 }
 
 .extraStyling a {
-  color: var(--color-white);
+  color: var(--color-dark);
   text-decoration: none;
+}
+
+.extraStyling .logo-color {
+  filter: invert(0%) sepia(0%) saturate(17%) hue-rotate(292deg) brightness(101%) contrast(106%);
 }
 
 .mob {
@@ -155,9 +146,10 @@ a {
 }
 
 /* small screen */
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1080px) {
   .header {
-    padding: 0 20px;
+    padding: 0 30px;
+    height: 110px;
   }
 
   .desk {
@@ -169,7 +161,7 @@ a {
   }
 
   .header-logo {
-    height: 40px;
+    height: 45px;
   }
 }
 </style>
