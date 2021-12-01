@@ -1,103 +1,195 @@
 <template>
     <div class="aboutus">
-        <genpagetitle
-            jumbotitle="CLEARVIEW RESEARCH"
-            jumbodescription="ABOUT US"
-            jumboimage="jumboimg1.webp"
-        />
-        <div class="aboutus-body">
-            <div class="aboutus-body-left">
-                <p class="mb-20">We assist corporations, lifestyle brands, charities, and governments in gaining access to unique and trustworthy audience insights, allowing them to make better decisions that solve complicated business challenges while also benefiting society as a whole.</p>
-                <p class="mb-20">Children, Generation Z, millennials, under-represented groups (e.g. those from Black, Asian, or other ethnic minority groups), and vulnerable groups are among the audiences with whom we engage and acquire consumer intelligence.</p>
-                <p class="mb-30">We've worked on projects in Australia, Brazil, and Spain, among other places on four continents. Starbucks UK, NHS England, the Vodafone Foundation, Unicef UK, and Tinder have all given us project briefs.</p>
-
-                <p class="aboutus-title">MISSION</p>
-                <p class="mb-30">To provide people from underrepresented and disadvantaged groups a voice in research.</p>
-
-                <p class="aboutus-title">VISION</p>
-                <p class="mb-30">To use research to empower individuals working for social, racial, and economic justice in society.</p>
+        <div class="aboutus-title">
+            <h4 class="aboutus-title-intro">We assist corporations to make better decisions</h4>
+            <div class="aboutus-title-sub">
+                <div class="aboutus-title-hl"></div>
+                <p class="aboutus-title-explain">These decisions solve complicated business challenges while also benefiting society as a whole.</p>
             </div>
-            <div class="aboutus-body-right">
-                <img src="~/assets/images/aboutus.webp" alt="">
-            </div>
+        </div>
+        <div class="aboutus-image"></div>
+        <div class="aboutus-content">
+            <div class="aboutus-content-hl mbhl"></div>
+            <p class="aboutus-content-text">Children, Generation Z, millennials, under-represented groups (e.g. those from Black, Asian, or other ethnic minority groups), and vulnerable groups are among the audiences with whom we engage and acquire consumer intelligence.</p>
+            <p class="aboutus-content-subtext">We've worked on projects in Australia, Brazil, and Spain, among other places on four continents. Starbucks UK, NHS England, the Vodafone Foundation, Unicef UK, and Tinder have all given us project briefs.</p>
+            <div class="aboutus-content-hl mthl"></div>
         </div>
     </div>
 </template>
 
 <script>
-import genpagetitle from "@/components/utilities/genpagetitle";
-
 export default {
     components: {
-        genpagetitle
+        
     },
     head: {
         title: 'About Clearview research',
-    },
-    data() {
-        return {
-            form: null
-        }
-    },
-    methods: {
     }
 }
 </script>
 
 <style>
 .aboutus {
-    margin-top: 72px;
+    margin-top: 138px;
 }
 
-.aboutus-body {
-    padding: 0 64px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content:flex-start;
-    align-items: center;
+.mbhl {
+    margin-bottom: 66px;
+}
+
+.mthl {
+    margin-top: 66px;
+}
+
+.aboutus-title-hl {
     width: 100%;
-}
-
-.aboutus-body-left {
-    font-size: 16px;
-    line-height: 28px;
-    width: 50%;
-    padding-right: 76px;
-}
-
-.aboutus-body-right {
-    width: 50%;
-}
-
-.aboutus-body-right img { 
-    width: 100%;
+    height: 1px;
+    background-color: var(--color-danger);
+    margin-bottom: 31px;
+    margin-top: 50px;
 }
 
 .aboutus-title {
-    color: var(--color-danger);
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 28px;
-    margin-bottom: 8px;
+    padding: 73px 200px 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
+.aboutus-title-intro {
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 65px;
+    line-height: 77px;
+    flex: 1;
+    margin-right: 60px;
+}
 
-/* small screen */
-@media only screen and (max-width: 950px) {
-    .aboutus-body {
-        padding: 0 20px;
+.aboutus-title-sub {
+    width: 330px;
+}
+
+.aboutus-title-explain {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 227.7%;
+}
+
+.aboutus-image {
+    background-image: url('~assets/images/aboutus.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 511px;
+    width: 100%;
+}
+
+.aboutus-content {
+    padding: 125px 235px 115px;
+}
+
+.aboutus-content-hl {
+    height: 1px;
+    background-color: var(--color-danger);
+    width: 100%;
+}
+
+.aboutus-content-text {
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 166.5%;
+    margin-bottom: 46px;
+}
+
+.aboutus-content-subtext {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 166.5%;
+}
+
+@media only screen and (max-width: 1350px) {
+    .aboutus-title {
+        padding: 73px 120px 100px;
+    }
+
+    .aboutus-content {
+        padding: 125px 200px 115px;
+    }
+}
+
+/* important screen */
+@media only screen and (max-width: 1080px) {
+    .mbhl {
+        margin-bottom: 38px;
+    }
+
+    .mthl {
+        margin-top: 52px;
+    }
+
+    .aboutus {
+        margin-top: 110px;
+    }
+
+    .aboutus-title {
+        padding: 53px 46px 70px;
         flex-direction: column;
     }
 
-    .aboutus-body-left {
-        width: 100%;
-        padding-right: 0;
-        text-align: center;
+    .aboutus-title-intro {
+        font-size: 45px;
+        line-height: 128.5%;
+        margin-right: 0;
     }
 
-    .aboutus-body-right {
-        display: none;
+    .aboutus-title-sub {
+        width: 100%;
+    }
+
+    .aboutus-title-hl {
+        margin-bottom: 26px;
+        margin-top: 44px;
+    }
+
+    .aboutus-title-explain {
+        font-size: 15px;
+        line-height: 227.7%;
+    }
+
+    .aboutus-content {
+        padding: 60px 46px 48px;
+    }
+
+    .aboutus-content-text {
+        font-size: 20px;
+        line-height: 175.5%;
+        margin-bottom: 12px;
+    }
+
+    .aboutus-content-subtext {
+        font-size: 15px;
+        line-height: 181.5%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .aboutus-image {
+        height: 381px;
+        background-image: url('~assets/images/aboutus-mobile.png');
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .aboutus-title-intro {
+        font-size: 34px;
+        line-height: 128.5%;
+        margin-right: 0;
     }
 }
 </style>
