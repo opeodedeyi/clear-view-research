@@ -181,7 +181,8 @@ export default {
 }
 
 .footer-bottom-header-menu-bar {
-    height: 45px;
+    height: 28px;
+    width: 21px;
     cursor: pointer;
 }
 

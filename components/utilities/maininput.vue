@@ -1,6 +1,6 @@
 <template>
     <div class="normal-form">
-        <label :for="name" class="mb1">
+        <label :for="name" class="label">
             {{name}}
         </label>
 
@@ -10,7 +10,6 @@
             type="text" 
             maxlength="50"
             :name="name" 
-            :placeholder="placeholder" 
             :value="value" 
             @input="$emit('input', $event.target.value) ">
         <!-- email input -->
@@ -18,14 +17,12 @@
             v-if="controlType === 'input' && inputType ==='email'" 
             type="email" 
             :name="name" 
-            :placeholder="placeholder" 
             :value="value" 
             @input="$emit('input', $event.target.value) ">
         <!-- textarea input -->
         <div class="textarea" v-if="controlType === 'textarea'">
             <textarea  
                 :name="name" 
-                :placeholder="placeholder"
                 :value="value"
                 @input="$emit('input', $event.target.value) ">
             </textarea>
@@ -65,8 +62,8 @@ export default {
 </script>
 
 <style scoped>
-.mb1 {
-    margin-bottom: 1px;
+.label {
+    margin-bottom: 15px;
 }
 
 .normal-form {
@@ -74,40 +71,43 @@ export default {
     flex-direction: column;
     flex-wrap: nowrap;
     width: 100%;
-    max-width: 500px;
-    margin-bottom: 16px;
+    margin-bottom: 30px;
 }
 
 .normal-form label {
     font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-    color: var(--color-company);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 150%;
+    color: var(--color-white);
 }
 
 input,
 textarea {
-    font-family: 'Inter';
+    font-family: 'Libre Franklin';
 }
 
 .normal-form input {
-    font-size: 15px;
-    color: var(--color-company);
+    font-size: 17px;
+    line-height: 150%;
+    color: var(--color-dark);
     padding: 10px 16px;
-    background-color: var(--color-gray-form);
-    border: 0.5px solid var(--color-form-border);
-    border-radius: 25px;
+    background-color: var(--color-white);
+    border: 0.5px solid var(--color-white);
+    border-radius: 5px;
     outline: none;
 }
 
 .normal-form .textarea {
     width: 100%;
-    font-size: .95rem;
-    color: var(--color-company);
+    font-size: 17px;
+    line-height: 150%;
+    color: var(--color-dark);
     padding: 10px 16px;
-    background-color: var(--color-gray-form);
-    border: 0.5px solid var(--color-form-border);
-    border-radius: 20px;
+    background-color: var(--color-white);
+    border: 0.5px solid var(--color-white);
+    border-radius: 5px;
     outline: none;
     display: flex;
     flex-direction: column;
@@ -117,12 +117,40 @@ textarea {
 textarea {
     height: 150px;
     width: 100%;
-    font-size: 15px;
-    color: var(--color-company);
-    background-color: var(--color-gray-form);
+    font-size: 17px;
+    line-height: 150%;
+    color: var(--color-dark);
+    background-color: var(--color-white);
     border: none;
     outline: none;
     resize: none;
     overflow: hidden;
+}
+
+@media only screen and (max-width: 1080px) {
+    .label {
+        margin-bottom: 10px;
+    }
+
+    .normal-form label {
+        font-size: 15px;
+        line-height: 187.7%;
+    }
+
+    .normal-form input {
+        font-size: 15px;
+        line-height: 187.7%;
+        padding: 12px 16px;
+    }
+
+    .normal-form .textarea {
+        font-size: 15px;
+        line-height: 187.7%;
+    }
+
+    textarea {
+        font-size: 15px;
+        line-height: 187.7%;
+    }
 }
 </style>
