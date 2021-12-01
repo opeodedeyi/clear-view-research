@@ -41,14 +41,60 @@
                 <li><p>used to administer andoperate prize draws and incentives; or</p></li>
                 <li><p>occasionally used to re-contact you to validate your responses (if youhave consented to us doing so).</p></li>
             </ul>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p>All of your responses to questions posed within surveys, interviews or solution labs are confidential. We will never intentionally disclose your personal information or individual survey responses to the client that commissioned the study or any third parties unless:</p>
+            <ul>
+                <li><p>you request or consent to share your identifying information and individual responses; or</p></li>
+                <li><p>in the rare but possible circumstance that the information is subject to disclosure pursuant to judicial or other government subpoenas, warrants, orders or for similar legal or regulatory requirements.</p></li>
+            </ul>
+            <p>We also collect your personal information for one of the following purposes:</p>
+            <ul>
+                <li><p>to correspond with you after you have contacted us;</p></li>
+                <li><p>to invite you to participate in research;</p></li>
+                <li><p>to confirm the details of the research you have agreed to take part in;</p></li>
+                <li><p>to conduct research with you;</p></li>
+                <li><p>to validate answers/views you gave in a recent research we conducted (if you have consented to us doing so);</p></li>
+                <li><p>to update and to ensure that our records of your personal information are correct (applicable to those consenting to be part of an ongoing community or panel); and</p></li>
+                <li><p>to notify you if you have won a prize draw that we administered or to provide you with an incentive for taking part.</p></li>
+            </ul>
+            <p>We will not mislead you about the nature of the research or how the data will be used. The information on about the nature of the research and how the data will be used is normally placed on the invitation or the consent form (or informed as sent form).</p>
+            <p>If you are invited to take part in research, it will be because:</p>
+            <ul>
+                <li><p>you have responded to a call-out to take part in a research project being conducted by CVR; or</p></li>
+                <li><p>you were selected as you consented to, following a recent purchase from, or visit, one of the companies or organisations that has commissioned us; or</p></li>
+                <li><p>you were selected because you are a service-user or service-provider to one of the companies or organisations that has commissioned us; or</p></li>
+                <li><p>you have given permission for a company or organisation to supply your details to a third party for research purposes; or</p></li>
+                <li><p>you have taken part in previous research administered by CVR and given us your permission to contact you in the future for research purposes.</p></li>
+            </ul>
+            <p>If you have been contacted by CVRand you do not believe you have given your permission or just wish your name to be removed from the database, let us know and we will remove you from the contact list for that particular research project and inform the relevant organisation who supplied your details.</p>
+            <p><b>Who CVR shares personal data with</b><br>
+            We will not sell your personal information to third parties. From time to time we may employ other companies and individuals to perform functions on our behalf. They will have access to the personal information needed to perform their functions, but will not use it for other purposes. They must also process the personal information as set out in this Privacy Policy and as permitted by the UK’s Data Protection laws. Processing of prizes and incentives from theresult may result in your contact details being passed onto a third party i.e. Amazon etc. This would purely be in order for the prize or incentive to be sent out to you electronically and would not result in any marketing or follow up.</p>
+            <p><b>How long CVR retains personal data</b><br>
+            CVR makes reasonable efforts to keep personal information in its possession or control, which is used on an ongoing basis, accurate, complete, current and relevant, based on the most recent information available to us. We rely on you to help us keep your personal information accurate, complete and current by answering our questions honestly. Personally identifiable information collected will be kept for no longer than 5 years months from project completion, however, for full details on ourretention policy please contact our Data Protection Officer.</p>
+            <p><b>Your Rights</b><br>
+            Your engagementin any CVRsurvey, interview or solution labis voluntary at all times, and we are always thankful for your help. You also have the right to <b>withdraw consent</b> you gave for participation in one of our surveys, interviews and solution lab at any time. In addition to your rights to withdraw your consent, you have the right toask us:</p>
+            <ul>
+                <li><p>for <b>access</b> to information about your personal data or for a copy of your personal data</p></li>
+                <li><p>to <b>correct</b> or <b>delete</b> your personal data</p></li>
+                <li><p>to <b>restrict</b> (i.e. stop any active) processing of your personal data</p></li>
+                <li><p>to provide you with certain personal data in a <b>structured, machine-readable format</b> and to transmit that data to another organisation</p></li>
+            </ul>
+            <p>You  also  have  the  right  to <b>withdraw  consent</b> you  gave  for  participation  in  one  of  our  surveys, interviews and solution lab at any time. </p>
+            <p>To do this, please submit your request in writing to the email or postal address detailed below in our Contact Us section.</p>
+            <p>Please note whereby your personal data has been collected via a third party we will reasonably assist you in using your rights with these third parties. We aim to deal with any data requests within 3 working days of receiving the request.</p>
+            <p><b>How to contact us and exercise your rights</b><br>
+            If you have any queries concerning this policy, our website or our research, or would like to make a subject access request, please contact us.</p>
+            <p>We will do our best to assist with any queries you have about your personal data.  You can contact our Data Protection Officer at any time using the contact details below.  When you do so, please provide your full name, your preferred contact information, and a summary of your query.</p>
+            <p>Burphy Momponga Zumu<br>
+            ClearView Research Limited<br>
+            86-90 Paul Street<br>
+            Shoreditch<br>
+            London<br>
+            EC2A 4NE<br>
+            burphy@clearviewresearch.co.uk</p>
+            <p>If you have concerns regarding how your personal information has been processed by CVRyou can make a complaint to the Information Commissioners Office (ICO) via the following options:</p>
+            <p>Website: https://ico.org.uk/concerns Telephone helpline: 0303 123 1113</p>
+            <p>Our policy may be updated periodically and the latest version will always be available here on the CVRwebsite.</p>
+            <p>CVRPrivacy Policy last updated 15/05/18.</p>
         </div>
     </div>
 </template>
@@ -91,7 +137,7 @@ export default {
 }
 
 .policy-body {
-    padding: 0 200px 42px;
+    padding: 72px 200px;
     background: var(--color-white);
 }
 
@@ -130,13 +176,17 @@ export default {
     }
 
     .policy-body {
-        padding: 0 30px 31px;
+        padding: 59px 30px;
     }
 
     .policy-body p {
         font-size: 12px;
         line-height: 227.7%;
         padding: 12px 0;
+    }
+
+    .align-right {
+        text-align: right;
     }
 }
 </style>
