@@ -154,9 +154,10 @@ export default {
 }
 
 .footer-bottom-header-address-logo {
-    height: 36px;
-    margin-right: 5px;
+    height: 27px;
+    margin-right: 10px;
     margin-bottom: 0px;
+    margin-top: 5px;
 }
 
 .footer-bottom-header-logo img,
@@ -181,8 +182,7 @@ export default {
 }
 
 .footer-bottom-header-menu-bar {
-    height: 28px;
-    width: 21px;
+    height: 45px;
     cursor: pointer;
 }
 
