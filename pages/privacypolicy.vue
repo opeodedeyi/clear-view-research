@@ -91,10 +91,10 @@
             London<br>
             EC2A 4NE<br>
             burphy@clearviewresearch.co.uk</p>
-            <p>If you have concerns regarding how your personal information has been processed by CVRyou can make a complaint to the Information Commissioners Office (ICO) via the following options:</p>
+            <p>If you have concerns regarding how your personal information has been processed by CVR you can make a complaint to the Information Commissioners Office (ICO) via the following options:</p>
             <p>Website: https://ico.org.uk/concerns Telephone helpline: 0303 123 1113</p>
-            <p>Our policy may be updated periodically and the latest version will always be available here on the CVRwebsite.</p>
-            <p>CVRPrivacy Policy last updated 15/05/18.</p>
+            <p>Our policy may be updated periodically and the latest version will always be available here on the CVR website.</p>
+            <p>CVR Privacy Policy last updated 15/05/18.</p>
         </div>
     </div>
 </template>
