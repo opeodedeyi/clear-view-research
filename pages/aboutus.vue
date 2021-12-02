@@ -14,6 +14,9 @@
             <p class="aboutus-content-subtext">We've worked on projects in Australia, Brazil, and Spain, among other places on four continents. Starbucks UK, NHS England, the Vodafone Foundation, Unicef UK, and Tinder have all given us project briefs.</p>
             <div class="aboutus-content-hl mthl"></div>
         </div>
+        <div class="aboutus-close">
+
+        </div>
     </div>
 </template>
 
@@ -111,6 +114,13 @@ export default {
     font-weight: normal;
     font-size: 20px;
     line-height: 166.5%;
+}
+
+.aboutus-close {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 @media only screen and (max-width: 1350px) {

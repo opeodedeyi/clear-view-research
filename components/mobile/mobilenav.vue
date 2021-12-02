@@ -14,10 +14,10 @@
             <li class="nav-item"><nuxt-link to="/blog">Blog</nuxt-link></li>
         </ul>
         <ul class="nav-social">
-            <li class="nav-social-item mlrico"><a href="http://google.com"><img src="~/assets/svg/instagramicon.svg" alt="" /></a></li>
-            <li class="nav-social-item mlrico"><a href="http://google.com"><img src="~/assets/svg/twittericon.svg" alt="" /></a></li>
-            <li class="nav-social-item mlrico"><a href="http://google.com"><img src="~/assets/svg/facebookicon.svg" alt="" /></a></li>
-            <li class="nav-social-item mlrico"><a href="http://google.com"><img src="~/assets/svg/linkedinicon.svg" alt="" /></a></li>
+            <li class="nav-social-item mlrico"><a href="https://www.instagram.com/cvr_insights/"><img src="~/assets/svg/instagramicon.svg" alt="" /></a></li>
+            <li class="nav-social-item mlrico"><a href="https://twitter.com/CVR_Insights"><img src="~/assets/svg/twittericon.svg" alt="" /></a></li>
+            <li class="nav-social-item mlrico"><a href="https://www.facebook.com/CVR.Insights/"><img src="~/assets/svg/facebookicon.svg" alt="" /></a></li>
+            <li class="nav-social-item mlrico"><a href="https://www.linkedin.com/company/clearview-research-ltd/"><img src="~/assets/svg/linkedinicon.svg" alt="" /></a></li>
         </ul>
     </div>
 </template>

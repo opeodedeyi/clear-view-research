@@ -35,10 +35,10 @@
                 <div class="gen-hl"></div>
                 <p class="contact-connect-title">Connect with us</p>
                 <ul class="contact-social">
-                    <li class="contact-social-item mrico"><a href="http://google.com"><img src="~/assets/svg/instagramicon.svg" alt="" /></a></li>
-                    <li class="contact-social-item mlrico"><a href="http://google.com"><img src="~/assets/svg/twittericon.svg" alt="" /></a></li>
-                    <li class="contact-social-item mlrico"><a href="http://google.com"><img src="~/assets/svg/facebookicon.svg" alt="" /></a></li>
-                    <li class="contact-social-item mlico"><a href="http://google.com"><img src="~/assets/svg/linkedinicon.svg" alt="" /></a></li>
+                    <li class="contact-social-item mrico"><a href="https://www.instagram.com/cvr_insights/"><img src="~/assets/svg/instagramicon.svg" alt="" /></a></li>
+                    <li class="contact-social-item mlrico"><a href="https://twitter.com/CVR_Insights"><img src="~/assets/svg/twittericon.svg" alt="" /></a></li>
+                    <li class="contact-social-item mlrico"><a href="https://www.facebook.com/CVR.Insights/"><img src="~/assets/svg/facebookicon.svg" alt="" /></a></li>
+                    <li class="contact-social-item mlico"><a href="https://www.linkedin.com/company/clearview-research-ltd/"><img src="~/assets/svg/linkedinicon.svg" alt="" /></a></li>
                 </ul>
             </div>
         </div>

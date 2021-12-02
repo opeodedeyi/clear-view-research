@@ -41,10 +41,10 @@
                     <p class="footer-outro-con">Connect with us</p>
                     <div class="footer-outro-hl"></div>
                     <ul class="footer-outro-social">
-                        <li class="footer-outro-social-item mlrico"><a href="http://google.com"><img src="~/assets/svg/instagramicon2.svg" alt="" /></a></li>
-                        <li class="footer-outro-social-item mlrico"><a href="http://google.com"><img src="~/assets/svg/twittericon2.svg" alt="" /></a></li>
-                        <li class="footer-outro-social-item mlrico"><a href="http://google.com"><img src="~/assets/svg/facebookicon2.svg" alt="" /></a></li>
-                        <li class="footer-outro-social-item mlrico"><a href="http://google.com"><img src="~/assets/svg/linkedinicon2.svg" alt="" /></a></li>
+                        <li class="footer-outro-social-item mlrico"><a href="https://www.instagram.com/cvr_insights/"><img src="~/assets/svg/instagramicon2.svg" alt="" /></a></li>
+                        <li class="footer-outro-social-item mlrico"><a href="https://twitter.com/CVR_Insights"><img src="~/assets/svg/twittericon2.svg" alt="" /></a></li>
+                        <li class="footer-outro-social-item mlrico"><a href="https://www.facebook.com/CVR.Insights/"><img src="~/assets/svg/facebookicon2.svg" alt="" /></a></li>
+                        <li class="footer-outro-social-item mlrico"><a href="https://www.linkedin.com/company/clearview-research-ltd/"><img src="~/assets/svg/linkedinicon2.svg" alt="" /></a></li>
                     </ul>
                 </div>
             </div>
