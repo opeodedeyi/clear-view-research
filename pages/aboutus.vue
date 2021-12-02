@@ -14,8 +14,14 @@
             <p class="aboutus-content-subtext">We've worked on projects in Australia, Brazil, and Spain, among other places on four continents. Starbucks UK, NHS England, the Vodafone Foundation, Unicef UK, and Tinder have all given us project briefs.</p>
             <div class="aboutus-content-hl mthl"></div>
         </div>
-        <div class="aboutus-close">
-
+        <div class="aboutus-statement">
+            <div class="aboutus-statement-text">
+                <p class="mission-title">OUR MISSION</p>
+                <p class="mission-text">To provide people from underrepresented and disadvantaged groups a voice in research.</p>
+                <p class="vision-title">OUR VISION</p>
+                <p class="vision-text">To use research to empower individuals working for social, racial, and economic justice in society.</p>
+            </div>
+            <div class="aboutus-statement-image"></div>
         </div>
     </div>
 </template>
@@ -123,6 +129,53 @@ export default {
     flex-wrap: nowrap;
 }
 
+.aboutus-statement {
+    width: 100%;
+    min-height: 500px;
+    background-color: var(--color-company);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.aboutus-statement-text {
+    padding: 100px 160px 100px 180px;
+    flex: 1;
+}
+
+.mission-title,
+.vision-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 193.7%;
+    letter-spacing: 0.075em;
+    color: var(--color-danger);
+    margin-bottom: 11px;
+}
+
+.mission-text,
+.vision-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 205.7%;
+    color: var(--color-white);
+}
+
+.mission-text {
+    margin-bottom: 65px;
+}
+
+.aboutus-statement-image {
+    height: cover;
+    width: 40%;
+    background-image: url('~assets/images/about.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @media only screen and (max-width: 1350px) {
     .aboutus-title {
         padding: 73px 120px 100px;
@@ -130,6 +183,10 @@ export default {
 
     .aboutus-content {
         padding: 125px 200px 115px;
+    }
+
+    .aboutus-statement-text {
+        padding: 100px 120px 100px 120px;
     }
 }
 
@@ -186,12 +243,48 @@ export default {
         font-size: 15px;
         line-height: 181.5%;
     }
+
+    .aboutus-statement {
+        flex-direction: column;
+    }
+
+    .aboutus-statement-text {
+        padding: 64px 46px 74px;
+        flex: 1;
+    }
+
+    .mission-title,
+    .vision-title {
+        letter-spacing: 0.075em;
+        font-size: 12px;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .mission-text,
+    .vision-text {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .mission-text {
+        margin-bottom: 55px;
+    }
+
+    .aboutus-statement-image {
+        width: 100%;
+        height: 352px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     .aboutus-image {
         height: 381px;
         background-image: url('~assets/images/aboutus-mobile.png');
+    }
+
+    .aboutus-statement-image {
+        background-image: url('~assets/images/about-mobile.png');
     }
 }
 
