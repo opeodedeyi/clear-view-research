@@ -3,7 +3,7 @@
         <div class="nav-header">
             <p class="nav-header-logo">Menu</p>
             <div class="nav-header-cancle" @click="cancel">
-                <img src="~/assets/svg/cancelwhite.svg" alt="" />
+                <img src="~/assets/svg/cancel.svg" alt="x" />
             </div>
         </div>
         <ul class="nav-main">
@@ -107,7 +107,7 @@ export default {
 }
 
 .nav-header-cancle {
-    height: 20px;
+    height: 45px;
 }
 
 .nav-header-cancle img {

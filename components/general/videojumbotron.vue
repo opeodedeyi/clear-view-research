@@ -2,11 +2,11 @@
     <div class="video-jumbotron">
         <video autoplay loop muted playsinline>
             <source src="~/assets/videos/main-video2.mp4" type="video/mp4">
-        </video> <!-- poster="~/assets/images/video.png" -->
+        </video>
         <div class="video-jumbotron-overlay">
             <div class="jumbo-over-empty mb"></div>
-            <h1 class="jumbo-over-header plr">Leverage the power of research</h1>
-            <div class="jumbo-over-explanation plr pb">Giving minority audiences a voice and providing organizations the opportunity to hear them</div>
+            <h1 class="jumbo-over-header">Leverage <br> the power of <br> <span class="special-header">Research</span></h1>
+            <div class="jumbo-over-explanation">Giving minority audiences a voice and providing <br>organizations the opportunity to hear them</div>
             <mainbutton type="link" to="/aboutus" size="medium">More about Clearview</mainbutton>
         </div>
     </div>
@@ -23,22 +23,13 @@ export default {
 </script>
 
 <style scoped>
-.pb {
-    padding-bottom: 48px;
-}
-
 .mb {
     margin-bottom: 50px;
 }
 
-.plr {
-    padding-left: 64px;
-    padding-right: 64px;
-}
-
 .video-jumbotron {
     position: relative;
-    height: 700px;
+    height: 878px;
 }
 
 .video-jumbotron video {
@@ -58,7 +49,8 @@ export default {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 83px 78px 83px 188px;
 }
 
 .jumbo-over-empty::before {
@@ -67,46 +59,60 @@ export default {
 }
 
 .jumbo-over-header {
-    font-weight: bold;
-    font-size: 64px;
-    line-height: 98px;
-    text-align: center;
+    width: 100%;
+    font-family: "Questrial";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 75px;
+    line-height: 77px;
     color: var(--color-white);
+    margin-bottom: 17px;
+}
+
+.special-header {
+    color: var(--color-danger);
+    font-size: 100px;
+    line-height: 103px;
 }
 
 .jumbo-over-explanation {
+    width: 100%;
+    font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 28px;
-    text-align: center;
-    color: var(--color-text-header);
-    margin-top: 16px;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-white);
+    margin-bottom: 30px;
 }
 
 /* small screen */
-@media only screen and (max-width: 950px) {
-    .pb {
-        padding-bottom: 32px;
-    }
-
-    .plr {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
+@media only screen and (max-width: 1080px) {
     .video-jumbotron {
-        height: 615px;
+        height: 617px;
+    }
+
+    .video-jumbotron-overlay {
+        align-items: center;
+        padding: 100px 30px;
     }
 
     .jumbo-over-header {
-        font-size: 36px;
-        line-height: 44px;
+        font-size: 35px;
+        line-height: 36px;
+        text-align: center;
+        margin-bottom: 6px;
+    }
+
+    .special-header {
+        font-size: 60px;
+        line-height: 62px;
     }
 
     .jumbo-over-explanation {
-        font-size: 16px;
-        line-height: 26px;
-        margin-top: 24px;
+        font-size: 12px;
+        line-height: 169.7%;
+        margin-bottom: 20px;
+        text-align: center;
     }
 }
 </style>
