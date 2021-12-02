@@ -1,35 +1,22 @@
 <template>
     <div class="expertise">
-        <genpagetitle
-            jumbotitle="CLEARVIEW RESEARCH"
-            jumbodescription="EXPERTISE"
-            jumboimage="jumboimg1.webp"
-        />
-        <div class="expertise-section">
-            <div class="expertise-explanation">
-                <div 
-                    class="expertise-card" 
-                    v-for="(item, index) in whatwedo"
-                    :key="index"
-                    >
-                    <div class="expertise-card-image">
-                        <img :src="require(`@/assets/svg/${item.image}`)" alt="">
-                    </div>
-                    <div class="expertise-card-explain">
-                        <p class="expertise-card-explain-title">{{item.title}}</p>
-                        <p class="expertise-card-explain-content">{{item.content}}</p>
-                    </div>
-                </div>
+        <div class="expertise-title">
+            <h4 class="expertise-title-intro">We provide a platform through research and engagement for the voices and experiences of everyday people, who often go unheard, to be heard, respected and recognised.</h4>
+            <div class="expertise-title-sub">
+                <div class="expertise-title-hl"></div>
+                <p class="expertise-title-explain">These decisions solve complicated business challenges while also benefiting society as a whole.Our truly diverse (and experienced) team allows us to connect with people from diverse communities.</p>
             </div>
         </div>
+        <div class="expertise-image"></div>
+        <!-- content to go here after lamina makes corrections -->
+        <div class="expertise-team"></div>
     </div>
 </template>
 
 <script>
-import genpagetitle from "@/components/utilities/genpagetitle";
 export default {
     components: {
-        genpagetitle
+        
     },
     head: {
         title: 'Clearview research expertise',
@@ -48,7 +35,7 @@ export default {
         }
     },
     methods: {
-        async getAllTeamMembers(limit = 20, skip = 0) {
+        async getAllTeamMembers(limit = 200, skip = 0) {
             var response = await this.$contentful.client.getEntries({
                 content_type: 'team',
                 order: 'fields.id',
@@ -79,71 +66,90 @@ export default {
     margin-top: 72px;
 }
 
-.expertise-section {
-    padding: 0 64px;
+.expertise-title-hl {
     width: 100%;
+    height: 1px;
+    background-color: var(--color-danger);
+    margin-bottom: 31px;
+    margin-top: 50px;
 }
 
-.expertise-explanation {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(12, minmax(auto, 150px));
-    gap: 48px 24px;
-    margin-bottom: 100px;
-}
-
-.expertise-card {
+.expertise-title {
+    padding: 73px 213px 100px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: flex-start;
-    grid-column: span 6;
+    justify-content: space-between;
 }
 
-.expertise-card-image {
-    width: 90px;
-    height: 90px;
-    background-color: var(--color-text-header);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    margin-right: 24px;
+.expertise-title-intro {
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 145%;
+    flex: 1;
+    margin-right: 80px;
 }
 
-.expertise-card-image img {
-    height: 100%;
+.expertise-title-sub {
+    width: 363px;
 }
 
-.expertise-card-explain-title {
-    font-weight: bold;
+.expertise-title-explain {
+    font-style: normal;
+    font-weight: normal;
     font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 12px;
+    line-height: 227.7%;
 }
 
-.expertise-card-explain-content {
-    font-size: 16px;
-    line-height: 24px;
+.expertise-image {
+    background-image: url('~assets/images/expertise.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 511px;
+    width: 100%;
 }
 
-/* small screen */
-@media only screen and (max-width: 900px) {
-    .expertise-section {
-        padding: 0 20px;
+@media only screen and (max-width: 1350px) {
+    .expertise-title {
+        padding: 73px 200px 100px;
+    }
+}
+
+/* important screen */
+@media only screen and (max-width: 1080px) {
+    .expertise-title {
+        padding: 53px 46px 70px;
+        flex-direction: column;
     }
 
-    .expertise-explanation {
-        grid-template-columns: repeat(6, minmax(auto, 150px));
-        gap: 48px 24px;
+    .expertise-title-intro {
+        font-size: 30px;
+        line-height: 156.5%;
+        margin-right: 0;
     }
 
-    .expertise-card-image {
-        width: 48px;
-        height: 48px;
-        margin-right: 16px;
+    .expertise-title-sub {
+        width: 100%;
+    }
+
+    .expertise-title-hl {
+        margin-bottom: 26px;
+        margin-top: 44px;
+    }
+
+    .expertise-title-explain {
+        font-size: 15px;
+        line-height: 227.7%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .expertise-image {
+        height: 381px;
+        background-image: url('~assets/images/expertise-mobile.png');
     }
 }
 </style>

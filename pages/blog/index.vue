@@ -19,14 +19,12 @@
 </template>
 
 <script>
-import genpagetitle from "@/components/utilities/genpagetitle";
 import blogcard from "@/components/utilities/blogcard";
 import mainbutton from "@/components/utilities/mainbutton";
 import loadingb from "@/components/utilities/loadingb";
 
 export default {
     components: {
-        genpagetitle,
         blogcard,
         mainbutton,
         loadingb

@@ -65,77 +65,8 @@ export default {
 </script>
 
 <style scoped>
-.soop-jumbotron {
-  padding: 100px 64px 100px;
-}
-
-.soop-jumbo-header {
-  color: var(--color-danger);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  text-align: center;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.soop-jumbo-title {
-  text-align: center;
-  color: var(--color-company);
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 40px;
-  margin-bottom: 48px;
-}
-
-.soop-jumbo-content {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-}
-
-.soop-jumbo-cards {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(auto, 200px));
-  gap: 24px;
-  width: 100%;
-}
-
-.soop-jumbo-cta {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  margin-top: 60px;
-}
-
 /* small screen */
-@media only screen and (max-width: 800px) {
-  .soop-jumbotron {
-    padding: 60px 20px;
-    border-top: 1px solid var(--color-form-border);
-  }
+@media only screen and (max-width: 1080px) {
 
-  .soop-jumbo-title {
-    font-size: 22px;
-    line-height: 32px;
-    margin-bottom: 32px;
-  }
-
-  .soop-jumbo-cta {
-    margin-top: 40px;
-  }
-
-  .soop-jumbo-cards {
-    grid-template-columns: repeat(6, minmax(auto, 150px));
-    gap: 24px;
-  }
 }
 </style>

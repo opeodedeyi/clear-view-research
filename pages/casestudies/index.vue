@@ -18,14 +18,12 @@
 </template>
 
 <script>
-import genpagetitle from "@/components/utilities/genpagetitle";
 import casestudycard from "@/components/utilities/casestudycard";
 import mainbutton from "@/components/utilities/mainbutton";
 import loadingb from "@/components/utilities/loadingb";
 
 export default {
     components: {
-        genpagetitle,
         casestudycard,
         mainbutton,
         loadingb

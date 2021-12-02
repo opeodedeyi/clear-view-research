@@ -255,7 +255,6 @@ export default {
 
     .mission-title,
     .vision-title {
-        letter-spacing: 0.075em;
         font-size: 12px;
         margin-bottom: 8px;
         text-align: center;
@@ -274,6 +273,7 @@ export default {
     .aboutus-statement-image {
         width: 100%;
         height: 352px;
+        background-image: url('~assets/images/about-mobile.png');
     }
 }
 
