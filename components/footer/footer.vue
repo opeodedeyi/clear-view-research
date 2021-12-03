@@ -280,14 +280,6 @@ export default {
 
 /* small screen */
 @media only screen and (max-width: 1270px) {
-    .mob {
-        display: flex;
-    }
-
-    .desk {
-        display: none;
-    }
-
     .footer {
         padding: 60px 78px;
     }
@@ -361,6 +353,14 @@ export default {
 @media only screen and (max-width: 1080px) {
     .footer {
         padding: 60px 30px;
+    }
+
+    .mob {
+        display: flex;
+    }
+
+    .desk {
+        display: none;
     }
 }
 
