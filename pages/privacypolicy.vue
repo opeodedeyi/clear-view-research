@@ -107,7 +107,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .policy {
     margin-top: 138px;
     width: 100%;

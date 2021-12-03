@@ -4,7 +4,7 @@
             <h4 class="expertise-title-intro">We provide a platform through research and engagement for the voices and experiences of everyday people, who often go unheard, to be heard, respected and recognised.</h4>
             <div class="expertise-title-sub">
                 <div class="expertise-title-hl"></div>
-                <p class="expertise-title-explain">These decisions solve complicated business challenges while also benefiting society as a whole.Our truly diverse (and experienced) team allows us to connect with people from diverse communities.</p>
+                <p class="expertise-title-explain">These decisions solve complicated business challenges while also benefiting society as a whole. Our truly diverse (and experienced) team allows us to connect with people from diverse communities.</p>
             </div>
         </div>
         <div class="expertise-image"></div>
@@ -61,7 +61,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .expertise {
     margin-top: 72px;
 }

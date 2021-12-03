@@ -1,30 +1,44 @@
 <template>
   <div class="homepage">
     <videojumbotron/>
+    <div class="homepage-about">
+      <div class="homepage-about-design desk"></div>
+      <div class="homepage-about-content">
+        <div class="homepage-about-wedo">
+          <div class="wedo-header"><p class="wedo-title">WHAT WE DO</p><div class="wedo-hl"></div></div>
+          <p class="wedo-text">We assist corporations, lifestyle brands, charities, and governments in gaining access to unique and trustworthy audience insights, allowing them to make better decisions that solve complicated business challenges while also benefiting society as a whole.</p>
+          <div class="wedo-hl2"></div>
+        </div>
+        <div class="homepage-about-mission">
+          <div class="mission-content">
+            <p class="mission-content-title">OUR MISSION</p>
+            <p class="mission-content-text">To provide people from underrepresented and disadvantaged groups a voice in research.</p>
+            <div><mainbutton type="btn" :onClick="aboutUs" size="medium">Learn More</mainbutton></div>
+          </div>
+          <div class="mission-photo"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
-<script>
+<script scoped>
 import videojumbotron from "@/components/general/videojumbotron";
+import mainbutton from "@/components/utilities/mainbutton";
 
 export default {
   data() {
     return {
       caseStudies: null,
-      refrences: ['bbcradio.svg','glamour.svg','metro.svg','skynews.svg','theguardian.svg','theindependent.svg','thesun.svg','thetelegraph.svg'],
-      partners: ['m&c.svg','artscouncil.svg','uber.svg','tinder.png','starbucks.svg','kingscollege.svg','kpmg.svg','nhs.svg', 'ms.png'],
-      weempowerorganizations: [
-          {id: 1, image: 'ccc.svg', title: 'Create Clear Communication', content:'We work with a variety of communities to build strong and meaningful connections.'},
-          {id: 2, image: 'dgu.svg', title: 'Develop Greater Understanding', content:'We help you discover actual information from folks who are typically unheard by using creative research methods.'},
-          {id: 3, image: 'eli.svg', title: 'Ensure Lasting Impact', content:'We give vital and strategic support so that you can have a significant impact.'},
-      ],
+      refrences: [],
+      partners: [],
       whatwedo: [
-        {id: 1, image: 'audienceinsight.svg', title: 'Audience Insight', content:'Learn more about the audience you seek to understand and gather relevant and culturally informed insight'},
-        {id: 2, image: 'advisory.svg', title: 'Advisory', content:'We share our expertise with you to help you in developing effective strategies to make a huge social impact'},
-        {id: 3, image: 'comms.svg', title: 'Communications & Marketing', content:'Want to create bold campaigns that make an impact and hit close to home? We help you do just that'},
-        {id: 4, image: 'learningpartner.svg', title: 'Learning Partner', content:'Team work makes the dream work. We collaborate with organizations that are truly about solving problems in the society'},
-        {id: 5, image: 'monitoring.svg', title: 'Monitoring & Evaluation', content:'We have the experience in monitoring diverse and excluded communities, and evaluating initiatives targeted at them'},
-        {id: 6, image: 'strategicplanning.svg', title: 'Strategic Planning', content:'Crush those business goals with our actionable strategies based on relevant insights'},
+        {id: 1, image: 'comms.svg', title: 'Communications & Marketing'},
+        {id: 2, image: 'audienceinsight.svg', title: 'Audience Insight'},
+        {id: 3, image: 'advisory.svg', title: 'Advisory'},
+        {id: 4, image: 'monitoring.svg', title: 'Monitoring & Evaluation'},
+        {id: 5, image: 'learningpartner.svg', title: 'Learning Partner'},
+        {id: 6, image: 'strategicplanning.svg', title: 'Strategic Planning'},
       ],
       testimonials: [
         {id: 1, image: 'dpfemale.png', name: 'Kate Goodman', role: 'Senior Campaigns Manager, Bite Back 2030', content:'CVR were great to work with, bringing unique and valuable insight to the team - which really helped steer our strategic direction on how to engage teenagers with the tricky topic of childhood obesity.'},
@@ -35,7 +49,8 @@ export default {
     }
   },
   components: {
-    videojumbotron
+    videojumbotron,
+    mainbutton
   },
   methods: {
     async getCaseStudies(limit = 2, skip = 0) {
@@ -56,6 +71,9 @@ export default {
         }
       })
       this.caseStudies = caseStudies
+    },
+    aboutUs() {
+      return this.$router.push('/aboutus')
     }
   },
   mounted() {
@@ -65,8 +83,191 @@ export default {
 </script>
 
 <style scoped>
+.desk {
+  display: flex;
+}
+
+.homepage-about {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.homepage-about-design {
+  width: 188px;
+  height: cover;
+  background-color: var(--color-company-dark)
+}
+
+.homepage-about-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.homepage-about-wedo {
+  padding: 100px 178px 120px 150px;
+}
+
+.wedo-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.wedo-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 193.7%;
+  letter-spacing: 0.075em;
+  color: var(--color-danger);
+  margin-right: 26px;
+  margin-bottom: 0;
+}
+
+.wedo-hl {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-danger);
+}
+
+.wedo-hl2 {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-danger);
+}
+
+.wedo-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px; /* prefer 20 */
+  line-height: 227.7%;
+  margin-top: 24px;
+  margin-bottom: 44px;
+}
+
+.homepage-about-mission {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: var(--color-company-dark);
+}
+
+.mission-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 92px 168px 101px 0;
+}
+
+.mission-content-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 193.7%;
+  letter-spacing: 0.075em;
+  color: var(--color-danger);
+}
+
+.mission-content-text {
+  color: var(--color-white);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 227.7%;
+  margin-top: 11px;
+  margin-bottom: 40px;
+}
+
+.mission-photo {
+  width: 50%;
+  height: cover;
+  background-image: url('~assets/images/homepage1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* small screen */
 @media only screen and (max-width: 1080px) {
+  .desk {
+    display: none;
+  }
 
+  .homepage-about {
+    flex-direction: column;
+  }
+
+  .homepage-about-wedo {
+    padding: 59px 46px 45px;
+  }
+
+  .wedo-header {
+    flex-direction: column;
+    display: block;
+  }
+
+  .wedo-title {
+    font-size: 12px;
+    line-height: 193.7%;
+    margin-right: 0;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .wedo-hl {
+    width: 100%;
+    height: 1px;
+  }
+
+  .wedo-text {
+    font-size: 15px;
+    line-height: 227.7%;
+    text-align: center;
+  }
+
+  .homepage-about-mission {
+    flex-direction: column;
+  }
+
+  .mission-content {
+    padding: 55px 46px 63px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .mission-content-title {
+    font-size: 12px;
+    line-height: 193.7%;
+    text-align: center;
+  }
+
+  .mission-content-text {
+    font-size: 22px;
+    line-height: 205.7%;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 40px;
+  }
+
+  .mission-photo {
+    width: 100%;
+    height: 292px;
+  }
+}
+
+/* small screen */
+@media only screen and (max-width: 600px) {
+  .mission-photo {
+    background-image: url('~assets/images/homepage1-mobile.png');
+  }
 }
 </style>

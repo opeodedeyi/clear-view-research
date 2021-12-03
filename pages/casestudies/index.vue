@@ -98,7 +98,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .casestudies {
     margin-top: 138px;
 }
