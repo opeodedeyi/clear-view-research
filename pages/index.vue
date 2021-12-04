@@ -180,8 +180,8 @@ export default {
   color: var(--color-white);
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 227.7%;
+  font-size: 40px;
+  line-height: 205.7%;
   margin-top: 11px;
   margin-bottom: 40px;
 }
