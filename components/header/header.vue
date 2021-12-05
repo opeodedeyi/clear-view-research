@@ -31,9 +31,17 @@ export default {
     mobilenav,
     mobileoverlay
   },
+  props: {
+    menuTrigger: { 
+      type: Number
+    }
+  },
   watch: {
     '$route' () {
       this.showMenuBar = false;
+    },
+    'menuTrigger' () {
+      this.showMenuBar = true;
     }
   },
   data() {

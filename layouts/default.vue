@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header />
+    <app-header :menuTrigger="menuTrigger" />
     <Nuxt />
     <app-footer @show-menu="showMenu()"/>
   </div>
@@ -11,6 +11,11 @@ import header from "~/components/header/header";
 import footer from "~/components/footer/footer";
 
 export default {
+  data() {
+    return {
+      menuTrigger: 0
+    }
+  },
   props: {
     isvisible: {
       type: Boolean,
@@ -24,7 +29,7 @@ export default {
   props: ['onAppSend'],
   methods: {
     showMenu() {
-      console.log("clicked");
+      this.menuTrigger++
     }
   }
 }
