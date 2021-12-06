@@ -63,7 +63,7 @@ export default {
 
 <style scoped>
 .expertise {
-    margin-top: 72px;
+    margin-top: 138px;
 }
 
 .expertise-title-hl {
@@ -120,6 +120,10 @@ export default {
 
 /* important screen */
 @media only screen and (max-width: 1080px) {
+    .expertise {
+        margin-top: 110px;
+    }
+
     .expertise-title {
         padding: 53px 46px 70px;
         flex-direction: column;
