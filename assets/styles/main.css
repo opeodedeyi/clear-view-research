@@ -4,6 +4,7 @@
     font-size: 16px;
     --color-white: #ffffff;
     --color-gray: #F2F4F6;
+    --color-gray-2: #F0F2F4;
     --color-dark: #000000;
     --color-danger: #E35326;
     --color-danger-dark: #D5481C;
@@ -36,14 +37,12 @@ html, body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: var(--color-white);
-    border-radius: 10px;
+    background: var(--color-company);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--color-company);
-    /* border-radius: 10px; */
+    background: var(--color-gray);
 }
 
 

@@ -19,6 +19,23 @@
         </div>
       </div>
     </div>
+    <!-- expertise -->
+    <!-- casestudy -->
+    <!-- testimonials -->
+    <!-- clients and friends -->
+    <!-- insights -->
+    <div class="homepage-close">
+      <div class="homepage-close-text">
+        <p class="close-title">You can’t make a great decision without, a clear view</p>
+        <p class="close-text">ClearView is a research agency that focuses on dealing with people of color, Asians, and other ethnic groups.</p>
+        <div><mainbutton type="btn" :onClick="aboutUs" size="medium">Learn More</mainbutton></div>
+        <div class="close-line c-l-short"></div>
+        <div class="close-line c-l-short2"></div>
+        <div class="close-line c-l-long"></div>
+        <div class="close-line c-l-long2"></div>
+      </div>
+      <div class="homepage-close-image"></div>
+    </div>
   </div>
 </template>
 
@@ -92,12 +109,13 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  background-color: var(--color-company-dark);
+  background-image: url('~assets/svg/homepage-patterns.svg');
 }
 
 .homepage-about-design {
   width: 188px;
   height: cover;
-  background-color: var(--color-company-dark)
 }
 
 .homepage-about-content {
@@ -109,6 +127,7 @@ export default {
 
 .homepage-about-wedo {
   padding: 100px 178px 120px 150px;
+  background-color: var(--color-white);
 }
 
 .wedo-header {
@@ -146,7 +165,7 @@ export default {
 .wedo-text {
   font-style: normal;
   font-weight: normal;
-  font-size: 30px; /* prefer 20 */
+  font-size: 30px;
   line-height: 227.7%;
   margin-top: 24px;
   margin-bottom: 44px;
@@ -157,7 +176,6 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  background-color: var(--color-company-dark);
 }
 
 .mission-content {
@@ -195,6 +213,95 @@ export default {
   background-size: cover;
 }
 
+.homepage-close {
+  width: 100%;
+  min-height: 500px;
+  background-color: var(--color-gray-2);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.homepage-close-text {
+  padding: 137px 160px 136px 180px;
+  flex: 1;
+  position: relative;
+}
+
+.close-line {
+  position: absolute;
+  display: block;
+}
+
+.c-l-short,
+.c-l-short2 {
+  width: 150px;
+  background: var(--color-danger);
+  height: 4px;
+  transform: rotate(56.15deg);
+  left: -36px;
+}
+
+.c-l-long,
+.c-l-long2 {
+  width: 250px;
+  background: var(--color-danger);
+  height: 4px;
+  transform: rotate(-61.35deg);
+  right: -66px;
+}
+
+.c-l-short {
+  top: 200px;
+}
+
+.c-l-short2 {
+  bottom: 170px;
+}
+
+.c-l-long {
+  top: 166px;
+}
+
+.c-l-long2 {
+  bottom: 150px;
+}
+
+.close-title {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 143.2%;
+  color: var(--color-dark);
+  margin-bottom: 10px;
+}
+
+.close-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 183.7%;
+  color: var(--color-dark);
+  margin-bottom: 55px;
+}
+
+.homepage-close-image {
+  height: cover;
+  width: 45%;
+  background-image: url('~assets/images/homepage2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 1350px) {
+  .homepage-close-text {
+    padding: 100px 120px 100px 120px;
+  }
+}
+
 /* small screen */
 @media only screen and (max-width: 1080px) {
   .desk {
@@ -203,6 +310,11 @@ export default {
 
   .homepage-about {
     flex-direction: column;
+    background-image: none;
+    /* background-image: url('~assets/svg/homepage-patterns-mobile.svg');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover; */
   }
 
   .homepage-about-wedo {
@@ -261,6 +373,41 @@ export default {
   .mission-photo {
     width: 100%;
     height: 292px;
+  }
+
+  .homepage-close {
+    flex-direction: column;
+  }
+
+  .homepage-close-text {
+    padding: 74px 46px 74px;
+    flex: 1;
+  }
+
+  .close-line {
+    display: none;
+  }
+
+  .close-title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 143.2%;
+    margin-bottom: 17px;
+  }
+
+  .close-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 183.7%;
+    margin-bottom: 36px;
+  }
+
+  .homepage-close-image {
+    width: 100%;
+    height: 342px;
+    background-image: url('~assets/images/homepage2-mobile.png');
   }
 }
 

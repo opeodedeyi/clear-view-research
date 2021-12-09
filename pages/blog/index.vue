@@ -1,7 +1,7 @@
 <template>
     <div class="blog">
         <div class="blog-title">
-            Blog
+            Hot off the press
         </div>
         <div class="blog-jumbo-cards" v-if="blogs != null">
             <blogcard
@@ -35,7 +35,7 @@ export default {
     data() {
         return {
             blogs: null,
-            limit: 4,
+            limit: 10,
             page: 1,
             total: null,
             loading: false

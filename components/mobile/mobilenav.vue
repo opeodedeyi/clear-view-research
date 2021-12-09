@@ -42,12 +42,6 @@ export default {
 .mlrico {
     margin: 0 3.5px;
 }
-.nav {
-    font-family: 'Questrial', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
 /* .nav-item a {
     position: relative;
@@ -68,8 +62,10 @@ export default {
 } */
 
 .nav {
+    font-family: 'Questrial', sans-serif;
     display: none;
     flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     right: -420px;
@@ -78,7 +74,8 @@ export default {
     width: 100%;
     max-width: 420px;
     padding: 0 30px;
-    background: var(--color-company);
+    background-color: var(--color-company);
+    background-image: url('~assets/svg/homepage-patterns-mobile.svg');
     color: var(--color-white);
     transition: right .3s;
     height: 100vh;
