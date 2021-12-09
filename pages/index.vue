@@ -1,6 +1,8 @@
 <template>
   <div class="homepage">
+
     <videojumbotron/>
+
     <div class="homepage-about">
       <div class="homepage-about-design desk"></div>
       <div class="homepage-about-content">
@@ -19,8 +21,62 @@
         </div>
       </div>
     </div>
-    <!-- expertise -->
-    <!-- casestudy -->
+
+    <div class="expertise">
+      <p class="expertise-title">Our Expertise</p>
+      <div class="expertise-cards">
+        <div class="expertise-card e-c-large">
+          <div class="e-c-line"></div>
+          <div class="e-c-line2"></div>
+          <div class="e-c-line3"></div>
+          <img src="~assets/svg/c&mIcon.svg" alt="">
+          <p class="expertise-card-text">Communications <br>& Marketing</p>
+        </div>
+        <div class="expertise-card e-c-normal">
+          <div class="e-c-line"></div>
+          <div class="e-c-line2"></div>
+          <div class="e-c-line3"></div>
+          <img src="~assets/svg/aIIcon.svg" alt="">
+          <p class="expertise-card-text">Audience <br>Insight</p>
+        </div>
+        <div class="expertise-card e-c-normal">
+          <div class="e-c-line"></div>
+          <div class="e-c-line2"></div>
+          <div class="e-c-line3"></div>
+          <img src="~assets/svg/aIcon.svg" alt="">
+          <p class="expertise-card-text">Advisory</p>
+        </div>
+        <div class="expertise-card e-c-large">
+          <div class="e-c-line"></div>
+          <div class="e-c-line2"></div>
+          <div class="e-c-line3"></div>
+          <img src="~assets/svg/m&eIcon.svg" alt="">
+          <p class="expertise-card-text">Monitioring & <br>Evaluation</p>
+        </div>
+        <div class="expertise-card e-c-normal">
+          <div class="e-c-line"></div>
+          <div class="e-c-line2"></div>
+          <div class="e-c-line3"></div>
+          <img src="~assets/svg/lPIcon.svg" alt="">
+          <p class="expertise-card-text">Learning <br>Partner</p>
+        </div>
+        <div class="expertise-card e-c-normal">
+          <div class="e-c-line"></div>
+          <div class="e-c-line2"></div>
+          <div class="e-c-line3"></div>
+          <img src="~assets/svg/sPIcon.svg" alt="">
+          <p class="expertise-card-text">Strategic <br>Planning</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="casestudy">
+      <p class="casestudy-title">Case Studies</p>
+      <div class="casestudy-cards">
+        
+      </div>
+    </div>
+
     <!-- testimonials -->
     <!-- clients and friends -->
     <!-- insights -->
@@ -49,14 +105,6 @@ export default {
       caseStudies: null,
       refrences: [],
       partners: [],
-      whatwedo: [
-        {id: 1, image: 'comms.svg', title: 'Communications & Marketing'},
-        {id: 2, image: 'audienceinsight.svg', title: 'Audience Insight'},
-        {id: 3, image: 'advisory.svg', title: 'Advisory'},
-        {id: 4, image: 'monitoring.svg', title: 'Monitoring & Evaluation'},
-        {id: 5, image: 'learningpartner.svg', title: 'Learning Partner'},
-        {id: 6, image: 'strategicplanning.svg', title: 'Strategic Planning'},
-      ],
       testimonials: [
         {id: 1, image: 'dpfemale.png', name: 'Kate Goodman', role: 'Senior Campaigns Manager, Bite Back 2030', content:'CVR were great to work with, bringing unique and valuable insight to the team - which really helped steer our strategic direction on how to engage teenagers with the tricky topic of childhood obesity.'},
         {id: 2, image: 'dpmale.png', name: 'Jess Bool', role: 'Youth Strategy Lead, Unicef UK', content:'We worked with ClearView in Spring 2018 as part of our work to develop Unicef UK’s framework for youth engagement. Through a series of Solutions Labs and a bespoke digital tool that reached young people all over the UK, they prepared recommendations that have informed our work since.'},
@@ -165,8 +213,8 @@ export default {
 .wedo-text {
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 227.7%;
+  font-size: 20px;
+  line-height: 183.7%; /* original font is 30px */
   margin-top: 24px;
   margin-bottom: 44px;
 }
@@ -198,8 +246,8 @@ export default {
   color: var(--color-white);
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
-  line-height: 205.7%;
+  font-size: 20px;
+  line-height: 183.7%; /* original font 40px */
   margin-top: 11px;
   margin-bottom: 40px;
 }
@@ -212,6 +260,110 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* expertise */
+.expertise {
+  padding: 102px 120px 0;
+}
+
+.expertise-title {
+  color: var(--color-company);
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 46px;
+  margin-bottom: 74px;
+}
+
+.expertise-cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 200px));
+  gap: 50px 43px;
+}
+
+.expertise-card {
+  position: relative;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  height: 346px;
+  padding: 55px 30px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.expertise-card img {
+  max-width: 60px;
+  max-height: 57px;
+}
+
+.expertise-card-text {
+  color: var(--color-company);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 143.2%;
+}
+
+.e-c-line2 {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  height: 4px;
+  width: 150px;
+  background-color: rgba(0, 32, 71, 0.1);
+  transform: rotate(56.15deg);
+}
+
+.e-c-line {
+  position: absolute;
+  bottom: 150px;
+  right: -55px;
+  height: 4px;
+  width: 150px;
+  background-color: rgba(0, 32, 71, 0.1);
+  transform: rotate(-61.35deg);
+}
+
+.e-c-line3 {
+  position: absolute;
+  top: 20px;
+  right: -55px;
+  height: 4px;
+  width: 120px;
+  background-color: rgba(0, 32, 71, 0.1);
+  transform: rotate(-61.35deg);
+}
+
+.e-c-large {
+  grid-column: span 6;
+}
+
+.e-c-normal {
+  grid-column: span 3;
+}
+
+/* casestudy */
+.casestudy {
+  padding: 127px 120px 0;
+}
+
+.casestudy-title {
+  color: var(--color-company);
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 46px;
+  margin-bottom: 54px;
+}
+
+/* testimonials */
+/* clients and friends */
+/* insights */
 
 .homepage-close {
   width: 100%;
@@ -375,6 +527,57 @@ export default {
     height: 292px;
   }
 
+  /* expertise */
+  .expertise {
+    padding: 53px 46px 0;
+  }
+
+  .expertise-title {
+    font-size: 25px;
+    line-height: 26px;
+    margin-bottom: 35px;
+  }
+
+  .expertise-card {
+    height: 215px;
+    padding: 38px 35px 30px;
+  }
+
+  .expertise-card img {
+    max-width: 47px;
+    max-height: 43px;
+  }
+
+  .expertise-card-text {
+    font-size: 18px;
+    line-height: 143.2%;
+  }
+
+  .e-c-line {
+    bottom: 80px;
+  }
+  
+  .e-c-normal {
+    grid-column: span 6;
+  }
+
+  /* casestudy */
+  .casestudy {
+    padding: 60px 0 0;
+  }
+
+  .casestudy-title {
+    font-size: 25px;
+    line-height: 26px;
+    margin-bottom: 38px;
+    padding: 0 46px;
+  }
+
+  /* testimonials */
+  /* clients and friends */
+  /* insights */
+
+  /* closing statement */
   .homepage-close {
     flex-direction: column;
   }
@@ -408,6 +611,13 @@ export default {
     width: 100%;
     height: 342px;
     background-image: url('~assets/images/homepage2-mobile.png');
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .expertise-cards {
+    grid-template-columns: repeat(6, minmax(auto, 150px));
+    gap: 20px 20px;
   }
 }
 
