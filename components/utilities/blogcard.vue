@@ -154,6 +154,8 @@ export default {
     .blog-card-content-button {
         width: 157px;
         height: 51.5px;
+        font-size: 15px;
+        line-height: 18px;
     }
 }
 </style>

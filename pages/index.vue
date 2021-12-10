@@ -73,12 +73,27 @@
     <div class="casestudy">
       <p class="casestudy-title">Case Studies</p>
       <div class="casestudy-cards">
-        
+        <div class="casestudy-cards-inner">
+          <casestudycard
+            v-for="(result, index) in caseStudies"
+            :key="index"
+            :slug="result.slug"
+            :featuredImage="result.featuredImage"
+            :title="result.title"
+            :date="result.createdAt"
+            typeOf="alt" />
+        </div>
+      </div>
+      <div class="casestudy-controls desk">
+        <div class="arrow-container mr-15"><img src="~assets/svg/arrowleft.svg" alt=""></div>
+        <div class="arrow-container"><img src="~assets/svg/arrowright.svg" alt=""></div>
+        <div class="casestudy-controls-hl"></div>
       </div>
     </div>
 
     <!-- testimonials -->
     <!-- clients and friends -->
+
     <!-- insights -->
     <div class="homepage-close">
       <div class="homepage-close-text">
@@ -96,6 +111,7 @@
 </template>
 
 <script scoped>
+import casestudycard from "@/components/utilities/casestudycard";
 import videojumbotron from "@/components/general/videojumbotron";
 import mainbutton from "@/components/utilities/mainbutton";
 
@@ -114,11 +130,12 @@ export default {
     }
   },
   components: {
+    casestudycard,
     videojumbotron,
     mainbutton
   },
   methods: {
-    async getCaseStudies(limit = 2, skip = 0) {
+    async getCaseStudies(limit = 4, skip = 0) {
       var response = await this.$contentful.client.getEntries({
         content_type: 'projects',
         order: '-sys.createdAt',
@@ -348,7 +365,9 @@ export default {
 
 /* casestudy */
 .casestudy {
-  padding: 127px 120px 0;
+  padding: 127px 0 0 0;
+  background: -webkit-linear-gradient(top, #f2f4f6 45%,#002047 45%,#002047 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f2f4f6 45%,#002047 45%,#002047 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .casestudy-title {
@@ -359,6 +378,61 @@ export default {
   font-size: 45px;
   line-height: 46px;
   margin-bottom: 54px;
+  padding: 0 120px;
+}
+
+.casestudy-cards {
+  position: relative;
+  width: 100%;
+  height: 585px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.casestudy-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.casestudy-cards-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+}
+
+.casestudy-controls {
+  width: 100%;
+  padding: 0 120px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  margin-top: 45px;
+}
+
+.casestudy-controls-hl {
+  flex: 1;
+  height: 2px;
+  background-color: var(--color-white);
+  margin-left: 38px;
+}
+
+.arrow-container {
+  height: 74px;
+  width: 74px;
+  border-radius: 100%;
+  background-color: var(--color-danger);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 /* testimonials */
@@ -563,7 +637,7 @@ export default {
 
   /* casestudy */
   .casestudy {
-    padding: 60px 0 0;
+    padding: 60px 0 0 0;
   }
 
   .casestudy-title {
@@ -571,6 +645,10 @@ export default {
     line-height: 26px;
     margin-bottom: 38px;
     padding: 0 46px;
+  }
+
+  .casestudy-cards {
+    height: 354px;
   }
 
   /* testimonials */
