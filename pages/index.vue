@@ -91,10 +91,15 @@
       </div>
     </div>
 
-    <!-- testimonials -->
-    <!-- clients and friends -->
+    <div  class="testimonial">
+      <p class="testimonial-title">OUR CLIENTS SPEAK</p>
+      <p class="testimonial-subtitle">Feedback from our customers</p>
+    </div>
 
+    <!-- clients and friends -->
     <!-- insights -->
+
+    <!-- closing -->
     <div class="homepage-close">
       <div class="homepage-close-text">
         <p class="close-title">You can’t make a great decision without, a clear view</p>
@@ -436,6 +441,32 @@ export default {
 }
 
 /* testimonials */
+.testimonial {
+  width: 100%;
+  padding: 100px 120px 118px;
+  background-color: var(--color-company);
+}
+
+.testimonial-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 193.7%;
+  letter-spacing: 0.075em;
+  color: var(--color-danger);
+  margin-bottom: 15px;
+}
+
+.testimonial-subtitle {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 46px;
+  color: var(--color-white);
+  margin-bottom: 55px;
+}
+
 /* clients and friends */
 /* insights */
 
@@ -652,6 +683,24 @@ export default {
   }
 
   /* testimonials */
+  .testimonial {
+    padding: 54px 46px 61px;
+  }
+
+  .testimonial-title {
+    font-size: 12px;
+    line-height: 193.7%;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  .testimonial-subtitle {
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 54px;
+  }
+
   /* clients and friends */
   /* insights */
 
