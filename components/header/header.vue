@@ -8,7 +8,7 @@
         <li class="header-item"><nuxt-link to="/aboutus" class="plr-header">About Us</nuxt-link></li>
         <li class="header-item"><nuxt-link to="/expertise" class="plr-header">Our Expertise</nuxt-link></li>
         <li class="header-item"><nuxt-link to="/casestudies" class="plr-header">Case Studies</nuxt-link></li>
-        <li class="header-item"><nuxt-link to="/blog" class="plr-header">Blog</nuxt-link></li>
+        <li class="header-item"><nuxt-link to="/blog" class="plr-header">Hot Off The Press</nuxt-link></li>
         <mainbutton type="li" to="/contactus" size="header">Contact Us</mainbutton>
       </ul>
     </div>

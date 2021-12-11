@@ -115,4 +115,10 @@ export default {
         text-align: center;
     }
 }
+
+@media only screen and (max-width: 280px) {
+    .special-header {
+        font-size: 50px;
+    }
+}
 </style>

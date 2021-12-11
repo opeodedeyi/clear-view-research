@@ -9,7 +9,19 @@
         </div>
         <div class="expertise-image"></div>
         <!-- content to go here after lamina makes corrections -->
-        <div class="expertise-team"></div>
+        <div class="expertise-support">
+            <p class="expertise-support-title">We can support you with</p>
+            <div class="expertise-support-cards">
+                <div class="expertise-support-card" v-for="(result, index) in weSupportWith" :key="index">
+                    <img :src="require(`@/assets/svg/${result.image}`)" alt="">
+                    <p class="support-card-title">{{ result.title }}</p>
+                    <p class="support-card-content">{{ result.content }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="expertise-team">
+            <p class="expertise-team-title">Our Team</p>
+        </div>
     </div>
 </template>
 
@@ -23,13 +35,13 @@ export default {
     },
     data() {
         return {
-            whatwedo: [
-                {id: 1, image: 'audienceinsight2.svg', title: 'Audience Insight', content:"We interact and obtain trusted and culturally-informed input from the individuals our clients want to understand when they want to learn more about their audiences. We get this information by interacting with our current panels, databases, trusted sources, and networks, as well as our strategic community partners, with whom we've formed long-term, mutually beneficial partnerships."},
-                {id: 2, image: 'advisory2.svg', title: 'Advisory', content:"We work closely with our clients who are seeking a key buddy to support them in building their current/future initiatives, utilizing our in-house experience (as well as the smart folks in our network). This might include anything from providing best practices on how to engage with certain populations with which we have experience. To sharing our knowledge and experience with funders and prominent organizations on how they can effectively use their existing resources to have a greater social impact or address societal issues that they care about."},
-                {id: 3, image: 'comms2.svg', title: 'Communications & Marketing', content:"We provide communications and/or marketing teams with trusted and culturally sensitive knowledge in order to execute daring initiatives that cut through and resonate with people from the communities we specialize in. We've all seen how costly it can be for brands to make mistakes with their communication or campaigns, so we recognize the necessity of connecting properly with people."},
-                {id: 4, image: 'learningpartner2.svg', title: 'Learning Partner', content:"Collaboration is critical to our organization's success, and we're committed to collaborating with donors and powerful organizations to address pressing societal concerns."},
-                {id: 5, image: 'monitoring2.svg', title: 'Monitoring & Evaluation', content:"We have a lot of expertise with community-based monitoring and evaluation, as well as evaluating programs for vulnerable, excluded, and marginalized people. Allow us to assist you with developing or updating your organization's theory of change, developing a framework and method for examining outcomes and impact, and collecting insights and results to share with stakeholders."},
-                {id: 6, image: 'strategicplanning2.svg', title: 'Strategic Planning', content:"Based on evidence-based insights and best practice, we assist socially-driven enterprises in developing clear and concrete strategies to achieve their business goals."},
+            weSupportWith: [
+                {id: 1, image: 'aIIcon.svg', title: 'Audience Insight', content:"Want to create bold campaigns that make an impact and hit close to home? We help you do just that"},
+                {id: 2, image: 'aIcon.svg', title: 'Advisory', content:"Learn more about the audience you seek to understand and gather relevant and culturally informed insight"},
+                {id: 3, image: 'c&mIcon.svg', title: 'Communications & Marketing', content:"We share our expertise with you to help you in developing effective strategies to make a huge social impact"},
+                {id: 4, image: 'lPIcon.svg', title: 'Learning Partner', content:"We have the experience in monitoring diverse and excluded communities, and evaluating initiatives targeted at them"},
+                {id: 5, image: 'm&eIcon.svg', title: 'Monitoring & Evaluation', content:"Team work makes the dream work. We collaborate with organizations that are truly about solving problems in the society"},
+                {id: 6, image: 'sPIcon.svg', title: 'Strategic Planning', content:"Crush those business goals with our actionable strategies based on relevant insights"},
             ],
             team: null
         }
@@ -112,6 +124,85 @@ export default {
     width: 100%;
 }
 
+/* content to go here */
+
+/* support */
+.expertise-support {
+    padding: 60px 150px 107px;
+    background: var(--color-gray);
+}
+
+.expertise-support-title {
+    color: var(--color-dark);
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 227.7%;
+    margin-bottom: 30px;
+}
+
+.expertise-support-cards {
+    width: 100%;
+}
+
+.expertise-support-card {
+    background-color: var(--color-white);
+    width: 100%;
+    border-radius: 10px;
+    padding: 62px 160px 62px 84px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 40px;
+}
+
+.expertise-support-card:last-of-type {
+    margin-bottom: 0;
+}
+
+.expertise-support-card img {
+    max-height: 57px;
+    max-width: 67px;
+}
+
+.support-card-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 143.2%;
+    color: var(--color-company);
+    margin-left: 90px; /* 95px */
+}
+
+.support-card-content {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 166.5%;
+    color: var(--color-dark);
+    margin-left: 100px; /* 125px */
+}
+
+/* expertise team */
+.expertise-team {
+    padding: 106px 150px 127px;
+    background: var(--color-company);
+}
+
+.expertise-team-title {
+    color: var(--color-white);
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 46px;
+    margin-bottom: 65px;
+}
+
 @media only screen and (max-width: 1350px) {
     .expertise-title {
         padding: 73px 200px 100px;
@@ -147,6 +238,74 @@ export default {
     .expertise-title-explain {
         font-size: 15px;
         line-height: 227.7%;
+    }
+
+    /* content goes here */
+    /* support */
+    .expertise-support {
+        padding: 70px 46px 84px;
+        background: var(--color-gray);
+    }
+
+    .expertise-support-title {
+        font-size: 25px;
+        line-height: 227.7%;
+    }
+
+    .expertise-support-card img {
+        max-height: 57px;
+        max-width: 67px;
+    }
+
+    .support-card-title {
+        font-size: 18px;
+        line-height: 143.2%;
+        margin-left: 90px; /* 95px */
+        margin-top: 0;
+    }
+
+    .support-card-content {
+        font-size: 15px;
+        line-height: 166.5%;
+        margin-left: 100px; /* 125px */
+        margin-top: 0;
+    }
+
+    /* team */
+    .expertise-team {
+        padding: 40px 46px 101px;
+    }
+
+    .expertise-team-title {
+        font-size: 25px;
+        line-height: 26px;
+        margin-bottom: 25px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    /* ignore media querry until needed */
+    .expertise-support-card {
+        padding: 38px 35px 45px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 25px;
+    }
+
+    .support-card-title {
+        font-size: 18px;
+        line-height: 143.2%;
+        margin-left: 0;
+        margin-top: 60px;
+    }
+
+    .support-card-content {
+        font-size: 15px;
+        line-height: 166.5%;
+        margin-left: 0;
+        margin-top: 23px;
     }
 }
 

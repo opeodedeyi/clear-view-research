@@ -11,7 +11,7 @@
             <li class="nav-item"><nuxt-link to="/aboutus">About Us</nuxt-link></li>
             <li class="nav-item"><nuxt-link to="/expertise">Our Expertise</nuxt-link></li>
             <li class="nav-item"><nuxt-link to="/casestudies">Case Studies</nuxt-link></li>
-            <li class="nav-item"><nuxt-link to="/blog">Blog</nuxt-link></li>
+            <li class="nav-item"><nuxt-link to="/blog">Hot Off The Press</nuxt-link></li>
         </ul>
         <ul class="nav-social">
             <li class="nav-social-item mlrico"><a href="https://www.instagram.com/cvr_insights/"><img src="~/assets/svg/instagramicon.svg" alt="" /></a></li>
