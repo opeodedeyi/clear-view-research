@@ -289,8 +289,8 @@ export default {
         padding: 38px 35px 45px;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
-        align-content: center;
+        align-items: flex-start;
+        align-content: flex-start;
         margin-bottom: 25px;
     }
 
