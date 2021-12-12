@@ -8,7 +8,14 @@
             </div>
         </div>
         <div class="expertise-image"></div>
-        <!-- content to go here after lamina makes corrections -->
+
+        <div class="expertise-weknow">
+            <p class="expertise-weknow-title">We know a lot about</p>
+            <div class="expertise-weknow-cards">
+                <!-- we know alot content -->
+            </div>
+        </div>
+
         <div class="expertise-support">
             <p class="expertise-support-title">We can support you with</p>
             <div class="expertise-support-cards">
@@ -19,8 +26,10 @@
                 </div>
             </div>
         </div>
+
         <div class="expertise-team">
             <p class="expertise-team-title">Our Team</p>
+            <!-- our team content -->
         </div>
     </div>
 </template>
@@ -124,7 +133,21 @@ export default {
     width: 100%;
 }
 
-/* content to go here */
+/* weknow */
+.expertise-weknow {
+    padding: 83px 150px 0;
+    background: var(--color-gray);
+}
+
+.expertise-weknow-title {
+    color: var(--color-dark);
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 227.7%;
+    margin-bottom: 40px;
+}
 
 /* support */
 .expertise-support {
@@ -240,7 +263,17 @@ export default {
         line-height: 227.7%;
     }
 
-    /* content goes here */
+    /* weknow */
+    .expertise-weknow {
+        padding: 53px 46px 0;
+    }
+
+    .expertise-weknow-title {
+        font-size: 25px;
+        line-height: 227.7%;
+        margin-bottom: 53px;
+    }
+
     /* support */
     .expertise-support {
         padding: 70px 46px 84px;

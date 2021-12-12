@@ -1,6 +1,5 @@
 <template>
   <div class="homepage">
-
     <videojumbotron/>
 
     <div class="homepage-about">
@@ -91,9 +90,25 @@
       </div>
     </div>
 
-    <div  class="testimonial">
+    <div class="testimonial">
       <p class="testimonial-title">OUR CLIENTS SPEAK</p>
       <p class="testimonial-subtitle">Feedback from our customers</p>
+      <div class="testimony">
+        <div class="testimony-picture">
+          <img :src="require(`@/assets/images/${testimony[testimonyNo-1].image}`)" alt="">
+        </div>
+        <div class="testimony-content">
+          <p class="testimony-content-name">{{testimony[testimonyNo-1].name}}</p>
+          <p class="testimony-content-role">{{testimony[testimonyNo-1].role}}</p>
+          <div class="testimony-content-content">
+            <div class="testimony-quote"></div>
+            <p class="testimony-content-content-text">{{testimony[testimonyNo-1].content}}</p>
+            <div class="testimony-controls">
+
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- clients and friends -->
@@ -124,9 +139,8 @@ export default {
   data() {
     return {
       caseStudies: null,
-      refrences: [],
-      partners: [],
-      testimonials: [
+      testimonyNo: 1,
+      testimony: [
         {id: 1, image: 'dpfemale.png', name: 'Kate Goodman', role: 'Senior Campaigns Manager, Bite Back 2030', content:'CVR were great to work with, bringing unique and valuable insight to the team - which really helped steer our strategic direction on how to engage teenagers with the tricky topic of childhood obesity.'},
         {id: 2, image: 'dpmale.png', name: 'Jess Bool', role: 'Youth Strategy Lead, Unicef UK', content:'We worked with ClearView in Spring 2018 as part of our work to develop Unicef UK’s framework for youth engagement. Through a series of Solutions Labs and a bespoke digital tool that reached young people all over the UK, they prepared recommendations that have informed our work since.'},
         {id: 3, image: 'dpfemale.png', name: 'Anna Whitton', role: 'CEO, WDP', content:'The Clearview team were great to work with. They were energising, practical and provided really good quality feedback with clear, tangible recommendations. They built good rapport really quickly with our teams and delivered what we needed at pace.'},
@@ -467,6 +481,82 @@ export default {
   margin-bottom: 55px;
 }
 
+.testimony {
+  background-color: var(--color-company-dark);
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.testimony-picture {
+  width: 38%;
+  height: cover;
+}
+
+.testimony-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.testimony-content-name,
+.testimony-content-role,
+.testimony-content-content-text {
+  color: var(--color-white);
+}
+
+.testimony-content {
+  flex: 1;
+  padding: 61px 80px 56px;
+}
+
+.testimony-content-name {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 143.2%;
+  margin-bottom: 5px;
+}
+
+.testimony-content-role {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 143.2%;
+  margin-bottom: 28px;
+}
+
+.testimony-content-content {
+  position: relative;
+  padding: 29px 0 0 39px;
+}
+
+.testimony-quote {
+  position: absolute;
+  background: url('~assets/svg/quote.svg');
+  height: 67px;
+  width: 67px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+}
+
+.testimony-content-content-text {
+  position: relative;
+  z-index: 1;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 219.2%;
+  margin-bottom: 36px;
+}
+
 /* clients and friends */
 /* insights */
 
@@ -738,6 +828,57 @@ export default {
     width: 100%;
     height: 342px;
     background-image: url('~assets/images/homepage2-mobile.png');
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .testimony {
+    flex-direction: column;
+  }
+
+  .testimony-picture {
+    width: 100%;
+    height: 300px;
+  }
+
+  .testimony-picture img {
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .testimony-content {
+    padding: 40px 30px 45px;
+  }
+
+  .testimony-content-name {
+    text-align: center;
+    font-size: 20px;
+    line-height: 143.2%;
+    margin-bottom: 7px;
+  }
+
+  .testimony-content-role {
+    text-align: center;
+    font-size: 12px;
+    line-height: 168.2%;
+    margin-bottom: 40px;
+  }
+
+  .testimony-content-content {
+    padding: 11px 0 0;
+  }
+
+  .testimony-quote {
+    height: 34px;
+    width: 34px;
+    top: 0;
+    left: 45.6%;
+  }
+
+  .testimony-content-content-text {
+    text-align: center;
+    font-size: 15px;
+    line-height: 219.2%;
+    margin-bottom: 36px;
   }
 }
 
