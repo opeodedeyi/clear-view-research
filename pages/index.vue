@@ -249,7 +249,7 @@ export default {
 .wedo-text {
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 23px;
   line-height: 183.7%; /* original font is 30px */
   margin-top: 24px;
   margin-bottom: 44px;
@@ -282,7 +282,7 @@ export default {
   color: var(--color-white);
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 30px;
   line-height: 183.7%; /* original font 40px */
   margin-top: 11px;
   margin-bottom: 40px;
