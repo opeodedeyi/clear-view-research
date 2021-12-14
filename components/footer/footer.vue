@@ -29,7 +29,7 @@
                         <img src="~/assets/svg/locationicon.svg" class="location-logo-color" alt="" />
                     </div>
                     <div class="footer-address">
-                        <p>Clearview Research Ltd,
+                        <p>ClearView Research Ltd,
                         <br> 86-90 Paul Street, London, EC2A 4NE</p>
                     </div>
                 </div>

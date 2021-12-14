@@ -63,8 +63,8 @@ button {
 }
 
 .btn:hover {
-    border: 1px solid var(--color-danger-dark);
-    background-color: var(--color-danger-dark);
+    border: 1px solid var(--color-danger-hover);
+    background-color: var(--color-danger-hover);
     color: var(--color-white) !important;
     text-decoration: none;
 }
