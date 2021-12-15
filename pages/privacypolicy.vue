@@ -5,7 +5,7 @@
             <p class="policy-date">Effective date: May 24, 2018</p>
         </div>
         <div class="policy-body">
-            <p>At ClearView Research Limited (‘CVR’) we take your privacy very seriously and we are committed to protecting your personal data and handling it responsibly. We take great care in protecting your privacy and the information you provide whilst participating or wanting to participate inourresearchproject, as well as the personal data that we may receive from third parties.</p>
+            <p>At ClearView Research Limited (‘CVR’) we take your privacy very seriously and we are committed to protecting your personal data and handling it responsibly. We take great care in protecting your privacy and the information you provide whilst participating or wanting to participate in our research project, as well as the personal data that we may receive from third parties.</p>
             <p>We do not use any of your personal data to sell anything to youor sell your data with third parties. We conduct our research using scientific methods and we commit, in obtaining your consent, not to mislead you about the nature of the research or how the findings will be used. Your responses will be treated as confidential unless you consent to be identified.</p>
             <p>We are committed to meeting the requirements of the following laws and codes:</p>
             <ul>
