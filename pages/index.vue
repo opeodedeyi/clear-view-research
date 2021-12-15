@@ -112,7 +112,16 @@
     </div>
 
     <!-- clients and friends -->
+    <div class="brands">
+      <p class="brands-title">SOME OF OUR CLIENTS AND FRIENDS</p>
+
+    </div>
+
     <!-- insights -->
+    <div class="brands">
+      <p class="brands-title">OUR INSIGHTS AND PROJECTS HAVE BEEN NAME-CHECKED IN</p>
+
+    </div>
 
     <!-- closing -->
     <div class="homepage-close">
@@ -557,6 +566,22 @@ export default {
   margin-bottom: 36px;
 }
 
+/* brands */
+.brands {
+  width: 100%;
+  padding: 75px 120px;
+}
+
+.brands-title {
+  color: var(--color-company);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 193.7%;
+  letter-spacing: 0.075em;
+  text-align: center;
+
+}
 /* clients and friends */
 /* insights */
 
@@ -665,7 +690,7 @@ export default {
   }
 
   .homepage-about-wedo {
-    padding: 59px 46px 45px;
+    padding: 59px 30px 45px;
   }
 
   .wedo-header {
@@ -697,7 +722,7 @@ export default {
   }
 
   .mission-content {
-    padding: 55px 46px 63px;
+    padding: 55px 30px 63px;
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -724,7 +749,7 @@ export default {
 
   /* expertise */
   .expertise {
-    padding: 53px 46px 0;
+    padding: 53px 30px 0;
   }
 
   .expertise-title {
@@ -765,7 +790,7 @@ export default {
     font-size: 25px;
     line-height: 26px;
     margin-bottom: 38px;
-    padding: 0 46px;
+    padding: 0 30px;
   }
 
   .casestudy-cards {
@@ -774,7 +799,7 @@ export default {
 
   /* testimonials */
   .testimonial {
-    padding: 54px 46px 61px;
+    padding: 54px 30px 61px;
   }
 
   .testimonial-title {
@@ -791,6 +816,15 @@ export default {
     margin-bottom: 54px;
   }
 
+  /* brands */
+  .brands {
+    padding: 60px 30px 30px;
+  }
+
+  .brands-title {
+    font-size: 12px;
+    line-height: 193.7%;
+  }
   /* clients and friends */
   /* insights */
 
@@ -800,7 +834,7 @@ export default {
   }
 
   .homepage-close-text {
-    padding: 74px 46px 74px;
+    padding: 74px 30px 74px;
     flex: 1;
   }
 

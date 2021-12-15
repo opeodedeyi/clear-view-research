@@ -231,11 +231,11 @@ export default {
     }
 
     .casestudy-card-fixed:nth-of-type(1) {
-        margin-left: 46px;
+        margin-left: 30px;
     }
 
     .casestudy-card-fixed:last-of-type {
-        margin-right: 46px;
+        margin-right: 30px;
     }
 
     .casestudy-card-fixed-image {
