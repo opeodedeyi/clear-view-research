@@ -125,7 +125,7 @@
     </div>
 
     <!-- insights -->
-    <div class="brands">
+    <div class="brands-two">
       <p class="brands-title">OUR INSIGHTS AND PROJECTS HAVE BEEN NAME-CHECKED IN</p>
       <div class="brands-logos" :class="{ openInsights: closedInsights }">
         <img v-for="(brand, index) in insights" :key="index" :src="require(`@/assets/brands/${brand.src}`)" :alt="brand.src">
@@ -601,7 +601,8 @@ export default {
 }
 
 /* brands */
-.brands {
+.brands,
+.brands-two {
   background: var(--color-white);
   width: 100%;
   padding: 75px 120px;
@@ -904,6 +905,10 @@ export default {
   /* brands */
   .brands {
     padding: 60px 30px 55px;
+  }
+
+  .brands-two {
+    padding: 0 30px 75px;
   }
 
   .brands-title {
