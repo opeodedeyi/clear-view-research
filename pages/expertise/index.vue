@@ -239,7 +239,7 @@ export default {
     }
 
     .expertise-title {
-        padding: 53px 46px 70px;
+        padding: 53px 30px 70px;
         flex-direction: column;
     }
 
@@ -265,7 +265,7 @@ export default {
 
     /* weknow */
     .expertise-weknow {
-        padding: 53px 46px 0;
+        padding: 53px 30px 0;
     }
 
     .expertise-weknow-title {
@@ -276,7 +276,7 @@ export default {
 
     /* support */
     .expertise-support {
-        padding: 70px 46px 84px;
+        padding: 70px 30px 84px;
         background: var(--color-gray);
     }
 
@@ -306,7 +306,7 @@ export default {
 
     /* team */
     .expertise-team {
-        padding: 40px 46px 101px;
+        padding: 40px 30px 101px;
     }
 
     .expertise-team-title {

@@ -114,6 +114,9 @@
     <!-- clients and friends -->
     <div class="brands">
       <p class="brands-title">SOME OF OUR CLIENTS AND FRIENDS</p>
+      <div class="brands-logos">
+        <img v-for="(brand, index) in clients" :key="index" :src="require(`@/assets/brands/${brand.src}`)" alt="">
+      </div>
 
     </div>
 
@@ -154,7 +157,17 @@ export default {
         {id: 2, image: 'dpmale.png', name: 'Jess Bool', role: 'Youth Strategy Lead, Unicef UK', content:'We worked with ClearView in Spring 2018 as part of our work to develop Unicef UK’s framework for youth engagement. Through a series of Solutions Labs and a bespoke digital tool that reached young people all over the UK, they prepared recommendations that have informed our work since.'},
         {id: 3, image: 'dpfemale.png', name: 'Anna Whitton', role: 'CEO, WDP', content:'The Clearview team were great to work with. They were energising, practical and provided really good quality feedback with clear, tangible recommendations. They built good rapport really quickly with our teams and delivered what we needed at pace.'},
         {id: 4, image: 'dpfemale.png', name: 'Lucie Russell', role: 'CEO, StreetDoctors', content:'ClearView provided us with a really comprehensive service. We wanted to get to the nub of what young people affected by violence, and those who work with them, needed to better support them. ClearView took a really authentic and grassroots approach to achieving this task. Their work was thoughtful, down to earth, youth centric and efficient, leading to the production of a really comprehensive final report that was a gold mine of insights.'}
-      ]
+      ],
+      clients: [
+        {src: 'arts.png', link: '/blog/'},
+        {src: 'kingsCollege.png', link: '/blog/'},
+        {src: 'kpmg.png', link: '/blog/'},
+        {src: 'mandc.png', link: '/blog/'},
+        {src: 'nhs.png', link: '/blog/'},
+        {src: 'starbucks.png', link: '/blog/'},
+        {src: 'uber.png', link: '/blog/'}
+      ],
+      insights: []
     }
   },
   components: {
@@ -580,7 +593,21 @@ export default {
   line-height: 193.7%;
   letter-spacing: 0.075em;
   text-align: center;
+  margin-bottom: 48px;
+}
 
+.brands-logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 70px;
+}
+
+.brands-logos img {
+  max-width: 210px;
+  max-height: 92px;
+  object-fit: scale-down;
 }
 /* clients and friends */
 /* insights */
@@ -824,6 +851,16 @@ export default {
   .brands-title {
     font-size: 12px;
     line-height: 193.7%;
+    margin-bottom: 30px;
+  }
+
+  .brands-logos {
+    gap: 30px;
+  }
+
+  .brands-logos img {
+    max-width: 130px;
+    max-height: 51px;
   }
   /* clients and friends */
   /* insights */

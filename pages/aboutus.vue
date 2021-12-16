@@ -205,7 +205,7 @@ export default {
     }
 
     .aboutus-title {
-        padding: 53px 46px 70px;
+        padding: 53px 30px 70px;
         flex-direction: column;
     }
 
@@ -230,7 +230,7 @@ export default {
     }
 
     .aboutus-content {
-        padding: 60px 46px 48px;
+        padding: 60px 30px 48px;
     }
 
     .aboutus-content-text {
@@ -249,7 +249,7 @@ export default {
     }
 
     .aboutus-statement-text {
-        padding: 64px 46px 74px;
+        padding: 64px 30px 74px;
         flex: 1;
     }
 
