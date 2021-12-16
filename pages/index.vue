@@ -114,16 +114,27 @@
     <!-- clients and friends -->
     <div class="brands">
       <p class="brands-title">SOME OF OUR CLIENTS AND FRIENDS</p>
-      <div class="brands-logos">
-        <img v-for="(brand, index) in clients" :key="index" :src="require(`@/assets/brands/${brand.src}`)" alt="">
+      <div class="brands-logos" :class="{ openClients: closedClients }">
+        <img v-for="(brand, index) in clients" :key="index" :src="require(`@/assets/brands/${brand.src}`)" :alt="brand.src">
       </div>
-
+      <div class="brand-center">
+        <button @click.prevent="closedClients=!closedClients">
+          {{ closedClients ? 'View All Clients' : 'View Less Clients' }}
+        </button>
+      </div>
     </div>
 
     <!-- insights -->
     <div class="brands">
       <p class="brands-title">OUR INSIGHTS AND PROJECTS HAVE BEEN NAME-CHECKED IN</p>
-
+      <div class="brands-logos" :class="{ openInsights: closedInsights }">
+        <img v-for="(brand, index) in insights" :key="index" :src="require(`@/assets/brands/${brand.src}`)" :alt="brand.src">
+      </div>
+      <div class="brand-center">
+        <button @click.prevent="closedInsights=!closedInsights">
+          {{ closedInsights ? 'View All Outlets' : 'View Less Outlets' }}
+        </button>
+      </div>
     </div>
 
     <!-- closing -->
@@ -167,7 +178,17 @@ export default {
         {src: 'starbucks.png', link: '/blog/'},
         {src: 'uber.png', link: '/blog/'}
       ],
-      insights: []
+      insights: [
+        {src: 'arts.png', link: '/blog/'},
+        {src: 'kingsCollege.png', link: '/blog/'},
+        {src: 'kpmg.png', link: '/blog/'},
+        {src: 'mandc.png', link: '/blog/'},
+        {src: 'nhs.png', link: '/blog/'},
+        {src: 'starbucks.png', link: '/blog/'},
+        {src: 'uber.png', link: '/blog/'}
+      ],
+      closedClients: true,
+      closedInsights: true,
     }
   },
   components: {
@@ -581,6 +602,7 @@ export default {
 
 /* brands */
 .brands {
+  background: var(--color-white);
   width: 100%;
   padding: 75px 120px;
 }
@@ -609,8 +631,44 @@ export default {
   max-height: 92px;
   object-fit: scale-down;
 }
+
+.brand-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.brand-center button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--color-white);
+  background: var(--color-company);
+  border-radius: 31px;
+  border: none;
+  padding: 22px 43px;
+}
 /* clients and friends */
+.openClients {
+  height: 100px;
+  overflow: hidden;
+}
 /* insights */
+.openInsights {
+  height: 100px;
+  overflow: hidden;
+}
 
 .homepage-close {
   width: 100%;
@@ -845,7 +903,7 @@ export default {
 
   /* brands */
   .brands {
-    padding: 60px 30px 30px;
+    padding: 60px 30px 55px;
   }
 
   .brands-title {
@@ -863,7 +921,13 @@ export default {
     max-height: 51px;
   }
   /* clients and friends */
+  .openClients {
+    height: 55px;
+  }
   /* insights */
+  .openInsights {
+    height: 55px;
+  }
 
   /* closing statement */
   .homepage-close {
