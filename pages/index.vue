@@ -925,6 +925,14 @@ export default {
     max-width: 130px;
     max-height: 51px;
   }
+
+  .brand-center button {
+    font-size: 12px;
+    line-height: 15px;
+    border-radius: 31px;
+    border: none;
+    padding: 16px 22px;
+  }
   /* clients and friends */
   .openClients {
     height: 55px;
