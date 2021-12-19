@@ -16,7 +16,7 @@
                             <li class="footer-bottom-header-item"><nuxt-link to="/aboutus" class="plr-footer-bottom-header">About Us</nuxt-link></li>
                             <li class="footer-bottom-header-item"><nuxt-link to="/expertise" class="plr-footer-bottom-header">Our Expertise</nuxt-link></li>
                             <li class="footer-bottom-header-item"><nuxt-link to="/casestudies" class="plr-footer-bottom-header">Case Studies</nuxt-link></li>
-                            <li class="footer-bottom-header-item"><nuxt-link to="/blog" class="plr-footer-bottom-header">Hot Off The Press</nuxt-link></li>
+                            <li class="footer-bottom-header-item"><nuxt-link to="/blog" class="plr-footer-bottom-header">Blogs</nuxt-link></li>
                         </ul>
                     </div>
                     <div class="footer-bottom-header-menu-bar mob"  @click="showMenu">

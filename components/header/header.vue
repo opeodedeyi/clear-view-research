@@ -8,7 +8,7 @@
         <li class="header-item"><nuxt-link to="/aboutus" class="plr-header">About Us</nuxt-link></li>
         <li class="header-item"><nuxt-link to="/expertise" class="plr-header">Our Expertise</nuxt-link></li>
         <li class="header-item"><nuxt-link to="/casestudies" class="plr-header">Case Studies</nuxt-link></li>
-        <li class="header-item"><nuxt-link to="/blog" class="plr-header">Hot Off The Press</nuxt-link></li>
+        <li class="header-item"><nuxt-link to="/blog" class="plr-header">Blogs</nuxt-link></li>
         <mainbutton type="li" to="/contactus" size="header">Contact Us</mainbutton>
       </ul>
     </div>
@@ -125,6 +125,12 @@ a {
   font-size: 0.9375rem;
   font-weight: 400;
   color: var(--color-white);
+}
+
+/* active class */
+.header-item a.nuxt-link-exact-active,
+.header-item a:hover {
+  color: var(--color-danger);
 }
 
 .header-menu-bar {

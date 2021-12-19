@@ -29,7 +29,9 @@
 
         <div class="expertise-team">
             <p class="expertise-team-title">Our Team</p>
-            <!-- our team content -->
+            <div class="team-cards">
+                
+            </div>
         </div>
     </div>
 </template>

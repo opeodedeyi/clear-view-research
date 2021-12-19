@@ -1,7 +1,7 @@
 <template>
     <div class="blog">
         <div class="blog-title">
-            Hot off the press
+            Blogs
         </div>
         <div class="blog-jumbo-cards" v-if="blogs != null">
             <blogcard

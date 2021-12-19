@@ -114,7 +114,7 @@
     <!-- clients and friends -->
     <div class="brands">
       <p class="brands-title">SOME OF OUR CLIENTS AND FRIENDS</p>
-      <div class="brands-logos" :class="{ openClients: closedClients }">
+      <div class="brands-logos" :class="{ 'open-clients': closedClients }">
         <img v-for="(brand, index) in clients" :key="index" :src="require(`@/assets/brands/${brand.src}`)" :alt="brand.src">
       </div>
       <div class="brand-center">
@@ -127,7 +127,7 @@
     <!-- insights -->
     <div class="brands-two">
       <p class="brands-title">OUR INSIGHTS AND PROJECTS HAVE BEEN NAME-CHECKED IN</p>
-      <div class="brands-logos" :class="{ openInsights: closedInsights }">
+      <div class="brands-logos" :class="{ 'open-insights': closedInsights }">
         <img v-for="(brand, index) in insights" :key="index" :src="require(`@/assets/brands/${brand.src}`)" :alt="brand.src">
       </div>
       <div class="brand-center">
@@ -620,11 +620,13 @@ export default {
 }
 
 .brands-logos {
+  max-height: 1000px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 70px;
+  transition: max-height .4s;
 }
 
 .brands-logos img {
@@ -661,13 +663,13 @@ export default {
   padding: 22px 43px;
 }
 /* clients and friends */
-.openClients {
-  height: 100px;
+.open-clients {
+  max-height: 100px;
   overflow: hidden;
 }
 /* insights */
-.openInsights {
-  height: 100px;
+.open-insights {
+  max-height: 100px;
   overflow: hidden;
 }
 
@@ -934,12 +936,12 @@ export default {
     padding: 16px 22px;
   }
   /* clients and friends */
-  .openClients {
-    height: 55px;
+  .open-clients {
+    max-height: 55px;
   }
   /* insights */
-  .openInsights {
-    height: 55px;
+  .open-insights {
+    max-height: 55px;
   }
 
   /* closing statement */

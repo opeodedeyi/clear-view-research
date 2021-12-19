@@ -7,11 +7,12 @@
             </div>
         </div>
         <ul class="nav-main">
-            <li class="nav-item"><nuxt-link to="/">Home</nuxt-link></li>
+            <!-- <li class="nav-item"><nuxt-link to="/">Home</nuxt-link></li> -->
             <li class="nav-item"><nuxt-link to="/aboutus">About Us</nuxt-link></li>
             <li class="nav-item"><nuxt-link to="/expertise">Our Expertise</nuxt-link></li>
             <li class="nav-item"><nuxt-link to="/casestudies">Case Studies</nuxt-link></li>
-            <li class="nav-item"><nuxt-link to="/blog">Hot Off The Press</nuxt-link></li>
+            <li class="nav-item"><nuxt-link to="/blog">Blogs</nuxt-link></li>
+            <li class="nav-item"><nuxt-link to="/contactus">Contact Us</nuxt-link></li>
         </ul>
         <ul class="nav-social">
             <li class="nav-social-item mlrico"><a href="https://www.instagram.com/cvr_insights/"><img src="~/assets/svg/instagramicon.svg" alt="" /></a></li>
@@ -60,6 +61,11 @@ export default {
     border-radius: 3px;
     background: var(--color-white);
 } */
+
+.nav-item a.nuxt-link-exact-active,
+.nav-item a:hover {
+    color: var(--color-danger);
+}
 
 .nav {
     font-family: 'Questrial', sans-serif;
@@ -163,45 +169,6 @@ export default {
 .nav-social-item {
     text-decoration: none;
     list-style: none;
-}
-
-/* -- slideRight -- */
-@-webkit-keyframes vodal-slideRight-enter {
-    from {
-        -webkit-transform: translate3d(150px, 0, 0);
-        transform: translate3d(150px, 0, 0);
-    }
-}
-
-@keyframes vodal-slideRight-enter {
-    from {
-        -webkit-transform: translate3d(150px, 0, 0);
-        transform: translate3d(150px, 0, 0);
-    }
-}
-
-.vodal-slideRight-enter-active {
-    -webkit-animation: vodal-slideRight-enter both cubic-bezier(0.4, 0, 0, 1.5);
-    animation: vodal-slideRight-enter both cubic-bezier(0.4, 0, 0, 1.5);
-}
-
-@-webkit-keyframes vodal-slideRight-leave {
-    to {
-        -webkit-transform: translate3d(150px, 0, 0);
-        transform: translate3d(150px, 0, 0);
-    }
-}
-
-@keyframes vodal-slideRight-leave {
-    to {
-        -webkit-transform: translate3d(150px, 0, 0);
-        transform: translate3d(150px, 0, 0);
-    }
-}
-
-.vodal-slideRight-leave-active {
-    -webkit-animation: vodal-slideRight-leave both;
-    animation: vodal-slideRight-leave both;
 }
 
 /* small screen */
