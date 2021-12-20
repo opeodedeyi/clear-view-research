@@ -30,7 +30,16 @@
         <div class="expertise-team">
             <p class="expertise-team-title">Our Team</p>
             <div class="team-cards">
-                
+                <div class="member-card" v-for="(member, index) in team" :key="index">
+                    <div class="member-picture">
+                        <img :src="member.displayPicture" alt="ima" class="imgg"/>
+                        <img src="@/assets/svg/plus.svg" alt="ima" class="plus"/>
+                    </div>
+                    <div class="member-content">
+                        <p class="member-name">{{member.fullName}}</p>
+                        <p class="member-role">{{member.role}}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -75,7 +84,7 @@ export default {
                     id, fullName, role, bio, displayPicture, createdAt
                 }
             })
-            console.log(team);
+            this.team = team
         }
     },
     mounted() {
@@ -228,6 +237,70 @@ export default {
     margin-bottom: 65px;
 }
 
+.team-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 60px 35px;
+}
+
+.member-card {
+    width: 350px;
+}
+
+.member-picture {
+    height: 370px;
+    width: 100%;
+    position: relative;
+}
+
+.member-picture .imgg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.member-picture .plus {
+    cursor: pointer;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1;
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.member-content {
+    padding: 30px 0 0;
+}
+
+.member-content p {
+    color: var(--color-white);
+}
+
+.member-name {
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: normal;
+    /* font-size: 30px;
+    line-height: 31px; */
+    font-size: 25px;
+    line-height: 143.2%;
+    margin-bottom: 15px;
+}
+
+.member-role {
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 19px;
+}
+
 @media only screen and (max-width: 1350px) {
     .expertise-title {
         padding: 73px 200px 100px;
@@ -316,6 +389,22 @@ export default {
         line-height: 26px;
         margin-bottom: 25px;
     }
+
+    .team-cards {
+        gap: 45px 20px;
+    }
+
+    .member-card {
+        width: 290px;
+    }
+
+    .member-picture {
+        height: 313px;
+    }
+
+    .member-content {
+        padding: 25px 0 0;
+    }
 }
 
 @media only screen and (max-width: 850px) {
@@ -348,6 +437,14 @@ export default {
     .expertise-image {
         height: 381px;
         background-image: url('~assets/images/expertise-mobile.png');
+    }
+
+    .member-card {
+        width: 100%;
+    }
+
+    .member-picture {
+        height: 380px;
     }
 }
 </style>
