@@ -33,7 +33,7 @@
                 <div class="member-card" v-for="(member, index) in team" :key="index">
                     <div class="member-picture">
                         <img :src="member.displayPicture" alt="ima" class="imgg"/>
-                        <img src="@/assets/svg/plus.svg" alt="ima" class="plus"/>
+                        <img src="@/assets/svg/plus.svg" alt="ima" class="plus" @click="showMember(index)"/>
                     </div>
                     <div class="member-content">
                         <p class="member-name">{{member.fullName}}</p>
@@ -63,7 +63,9 @@ export default {
                 {id: 5, image: 'm&eIcon.svg', title: 'Monitoring & Evaluation', content:"Team work makes the dream work. We collaborate with organizations that are truly about solving problems in the society"},
                 {id: 6, image: 'sPIcon.svg', title: 'Strategic Planning', content:"Crush those business goals with our actionable strategies based on relevant insights"},
             ],
-            team: null
+            team: null,
+            teamMember: null,
+            showPopup: false
         }
     },
     methods: {
@@ -85,6 +87,15 @@ export default {
                 }
             })
             this.team = team
+        },
+        showMember(ind) {
+            this.teamMember = ind
+            this.showPopup = true
+            console.log("popup shown");
+        },
+        hideMember() {
+            this.showPopup = false
+            console.log("popup hidden");
         }
     },
     mounted() {
@@ -303,7 +314,7 @@ export default {
 
 @media only screen and (max-width: 1350px) {
     .expertise-title {
-        padding: 73px 200px 100px;
+        padding: 73px 120px 100px;
     }
 }
 
@@ -404,6 +415,17 @@ export default {
 
     .member-content {
         padding: 25px 0 0;
+    }
+
+    .member-name {
+        font-size: 22px;
+        line-height: 23px;
+        margin-bottom: 13px;
+    }
+
+    .member-role {
+        font-size: 15px;
+        line-height: 15px;
     }
 }
 
