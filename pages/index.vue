@@ -115,7 +115,7 @@
     <div class="brands">
       <p class="brands-title">SOME OF OUR CLIENTS AND FRIENDS</p>
       <div class="brands-logos" :class="{ 'open-clients': closedClients }">
-        <img v-for="(brand, index) in clients" :key="index" :src="require(`@/assets/brands/${brand.src}`)" :alt="brand.src">
+        <img v-for="(brand, index) in clients" :key="index" :src="require(`@/assets/brands/clients/${brand.src}`)" :alt="brand.src">
       </div>
       <div class="brand-center">
         <button @click.prevent="closedClients=!closedClients">
@@ -128,7 +128,7 @@
     <div class="brands-two">
       <p class="brands-title">OUR INSIGHTS AND PROJECTS HAVE BEEN NAME-CHECKED IN</p>
       <div class="brands-logos" :class="{ 'open-insights': closedInsights }">
-        <img v-for="(brand, index) in insights" :key="index" :src="require(`@/assets/brands/${brand.src}`)" :alt="brand.src">
+        <img v-for="(brand, index) in insights" :key="index" :src="require(`@/assets/brands/insights/${brand.src}`)" :alt="brand.src">
       </div>
       <div class="brand-center">
         <button @click.prevent="closedInsights=!closedInsights">
@@ -170,22 +170,33 @@ export default {
         {id: 4, image: 'dpfemale.png', name: 'Lucie Russell', role: 'CEO, StreetDoctors', content:'ClearView provided us with a really comprehensive service. We wanted to get to the nub of what young people affected by violence, and those who work with them, needed to better support them. ClearView took a really authentic and grassroots approach to achieving this task. Their work was thoughtful, down to earth, youth centric and efficient, leading to the production of a really comprehensive final report that was a gold mine of insights.'}
       ],
       clients: [
-        {src: 'arts.png', link: '/blog/'},
-        {src: 'kingsCollege.png', link: '/blog/'},
+        {src: 'arts-council.png', link: '/blog/'},
+        {src: 'impact.png', link: '/blog/'},
+        {src: 'kings.png', link: '/blog/'},
         {src: 'kpmg.png', link: '/blog/'},
+        {src: 'logo.png', link: '/blog/'},
         {src: 'mandc.png', link: '/blog/'},
+        {src: 'ms.png', link: '/blog/'},
         {src: 'nhs.png', link: '/blog/'},
         {src: 'starbucks.png', link: '/blog/'},
-        {src: 'uber.png', link: '/blog/'}
+        {src: 'uber.png', link: '/blog/'},
+        {src: 'ukyouth.png', link: '/blog/'},
+        {src: 'unicef.png', link: '/blog/'},
+        {src: 'vodafone.png', link: '/blog/'},
+        {src: 'ygam.png', link: '/blog/'},
+        {src: 'youth.png', link: '/blog/'}
       ],
       insights: [
-        {src: 'arts.png', link: '/blog/'},
-        {src: 'kingsCollege.png', link: '/blog/'},
-        {src: 'kpmg.png', link: '/blog/'},
-        {src: 'mandc.png', link: '/blog/'},
-        {src: 'nhs.png', link: '/blog/'},
-        {src: 'starbucks.png', link: '/blog/'},
-        {src: 'uber.png', link: '/blog/'}
+        {src: 'bbc.png', link: '/blog/'},
+        {src: 'glamour.png', link: '/blog/'},
+        {src: 'guardian.png', link: '/blog/'},
+        {src: 'independent.png', link: '/blog/'},
+        {src: 'metro.png', link: '/blog/'},
+        {src: 'sky.png', link: '/blog/'},
+        {src: 'telegraph.png', link: '/blog/'},
+        {src: 'thesun.png', link: '/blog/'},
+        {src: 'thevoice.png', link: '/blog/'},
+        {src: 'wsj.png', link: '/blog/'}
       ],
       closedClients: true,
       closedInsights: true,
@@ -418,11 +429,11 @@ export default {
 }
 
 .e-c-large {
-  grid-column: span 6;
+  grid-column: span 4; /* grid-column: span 6;  */
 }
 
 .e-c-normal {
-  grid-column: span 3;
+  grid-column: span 4; /* grid-column: span 3;  */
 }
 
 /* casestudy */

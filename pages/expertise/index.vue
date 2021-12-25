@@ -9,10 +9,18 @@
         </div>
         <div class="expertise-image"></div>
 
+        <div class="expertise-numbers">
+            <div class="numbers-header"><p class="numbers-title">IN THE PAST COUPLE OF YEARS</p><div class="numbers-hl"></div></div>
+                <p class="numbers-text">We have had over 1,000 conversations in a diverse mix of communities across the UK and internationally.</p>
+            <div class="numbers-hl2"></div>
+        </div>
+
         <div class="expertise-weknow">
             <p class="expertise-weknow-title">We know a lot about</p>
             <div class="expertise-weknow-cards">
-                <!-- we know alot content -->
+                <div class="expertise-weknow-card" v-for="(result, index) in weknow" :key="index">
+                    <p class="weknow-card-cont">{{ result.content }}</p>
+                </div>
             </div>
         </div>
 
@@ -62,6 +70,17 @@ export default {
                 {id: 4, image: 'lPIcon.svg', title: 'Learning Partner', content:"We have the experience in monitoring diverse and excluded communities, and evaluating initiatives targeted at them"},
                 {id: 5, image: 'm&eIcon.svg', title: 'Monitoring & Evaluation', content:"Team work makes the dream work. We collaborate with organizations that are truly about solving problems in the society"},
                 {id: 6, image: 'sPIcon.svg', title: 'Strategic Planning', content:"Crush those business goals with our actionable strategies based on relevant insights"},
+            ],
+            weknow: [
+                {id: 1, content:"Public health & community engagement"},
+                {id: 2, content:"Peer & community research"},
+                {id: 3, content:"Children and young people"},
+                {id: 4, content:"Students and Campaigns"},
+                {id: 5, content:"People facing hardships and disadvantage"},
+                {id: 6, content:"Diverse consumers (and their habits)"},
+                {id: 7, content:"People with protected characteristics"},
+                {id: 8, content:"Black, Asian and minority groups"},
+                {id: 9, content:"Monitoring & evaluation"},
             ],
             team: null,
             teamMember: null,
@@ -155,6 +174,54 @@ export default {
     width: 100%;
 }
 
+/* numbers */
+.expertise-numbers {
+  padding: 100px 150px 0;
+  background-color: var(--color-gray);
+}
+
+.numbers-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.numbers-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 193.7%;
+  letter-spacing: 0.075em;
+  color: var(--color-danger);
+  margin-right: 26px;
+  margin-bottom: 0;
+}
+
+.numbers-hl {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-danger);
+}
+
+.numbers-hl2 {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-danger);
+}
+
+.numbers-text {
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 45px;
+    line-height: 156%;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
 /* weknow */
 .expertise-weknow {
     padding: 83px 150px 0;
@@ -169,6 +236,35 @@ export default {
     font-size: 30px;
     line-height: 227.7%;
     margin-bottom: 40px;
+}
+
+.expertise-weknow-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 200px));
+    gap: 50px 43px;
+}
+
+.expertise-weknow-card {
+    grid-column: span 4;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    height: 150px;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.weknow-card-cont {
+    color: var(--color-dark);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 139.2%;
+    text-align: center;
 }
 
 /* support */
@@ -349,6 +445,38 @@ export default {
         line-height: 227.7%;
     }
 
+    /* numbers */
+    .expertise-numbers {
+        padding: 59px 30px 0;
+    }
+
+    .numbers-header {
+        flex-direction: column;
+        display: block;
+    }
+
+    .numbers-title {
+        font-size: 12px;
+        line-height: 193.7%;
+        margin-right: 0;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .numbers-hl {
+        width: 100%;
+        height: 1px;
+    }
+
+    .numbers-text {
+        font-family: 'Questrial';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 156.5%;
+        text-align: center;
+    }
+
     /* weknow */
     .expertise-weknow {
         padding: 53px 30px 0;
@@ -357,7 +485,18 @@ export default {
     .expertise-weknow-title {
         font-size: 25px;
         line-height: 227.7%;
-        margin-bottom: 53px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .expertise-weknow-card {
+        grid-column: span 6;
+        height: 100px;
+    }
+
+    .weknow-card-cont {
+        font-size: 15px;
+        line-height: 166.5%;
     }
 
     /* support */
@@ -369,6 +508,7 @@ export default {
     .expertise-support-title {
         font-size: 25px;
         line-height: 227.7%;
+        text-align: center;
     }
 
     .expertise-support-card img {
@@ -467,6 +607,14 @@ export default {
 
     .member-picture {
         height: 380px;
+    }
+
+    /* weknow */
+    .expertise-weknow-cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(auto, 200px));
+        gap: 20px;
     }
 }
 </style>
