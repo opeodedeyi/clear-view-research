@@ -642,7 +642,7 @@ export default {
 
 .brands-logos img {
   max-width: 210px;
-  max-height: 92px;
+  max-height: 140px;
   object-fit: scale-down;
 }
 
@@ -675,12 +675,12 @@ export default {
 }
 /* clients and friends */
 .open-clients {
-  max-height: 100px;
+  max-height: 360px;
   overflow: hidden;
 }
 /* insights */
 .open-insights {
-  max-height: 100px;
+  max-height: 150px;
   overflow: hidden;
 }
 
@@ -936,7 +936,7 @@ export default {
 
   .brands-logos img {
     max-width: 130px;
-    max-height: 51px;
+    max-height: 90px;
   }
 
   .brand-center button {
@@ -948,11 +948,11 @@ export default {
   }
   /* clients and friends */
   .open-clients {
-    max-height: 55px;
+    max-height: 220px;
   }
   /* insights */
   .open-insights {
-    max-height: 55px;
+    max-height: 220px;
   }
 
   /* closing statement */
