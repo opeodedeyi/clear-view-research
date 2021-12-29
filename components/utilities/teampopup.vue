@@ -11,6 +11,7 @@
             <div class="popup-body">
                 <p class="popup-body-text">{{bio}}</p>
             </div>
+            <a href="https://www.linkedin.com/company/clearview-research-ltd/" class="popup-linkedin"><img src="~/assets/svg/linkedinicon.svg" alt="" /></a>
         </div>
     </div>
 </template>
@@ -70,12 +71,14 @@ export default {
     width: 100%;
     max-width: 1139px;
     height: 100%;
-    max-height: 460px;
+    max-height: 500px;
     border-radius: 20px;
     cursor: default;
     padding: 62px 100px;
     display: flex;
     flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
 }
 
 .popup-header {
@@ -111,7 +114,6 @@ export default {
 
 .popup-body {
     width: 100%;
-    /* overflow: scroll; */
     overflow-x: hidden;
     overflow-y: scroll;
     padding-right: 0px;
@@ -123,6 +125,10 @@ export default {
     font-weight: normal;
     font-size: 18px;
     line-height: 245%;
+}
+
+.popup-linkedin {
+    margin-top: 40px;
 }
 
 @media only screen and (max-width: 1080px) {
@@ -144,6 +150,10 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
+    .popup-header {
+        margin-bottom: 60px;
+    }
+
     .main-popup-content {
         width: 100%;
         max-width: 100%;
