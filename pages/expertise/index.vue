@@ -50,13 +50,15 @@
                 </div>
             </div>
         </div>
+        <teampopup v-if="showPopup" @close-popup="closeTeamPopup" :fullname="team[teamMember].fullName" :role="team[teamMember].role" :bio="team[teamMember].bio"></teampopup>
     </div>
 </template>
 
 <script>
+import teampopup from "@/components/utilities/teampopup";
 export default {
     components: {
-        
+        teampopup
     },
     head: {
         title: 'Clearview research expertise',
@@ -115,6 +117,9 @@ export default {
         hideMember() {
             this.showPopup = false
             console.log("popup hidden");
+        },
+        closeTeamPopup() {
+            this.showPopup = false
         }
     },
     mounted() {

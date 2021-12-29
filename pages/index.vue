@@ -673,11 +673,13 @@ export default {
   border: none;
   padding: 22px 43px;
 }
+
 /* clients and friends */
 .open-clients {
   max-height: 360px;
   overflow: hidden;
 }
+
 /* insights */
 .open-insights {
   max-height: 150px;
@@ -876,6 +878,10 @@ export default {
     bottom: 80px;
   }
   
+  .e-c-large {
+    grid-column: span 6; /* grid-column: span 6;  */
+  }
+
   .e-c-normal {
     grid-column: span 6;
   }
