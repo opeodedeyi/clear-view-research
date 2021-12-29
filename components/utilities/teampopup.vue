@@ -109,7 +109,10 @@ export default {
 
 .popup-body {
     width: 100%;
-    overflow: scroll;
+    /* overflow: scroll; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: 0px;
     flex: 1;
 }
 
@@ -133,8 +136,8 @@ export default {
     }
 
     .popup-body-text {
-        font-size: 15px;
-        line-height: 200.5%;
+        font-size: 16px;
+        line-height: 220.5%;
     }
 }
 
@@ -146,6 +149,11 @@ export default {
         max-height: 100%;
         border-radius: 0;
         padding: 50px 30px;
+    }
+
+    .popup-body-text {
+        font-size: 15px;
+        line-height: 220.5%;
     }
 }
 </style>
