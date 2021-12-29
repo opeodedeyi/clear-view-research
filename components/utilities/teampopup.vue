@@ -52,7 +52,7 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 100;
+    z-index: 101;
     background-color: rgba(0, 0, 0, 0.72);
     cursor: pointer;
     display: flex;
@@ -60,6 +60,8 @@ export default {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .main-popup-content {
