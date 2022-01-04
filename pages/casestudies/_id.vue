@@ -46,12 +46,13 @@ export default {
             projectDetails: null,
             title: 'case study',
             moreProjects: null,
-            limit: 2
+            limit: 2,
+            pageTitle: "Clearview research casestudy"
         }
     },
-    head: {
-        title: `Clearview research casestudy`,
-    },
+    // head: {
+    //     title: this.pageTitle,
+    // },
     components: {
         loadingb,
         mainbutton,
@@ -172,6 +173,19 @@ export default {
         },
         async readMore() {
             document.location.href = this.projectDetails[0].learnMore;
+        },
+        head() {
+            return {
+                title: this.pageTitle,
+                meta: [
+                // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+                    {
+                        hid: 'description',
+                        name: 'description',
+                        content: 'My custom description'
+                    }
+                ]
+            }
         }
     },
     mounted() {

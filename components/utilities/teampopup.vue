@@ -11,7 +11,7 @@
             <div class="popup-body">
                 <p class="popup-body-text">{{bio}}</p>
             </div>
-            <a href="https://www.linkedin.com/company/clearview-research-ltd/" class="popup-linkedin"><img src="~/assets/svg/linkedinicon.svg" alt="" /></a>
+            <div class="popup-linkedin"> <div class="popup-linkedin-logo" @click="goToLinkedin(linkedin)">Follow on Linkedin <img src="~/assets/svg/linkedinicon.svg" alt="" /></div> </div>
         </div>
     </div>
 </template>
@@ -30,6 +30,11 @@ export default {
         bio: {
             type: String,
             required: true
+        },
+        linkedin: {
+            type: String,
+            required: false,
+            default: "https://www.linkedin.com/company/clearview-research-ltd/"
         }
     },
     methods: {
@@ -39,6 +44,12 @@ export default {
         doNothing(e) {
             e.preventDefault();
             e.stopPropagation();
+        },
+        goToLinkedin(link) {
+            var anchor = document.createElement('a');
+            anchor.href = link;
+            anchor.target="_blank";
+            anchor.click();
         }
     }
 }
@@ -129,6 +140,20 @@ export default {
 
 .popup-linkedin {
     margin-top: 40px;
+}
+
+.popup-linkedin-logo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 220px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--color-company-dark);
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 1080px) {

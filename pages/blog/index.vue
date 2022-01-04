@@ -8,7 +8,7 @@
                 v-for="(result, index) in blogs"
                 :key="index"
                 :slug="result.slug"
-                :featuredImage="result.thumbnail"
+                :thumbnail="result.thumbnail"
                 :title="result.title"
                 :description="result.description"
                 :date="result.createdAt" />
@@ -30,7 +30,7 @@ export default {
         loadingb
     },
     head: {
-        title: 'Clearview research blogs',
+        title: 'ClearView Research Blogs',
     },
     data() {
         return {

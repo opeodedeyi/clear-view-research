@@ -24,6 +24,20 @@
     <div class="expertise">
       <p class="expertise-title">Our Expertise</p>
       <div class="expertise-cards">
+        <div class="expertise-card e-c-normal">
+          <div class="e-c-line"></div>
+          <div class="e-c-line2"></div>
+          <div class="e-c-line3"></div>
+          <img src="~assets/svg/aIIcon.svg" alt="">
+          <p class="expertise-card-text">Audience <br>Insight</p>
+        </div>
+        <div class="expertise-card e-c-large">
+          <div class="e-c-line"></div>
+          <div class="e-c-line2"></div>
+          <div class="e-c-line3"></div>
+          <img src="~assets/svg/m&eIcon.svg" alt="">
+          <p class="expertise-card-text">Monitioring & <br>Evaluation</p>
+        </div>
         <div class="expertise-card e-c-large">
           <div class="e-c-line"></div>
           <div class="e-c-line2"></div>
@@ -35,22 +49,8 @@
           <div class="e-c-line"></div>
           <div class="e-c-line2"></div>
           <div class="e-c-line3"></div>
-          <img src="~assets/svg/aIIcon.svg" alt="">
-          <p class="expertise-card-text">Audience <br>Insight</p>
-        </div>
-        <div class="expertise-card e-c-normal">
-          <div class="e-c-line"></div>
-          <div class="e-c-line2"></div>
-          <div class="e-c-line3"></div>
           <img src="~assets/svg/aIcon.svg" alt="">
           <p class="expertise-card-text">Advisory</p>
-        </div>
-        <div class="expertise-card e-c-large">
-          <div class="e-c-line"></div>
-          <div class="e-c-line2"></div>
-          <div class="e-c-line3"></div>
-          <img src="~assets/svg/m&eIcon.svg" alt="">
-          <p class="expertise-card-text">Monitioring & <br>Evaluation</p>
         </div>
         <div class="expertise-card e-c-normal">
           <div class="e-c-line"></div>
@@ -187,16 +187,16 @@ export default {
         {src: 'youth.png', link: '/blog/'}
       ],
       insights: [
-        {src: 'bbc.png', link: '/blog/'},
-        {src: 'glamour.png', link: '/blog/'},
-        {src: 'guardian.png', link: '/blog/'},
-        {src: 'independent.png', link: '/blog/'},
-        {src: 'metro.png', link: '/blog/'},
-        {src: 'sky.png', link: '/blog/'},
-        {src: 'telegraph.png', link: '/blog/'},
-        {src: 'thesun.png', link: '/blog/'},
-        {src: 'thevoice.png', link: '/blog/'},
-        {src: 'wsj.png', link: '/blog/'}
+        {src: 'bbc.png'},
+        {src: 'glamour.png'},
+        {src: 'guardian.png'},
+        {src: 'independent.png'},
+        {src: 'metro.png'},
+        {src: 'sky.png'},
+        {src: 'telegraph.png'},
+        {src: 'thesun.png'},
+        {src: 'thevoice.png'},
+        {src: 'wsj.png'}
       ],
       closedClients: true,
       closedInsights: true,

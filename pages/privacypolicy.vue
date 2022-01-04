@@ -102,7 +102,7 @@
 <script>
 export default {
     head: {
-        title: 'Clearview Privacy Policy',
+        title: 'ClearView Research Privacy Policy',
     }
 }
 </script>

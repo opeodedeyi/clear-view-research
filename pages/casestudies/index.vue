@@ -29,7 +29,7 @@ export default {
         loadingb
     },
     head: {
-        title: 'Clearview research case studies',
+        title: 'ClearView Research Case Studies',
     },
     data() {
         return {

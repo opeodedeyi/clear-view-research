@@ -6,7 +6,7 @@
                 <div class="blog-titlee">{{blogDetails[0].title}}</div>
             </div>
             <div class="blog-main-image">
-                <img :src="blogDetails[0].featuredImage" alt="">
+                <img :src="blogDetails[0].thumbnail" alt="">
             </div>
             <div class="blog-main-content" v-html="blogDetails[0].details"></div>
         </div>
@@ -20,7 +20,7 @@
                     v-for="(result, index) in moreblogs"
                     :key="index"
                     :slug="result.slug"
-                    :featuredImage="result.thumbnail"
+                    :thumbnail="result.thumbnail"
                     :title="result.title"
                     :description="result.description"
                     :date="result.createdAt" />
@@ -61,11 +61,10 @@ export default {
 
             blogs = blogs.map((item) => {
                 const { id, createdAt } = item.sys;
-                const { slug, title, authorName, description } = item.fields;
+                const { slug, title, description } = item.fields;
                 const thumbnail = item.fields.thumbnail.fields.file.url
-                const authorImage = item.fields.authorImage.fields.file.url
                 return{
-                    id, slug, title, description, thumbnail, authorName, authorImage, createdAt
+                    id, slug, title, description, thumbnail, createdAt
                 }
             })
             console.log(blogs);
@@ -147,16 +146,16 @@ export default {
                 }
 
                 const { id, createdAt } = item.sys;
-                const { title, description, authorName } = item.fields;
-                const featuredImage = item.fields.featuredImage.fields.file.url;
-                const authorImage = item.fields.authorImage.fields.file.url;
+                const { title, description } = item.fields;
+                const thumbnail = item.fields.thumbnail.fields.file.url
+                // const featuredImage = item.fields.featuredImage.fields.file.url;
                 const content = item.fields.details;
                 const details = documentToHtmlString(content, renderOptions)
                 
                 const customDate = this.getCustomDate(createdAt)
 
                 return{
-                    id, title, featuredImage, description, details, authorName, authorImage, createdAt, customDate
+                    id, title, thumbnail, description, details, createdAt, customDate
                 }
             })
             this.blogDetails = blog

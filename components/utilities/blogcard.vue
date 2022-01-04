@@ -1,7 +1,7 @@
 <template>
     <div class="blog-card">
         <div class="blog-card-image">
-            <img :src="featuredImage" alt="ima"/>
+            <img :src="thumbnail" alt="ima"/>
         </div>
         <div class="blog-card-content">
             <p class="blog-card-content-date">{{getCustomDate()}}</p>
@@ -19,7 +19,7 @@ export default {
         mainbutton
     },
     props: {
-        featuredImage: {
+        thumbnail: {
             type: String,
             required: true,
         },

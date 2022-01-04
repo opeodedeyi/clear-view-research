@@ -61,7 +61,7 @@ export default {
         teampopup
     },
     head: {
-        title: 'Clearview research expertise',
+        title: 'ClearView Research Expertise',
     },
     data() {
         return {
@@ -78,7 +78,7 @@ export default {
                 {id: 2, content:"Peer & community research"},
                 {id: 3, content:"Children and young people"},
                 {id: 4, content:"Students and Campaigns"},
-                {id: 5, content:"People facing hardships and disadvantage"},
+                {id: 5, content:"People facing hardships and multiple challenges"},
                 {id: 6, content:"Diverse consumers (and their habits)"},
                 {id: 7, content:"People with protected characteristics"},
                 {id: 8, content:"Black, Asian and minority groups"},

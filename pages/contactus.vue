@@ -55,7 +55,7 @@ export default {
         maininput
     },
     head: {
-        title: 'Contact Clearview research',
+        title: 'Contact ClearView Research',
     },
     data() {
         return {

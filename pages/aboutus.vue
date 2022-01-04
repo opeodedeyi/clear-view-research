@@ -32,7 +32,7 @@ export default {
         
     },
     head: {
-        title: 'About Clearview research',
+        title: 'About ClearView Research',
     }
 }
 </script>
