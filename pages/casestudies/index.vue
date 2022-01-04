@@ -44,7 +44,7 @@ export default {
         async getAllProjects(limit = this.limit, skip = 0) {
             this.loading = true
             var response = await this.$contentful.client.getEntries({
-                content_type: 'projects',
+                content_type: 'projects', //caseStudies
                 order: '-sys.createdAt',
                 limit,
                 skip
@@ -67,7 +67,7 @@ export default {
         async loadMoreProjects(limit = this.limit, skip = this.limit*this.page) {
             this.loading = true
             var response = await this.$contentful.client.getEntries({
-                content_type: 'projects',
+                content_type: 'projects', //caseStudies
                 order: '-sys.createdAt',
                 limit,
                 skip
