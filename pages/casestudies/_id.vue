@@ -59,7 +59,7 @@ export default {
         async getTwoProjects(limit = this.limit, skip = 0) {
             this.loading = true
             var response = await this.$contentful.client.getEntries({
-                content_type: 'projects', //caseStudies
+                content_type: 'caseStudies', //caseStudies
                 order: '-sys.createdAt',
                 limit,
                 skip
@@ -91,7 +91,7 @@ export default {
         },
         async getOneProject(slug) {
             var response = await this.$contentful.client.getEntries({
-                content_type: 'projects', //caseStudies
+                content_type: 'caseStudies', //caseStudies,
                 'fields.slug': slug
             })
             let project = response.items;

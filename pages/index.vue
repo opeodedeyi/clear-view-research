@@ -210,8 +210,8 @@ export default {
   methods: {
     async getCaseStudies(limit = 4, skip = 0) {
       var response = await this.$contentful.client.getEntries({
-        content_type: 'projects',
-        order: '-sys.createdAt',
+        content_type: 'caseStudies',
+        order: 'fields.id',
         limit,
         skip
       })
