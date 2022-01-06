@@ -13,7 +13,7 @@
                 :date="result.createdAt" />
         </div>
         <loadingb v-if="loading"/>
-        <div class="casestudies-loadmore" v-if="loading==false & limit*page<total & projects!=null"><mainbutton type="button" size="medium" :onClick="loadMoreProjects">Load more Casestudies</mainbutton></div>
+        <div class="casestudies-loadmore" v-if="loading==false & limit*page<total & projects!=null"><mainbutton type="button" size="medium" :onClick="loadMoreProjects">Load More Case Studies</mainbutton></div>
     </div>
 </template>
 
@@ -34,7 +34,7 @@ export default {
     data() {
         return {
             projects: null,
-            limit: 4,
+            limit: 6,
             page: 1,
             total: null,
             loading: false

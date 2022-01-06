@@ -148,7 +148,6 @@ export default {
                 const { id, createdAt } = item.sys;
                 const { title, description } = item.fields;
                 const thumbnail = item.fields.thumbnail.fields.file.url
-                // const featuredImage = item.fields.featuredImage.fields.file.url;
                 const content = item.fields.details;
                 const details = documentToHtmlString(content, renderOptions)
                 

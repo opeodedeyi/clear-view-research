@@ -46,7 +46,7 @@ export default {
             this.loading = true
             var response = await this.$contentful.client.getEntries({
                 content_type: 'blog',
-                order: '-sys.createdAt',
+                order: 'fields.id',
                 limit,
                 skip
             })
@@ -54,11 +54,10 @@ export default {
 
             blogs = blogs.map((item) => {
                 const { id, createdAt } = item.sys;
-                const { slug, title, authorName, description } = item.fields;
+                const { slug, title, description } = item.fields;
                 const thumbnail = item.fields.thumbnail.fields.file.url
-                const authorImage = item.fields.authorImage.fields.file.url
                 return{
-                    id, slug, title, description, thumbnail, authorName, authorImage, createdAt
+                    id, slug, title, description, thumbnail, createdAt
                 }
             })
             this.total = response.total
@@ -69,7 +68,7 @@ export default {
             this.loading = true
             var response = await this.$contentful.client.getEntries({
                 content_type: 'blog',
-                order: '-sys.createdAt',
+                order: 'fields.id',
                 limit,
                 skip
             })
@@ -77,11 +76,10 @@ export default {
 
             blogs = blogs.map((item) => {
                 const { id, createdAt } = item.sys;
-                const { slug, title, authorName, description } = item.fields;
+                const { slug, title, description } = item.fields;
                 const thumbnail = item.fields.thumbnail.fields.file.url
-                const authorImage = item.fields.authorImage.fields.file.url
                 return{
-                    id, slug, title, description, thumbnail, authorName, authorImage, createdAt
+                    id, slug, title, description, thumbnail, createdAt
                 }
             })
             let BlogsToPatch = this.blogs

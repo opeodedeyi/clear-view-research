@@ -50,7 +50,7 @@
                 </div>
             </div>
         </div>
-        <teampopup v-if="showPopup" @close-popup="closeTeamPopup" :fullname="team[teamMember].fullName" :role="team[teamMember].role" :bio="team[teamMember].bio"></teampopup>
+        <teampopup v-if="showPopup" @close-popup="closeTeamPopup" :fullname="team[teamMember].fullName" :role="team[teamMember].role" :bio="team[teamMember].bio" :linkedin="team[teamMember].linkedin"></teampopup>
     </div>
 </template>
 
@@ -101,10 +101,10 @@ export default {
 
             team = team.map((item) => {
                 const { createdAt } = item.sys;
-                const { id, fullName, role, bio } = item.fields;
+                const { id, fullName, role, bio, linkedin } = item.fields;
                 const displayPicture = item.fields.displayPicture.fields.file.url
                 return{
-                    id, fullName, role, bio, displayPicture, createdAt
+                    id, fullName, role, bio, linkedin, displayPicture, createdAt
                 }
             })
             this.team = team
