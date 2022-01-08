@@ -916,7 +916,7 @@ export default {
   }
 
   .casestudy-cards {
-    height: 354px;
+    height: 356px;
   }
 
   /* testimonials */

@@ -13,7 +13,7 @@
             <img :src="featuredImage" alt="ima"/>
         </div>
         <div class="casestudy-card-fixed-content">
-            <p class="casestudy-card-fixed-content-title">{{title | shortenText(20, '...')}}</p>
+            <p class="casestudy-card-fixed-content-title">{{title | shortenText(23, '...')}}</p>
             <button class="casestudy-card-fixed-content-button" @click.prevent="goTocasestudy">Read Case Study</button>
         </div>
     </div>
@@ -184,7 +184,7 @@ export default {
 .casestudy-card-fixed-content-title {
     font-style: normal;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 22px;
     line-height: 143.2%;
     margin-bottom: 20px;
 }
@@ -247,7 +247,7 @@ export default {
     }
 
     .casestudy-card-fixed-content-title {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 143.2%;
         margin-bottom: 17px;
     }
