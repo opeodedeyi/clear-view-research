@@ -71,7 +71,7 @@
 
     <div class="casestudy">
       <p class="casestudy-title">Case Studies</p>
-      <div class="casestudy-cards">
+      <div class="casestudy-cards" ref="caseScroll">
         <div class="casestudy-cards-inner">
           <casestudycard
             v-for="(result, index) in caseStudies"
@@ -84,8 +84,8 @@
         </div>
       </div>
       <div class="casestudy-controls desk">
-        <div class="arrow-container mr-15"><img src="~assets/svg/arrowleft.svg" alt=""></div>
-        <div class="arrow-container"><img src="~assets/svg/arrowright.svg" alt=""></div>
+        <div class="arrow-container mr-15" @click="slide('left')"><img src="~assets/svg/arrowleft.svg" alt=""></div>
+        <div class="arrow-container" @click="slide('right')"><img src="~assets/svg/arrowright.svg" alt=""></div>
         <div class="casestudy-controls-hl"></div>
       </div>
     </div>
@@ -208,7 +208,7 @@ export default {
     mainbutton
   },
   methods: {
-    async getCaseStudies(limit = 4, skip = 0) {
+    async getCaseStudies(limit = 6, skip = 0) {
       var response = await this.$contentful.client.getEntries({
         content_type: 'caseStudies',
         order: 'fields.id',
@@ -229,6 +229,22 @@ export default {
     },
     aboutUs() {
       return this.$router.push('/aboutus')
+    },
+    slide(direction) {
+      var container = this.$refs.caseScroll
+      if(direction == 'left'){
+        container.scrollBy({
+          top: 0,
+          left: -540,
+          behavior: 'smooth'
+        });
+      } else {
+        container.scrollBy({
+          top: 0,
+          left: +540,
+          behavior: 'smooth'
+        });
+      }
     }
   },
   mounted() {
@@ -497,8 +513,8 @@ export default {
 }
 
 .arrow-container {
-  height: 74px;
-  width: 74px;
+  height: 60px;
+  width: 60px;
   border-radius: 100%;
   background-color: var(--color-danger);
   display: flex;
@@ -506,6 +522,7 @@ export default {
   justify-content: center;
   align-items: center;
   align-content: center;
+  cursor: pointer;
 }
 
 /* testimonials */
