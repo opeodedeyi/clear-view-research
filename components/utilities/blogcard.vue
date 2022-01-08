@@ -78,7 +78,7 @@ export default {
 .blog-card-content-date {
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 227.7%;
     color: var(--color-dark);
     opacity: 0.5;
