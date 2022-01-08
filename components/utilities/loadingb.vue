@@ -13,7 +13,7 @@ export default {
 <style scoped>
 .loading {
     width: 100%;
-    padding: 72px 0 0;
+    padding: 20px 0 0;
     display: flex;
     flex-direction: row;
     justify-content: center;

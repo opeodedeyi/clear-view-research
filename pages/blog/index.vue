@@ -117,7 +117,7 @@ export default {
 .blog-jumbo-cards {
     display: grid;
     grid-template-columns: repeat(12, minmax(auto, 200px));
-    gap: 48px 24px;
+    gap: 62px 24px;
     width: 100%;
     padding: 0 78px;
     margin-bottom: 84px;
