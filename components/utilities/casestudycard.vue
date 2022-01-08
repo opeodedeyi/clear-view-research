@@ -13,7 +13,7 @@
             <img :src="featuredImage" alt="ima"/>
         </div>
         <div class="casestudy-card-fixed-content">
-            <p class="casestudy-card-fixed-content-title">{{title | shortenText(26, '...')}}</p>
+            <p class="casestudy-card-fixed-content-title">{{title | shortenText(20, '...')}}</p>
             <button class="casestudy-card-fixed-content-button" @click.prevent="goTocasestudy">Read Case Study</button>
         </div>
     </div>
@@ -150,8 +150,8 @@ export default {
 
 .casestudy-card-fixed {
     border-radius: 20px;
-    height: 585px;
-    width: 500px;
+    height: 450px;
+    width: 400px;
     margin-right: 40px;
 }
 
@@ -165,7 +165,7 @@ export default {
 
 .casestudy-card-fixed-image {
     width: 100%;
-    height: 377px;
+    height: 250px;
 }
 
 .casestudy-card-fixed-image img {
@@ -176,7 +176,7 @@ export default {
 }
 
 .casestudy-card-fixed-content {
-    padding: 43px 60px 47px;
+    padding: 42px 40px 42px;
     background-color: var(--color-white);
     border-radius: 0 0 20px 20px;
 }

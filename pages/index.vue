@@ -235,13 +235,13 @@ export default {
       if(direction == 'left'){
         container.scrollBy({
           top: 0,
-          left: -540,
+          left: -440,
           behavior: 'smooth'
         });
       } else {
         container.scrollBy({
           top: 0,
-          left: +540,
+          left: +440,
           behavior: 'smooth'
         });
       }
@@ -473,7 +473,7 @@ export default {
 .casestudy-cards {
   position: relative;
   width: 100%;
-  height: 585px;
+  height: 450px;
   overflow-x: scroll;
   overflow-y: hidden;
   -ms-overflow-style: none;  /* IE and Edge */
