@@ -103,8 +103,13 @@
           <div class="testimony-content-content">
             <div class="testimony-quote"></div>
             <p class="testimony-content-content-text">{{testimony[testimonyNo-1].content}}</p>
-            <div class="testimony-controls">
-
+            <div class="testimony-controls-container">
+              <ul class="testimony-controls">
+                <li :class="[testimonyNo===1 ? 'testimony-active' : 'testimony-controls-item' ]" @click="testimonyNo=1"></li>
+                <li :class="[testimonyNo===2 ? 'testimony-active' : 'testimony-controls-item' ]" @click="testimonyNo=2"></li>
+                <li :class="[testimonyNo===3 ? 'testimony-active' : 'testimony-controls-item' ]" @click="testimonyNo=3"></li>
+                <li :class="[testimonyNo===4 ? 'testimony-active' : 'testimony-controls-item' ]" @click="testimonyNo=4"></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -628,6 +633,44 @@ export default {
   margin-bottom: 36px;
 }
 
+.testimony-controls-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.testimony-controls {
+  width: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin: 0;
+}
+
+.testimony-controls-item {
+  list-style: none;
+  width: 11px;
+  height: 11px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.testimony-active {
+  list-style: none;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: var(--color-danger);
+  cursor: pointer;
+}
+
 /* brands */
 .brands,
 .brands-two {
@@ -1063,6 +1106,14 @@ export default {
     font-size: 15px;
     line-height: 219.2%;
     margin-bottom: 36px;
+  }
+
+  .testimony-controls-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 
