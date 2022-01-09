@@ -93,7 +93,7 @@
     <div class="testimonial">
       <p class="testimonial-title">OUR CLIENTS SPEAK</p>
       <p class="testimonial-subtitle">What our clients and partners say about us</p>
-      <div class="testimony">
+      <div class="testimony" v-touch:swipe.left="swipeRight" v-touch:swipe.right="swipeLeft">
         <div class="testimony-picture">
           <img :src="require(`@/assets/images/${testimony[testimonyNo-1].image}`)" alt="">
         </div>
@@ -250,6 +250,18 @@ export default {
           behavior: 'smooth'
         });
       }
+    },
+    swipeLeft() {
+      if (this.testimonyNo==1) {
+        return this.testimonyNo = 4
+      }
+      return this.testimonyNo--
+    },
+    swipeRight() {
+      if (this.testimonyNo==4) {
+        return this.testimonyNo = 1
+      }
+      return this.testimonyNo++
     }
   },
   mounted() {
