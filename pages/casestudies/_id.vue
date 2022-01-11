@@ -170,7 +170,11 @@ export default {
             console.log(project);
         },
         async readMore() {
-            document.location.href = this.projectDetails[0].learnMore;
+            // return console.log(this.projectDetails[0].learnMore);
+            var anchor = document.createElement('a');
+            anchor.href = this.projectDetails[0].learnMore;
+            anchor.target="_blank";
+            anchor.click();
         },
         head() {
             return {
