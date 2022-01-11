@@ -11,7 +11,7 @@
  
             <div class="project-learn-more" v-if="projectDetails[0].learnMore!=null">
                 <div class="project-hl"></div>
-                <p class="project-learn-more-title">Please find out more about our YE2030</p>
+                <p class="project-learn-more-title">Click to find out more about {{projectDetails[0].title}}</p>
                 <div class="project-readmore"><mainbutton size="more" type="btn" :onClick="readMore">Read More</mainbutton></div>
             </div>
 
@@ -170,7 +170,6 @@ export default {
             console.log(project);
         },
         async readMore() {
-            // return console.log(this.projectDetails[0].learnMore);
             var anchor = document.createElement('a');
             anchor.href = this.projectDetails[0].learnMore;
             anchor.target="_blank";
