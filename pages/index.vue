@@ -748,7 +748,7 @@ export default {
 
 /* clients and friends */
 .open-clients {
-  max-height: 360px;
+  max-height: 180px;
   overflow: hidden;
 }
 
