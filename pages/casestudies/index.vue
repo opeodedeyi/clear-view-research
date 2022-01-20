@@ -34,7 +34,7 @@ export default {
     data() {
         return {
             projects: null,
-            limit: 6,
+            limit: 10,
             page: 1,
             total: null,
             loading: false
