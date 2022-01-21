@@ -59,9 +59,9 @@ export default {
                     id, slug, title, featuredImage, createdAt
                 }
             })
+            console.log(projects);
             this.total = response.total
             this.loading = false
-            console.log(projects);
             return this.projects = projects;
         },
         async loadMoreProjects(limit = this.limit, skip = this.limit*this.page) {

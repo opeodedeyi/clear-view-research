@@ -8,7 +8,7 @@
                 v-for="(result, index) in blogs"
                 :key="index"
                 :slug="result.slug"
-                :thumbnail="result.thumbnail"
+                :featuredImage="result.featuredImage"
                 :title="result.title"
                 :description="result.description"
                 :date="result.createdAt" />
@@ -35,7 +35,7 @@ export default {
     data() {
         return {
             blogs: null,
-            limit: 10,
+            limit: 6,
             page: 1,
             total: null,
             loading: false
@@ -55,11 +55,12 @@ export default {
             blogs = blogs.map((item) => {
                 const { id, createdAt } = item.sys;
                 const { slug, title, description } = item.fields;
-                const thumbnail = item.fields.thumbnail.fields.file.url
+                const featuredImage = item.fields.featuredImage.fields.file.url
                 return{
-                    id, slug, title, description, thumbnail, createdAt
+                    id, slug, title, featuredImage, description, createdAt
                 }
             })
+            console.log(blogs);
             this.total = response.total
             this.loading = false
             return this.blogs = blogs;
@@ -77,9 +78,9 @@ export default {
             blogs = blogs.map((item) => {
                 const { id, createdAt } = item.sys;
                 const { slug, title, description } = item.fields;
-                const thumbnail = item.fields.thumbnail.fields.file.url
+                const featuredImage = item.fields.featuredImage.fields.file.url
                 return{
-                    id, slug, title, description, thumbnail, createdAt
+                    id, slug, title, description, featuredImage, createdAt
                 }
             })
             let BlogsToPatch = this.blogs

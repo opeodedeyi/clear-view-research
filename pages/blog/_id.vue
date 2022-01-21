@@ -6,7 +6,7 @@
                 <div class="blog-titlee">{{blogDetails[0].title}}</div>
             </div>
             <div class="blog-main-image">
-                <img :src="blogDetails[0].thumbnail" alt="">
+                <img :src="blogDetails[0].featuredImage" alt="">
             </div>
             <div class="blog-main-content" v-html="blogDetails[0].details"></div>
         </div>
@@ -20,7 +20,7 @@
                     v-for="(result, index) in moreblogs"
                     :key="index"
                     :slug="result.slug"
-                    :thumbnail="result.thumbnail"
+                    :featuredImage="result.featuredImage"
                     :title="result.title"
                     :description="result.description"
                     :date="result.createdAt" />
@@ -62,9 +62,9 @@ export default {
             blogs = blogs.map((item) => {
                 const { id, createdAt } = item.sys;
                 const { slug, title, description } = item.fields;
-                const thumbnail = item.fields.thumbnail.fields.file.url
+                const featuredImage = item.fields.featuredImage.fields.file.url
                 return{
-                    id, slug, title, description, thumbnail, createdAt
+                    id, slug, title, description, featuredImage, createdAt
                 }
             })
             console.log(blogs);
@@ -147,14 +147,14 @@ export default {
 
                 const { id, createdAt } = item.sys;
                 const { title, description } = item.fields;
-                const thumbnail = item.fields.thumbnail.fields.file.url
+                const featuredImage = item.fields.featuredImage.fields.file.url
                 const content = item.fields.details;
                 const details = documentToHtmlString(content, renderOptions)
                 
                 const customDate = this.getCustomDate(createdAt)
 
                 return{
-                    id, title, thumbnail, description, details, createdAt, customDate
+                    id, title, featuredImage, description, details, createdAt, customDate
                 }
             })
             this.blogDetails = blog
