@@ -350,14 +350,15 @@ export default {
 }
 
 .team-cards {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(12, minmax(auto, 200px));
-    gap: 60px 43px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 60px 35px;
 }
 
 .member-card {
-    grid-column: span 4;
+    width: 350px;
 }
 
 .member-picture {
@@ -397,6 +398,8 @@ export default {
     font-family: 'Questrial';
     font-style: normal;
     font-weight: normal;
+    /* font-size: 30px;
+    line-height: 31px; */
     font-size: 25px;
     line-height: 143.2%;
     margin-bottom: 15px;
@@ -544,11 +547,11 @@ export default {
     }
 
     .team-cards {
-        gap: 45px 40px;
+        gap: 45px 20px;
     }
 
     .member-card {
-        grid-column: span 4;
+        width: 290px;
     }
 
     .member-picture {
@@ -595,15 +598,6 @@ export default {
         margin-left: 0;
         margin-top: 23px;
     }
-
-    /* team */
-    .team-cards {
-        gap: 45px 40px;
-    }
-
-    .member-card {
-        grid-column: span 6;
-    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -627,15 +621,5 @@ export default {
         grid-template-columns: repeat(6, minmax(auto, 200px));
         gap: 20px;
     }
-
-    /* team */
-    .team-cards {
-        gap: 45px 40px;
-        grid-template-columns: repeat(6, minmax(auto, 200px));
-    }
-
-    /* .member-card {
-        grid-column: span 6;
-    } */
 }
 </style>
