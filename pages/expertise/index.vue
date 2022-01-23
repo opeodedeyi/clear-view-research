@@ -350,15 +350,20 @@ export default {
 }
 
 .team-cards {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 60px 35px;
+    gap: 60px 35px; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 200px));
+    gap: 60px 43px;
 }
 
 .member-card {
-    width: 350px;
+    /* width: 350px; */
+    grid-column: span 4;
 }
 
 .member-picture {
@@ -547,11 +552,12 @@ export default {
     }
 
     .team-cards {
-        gap: 45px 20px;
+        gap: 45px 40px;
     }
 
     .member-card {
-        width: 290px;
+        /* width: 290px; */
+        grid-column: span 4;
     }
 
     .member-picture {
@@ -598,6 +604,15 @@ export default {
         margin-left: 0;
         margin-top: 23px;
     }
+
+    /* team */
+    .team-cards {
+        gap: 45px 40px;
+    }
+
+    .member-card {
+        grid-column: span 6;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -621,5 +636,15 @@ export default {
         grid-template-columns: repeat(6, minmax(auto, 200px));
         gap: 20px;
     }
+
+    /* team */
+    .team-cards {
+        gap: 45px 40px;
+        grid-template-columns: repeat(6, minmax(auto, 200px));
+    }
+
+    /* .member-card {
+        grid-column: span 6;
+    } */
 }
 </style>
