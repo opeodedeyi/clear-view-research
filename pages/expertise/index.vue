@@ -406,6 +406,12 @@ export default {
     line-height: 19px;
 }
 
+@media only screen and (min-width: 1660px) {
+    .member-card {
+        grid-column: span 3;
+    }
+}
+
 @media only screen and (max-width: 1350px) {
     .expertise-title {
         padding: 73px 120px 100px;

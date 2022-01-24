@@ -12,7 +12,7 @@
                 <p class="gen-title">Whether you’d like to discuss a project or say hi, we always love to hear from you.</p>
                 <div class="gen-hl"></div>
                 <p v-if="errorMessage" class="contact-error">{{ errorMessage }}</p>
-                <form action="https://formsubmit.co/opeyemiodedeyi@gmail.com" method="POST" ref="form">
+                <form action="https://formsubmit.co/info@clearviewresearch.co.uk" method="POST" ref="form">
                     <maininput name="Name" placeholder="Full Name" inputType="text" controlType="input" v-model="form.name"/>
                     <maininput name="Subject" placeholder="Subject" inputType="text" controlType="input" v-model="form.subject"/>
                     <maininput name="Email" placeholder="Email Address" inputType="email" controlType="input" v-model="form.email"/>
