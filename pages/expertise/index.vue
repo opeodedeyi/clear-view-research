@@ -29,6 +29,7 @@
             <div class="expertise-support-cards">
                 <div class="expertise-support-card" v-for="(result, index) in weSupportWith" :key="index">
                     <img :src="require(`@/assets/svg/${result.image}`)" alt="">
+                    
                     <p class="support-card-title">{{ result.title }}</p>
                     <p class="support-card-content">{{ result.content }}</p>
                 </div>
@@ -296,14 +297,11 @@ export default {
     background-color: var(--color-white);
     width: 100%;
     border-radius: 10px;
-    padding: 62px 160px 62px 84px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
+    padding: 62px 90px 62px;
     margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 10% 25% 55%;
+    gap: 5%;
 }
 
 .expertise-support-card:last-of-type {
@@ -321,7 +319,6 @@ export default {
     font-size: 22px;
     line-height: 143.2%;
     color: var(--color-company);
-    margin-left: 90px; /* 95px */
 }
 
 .support-card-content {
@@ -330,7 +327,6 @@ export default {
     font-size: 20px;
     line-height: 166.5%;
     color: var(--color-dark);
-    margin-left: 100px; /* 125px */
 }
 
 /* expertise team */
@@ -350,11 +346,6 @@ export default {
 }
 
 .team-cards {
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 60px 35px; */
     width: 100%;
     display: grid;
     grid-template-columns: repeat(12, minmax(auto, 200px));
@@ -362,7 +353,6 @@ export default {
 }
 
 .member-card {
-    /* width: 350px; */
     grid-column: span 4;
 }
 
@@ -403,8 +393,6 @@ export default {
     font-family: 'Questrial';
     font-style: normal;
     font-weight: normal;
-    /* font-size: 30px;
-    line-height: 31px; */
     font-size: 25px;
     line-height: 143.2%;
     margin-bottom: 15px;
@@ -515,6 +503,12 @@ export default {
         background: var(--color-gray);
     }
 
+    .expertise-support-card {
+        padding: 62px 80px;
+        grid-template-columns: 10% 25% 55%;
+        gap: 5%;
+    }
+
     .expertise-support-title {
         font-size: 25px;
         line-height: 227.7%;
@@ -529,14 +523,14 @@ export default {
     .support-card-title {
         font-size: 18px;
         line-height: 143.2%;
-        margin-left: 90px; /* 95px */
+        /* margin-left: 90px; 95px */
         margin-top: 0;
     }
 
     .support-card-content {
         font-size: 15px;
         line-height: 166.5%;
-        margin-left: 100px; /* 125px */
+        /* margin-left: 100px; 125px */
         margin-top: 0;
     }
 
@@ -583,26 +577,43 @@ export default {
 @media only screen and (max-width: 850px) {
     /* ignore media querry until needed */
     .expertise-support-card {
+        background-color: var(--color-white);
+        width: 100%;
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: nowrap;
         padding: 38px 35px 45px;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         align-content: flex-start;
         margin-bottom: 25px;
+        gap: 40px;
+    }
+
+    .expertise-support-card img {
+        max-height: 57px;
+        max-width: 67px;
     }
 
     .support-card-title {
+        font-style: normal;
+        font-weight: 600;
+        color: var(--color-company);
         font-size: 18px;
         line-height: 143.2%;
         margin-left: 0;
-        margin-top: 60px;
+        /* margin-top: 60px; */
     }
 
     .support-card-content {
+        font-style: normal;
+        font-weight: normal;
+        color: var(--color-dark);
         font-size: 15px;
         line-height: 166.5%;
         margin-left: 0;
-        margin-top: 23px;
+        /* margin-top: 23px; */
     }
 
     /* team */
