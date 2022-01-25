@@ -142,6 +142,14 @@
       </div>
     </div>
 
+    <!-- accreditations -->
+    <div class="brands-two">
+      <p class="brands-title">WE HAVE RECEIVED ACKNOWLEDGEMENT FROM</p> <!-- WE HAVE BEEN APPROVED BY -->
+      <div class="brands-logos">
+        <img v-for="(brand, index) in accreditations" :key="index" :src="require(`@/assets/brands/acc/${brand.src}`)" :alt="brand.src">
+      </div>
+    </div>
+
     <!-- closing -->
     <div class="homepage-close">
       <div class="homepage-close-text">
@@ -202,6 +210,10 @@ export default {
         {src: 'thesun.png'},
         {src: 'thevoice.png'},
         {src: 'wsj.png'}
+      ],
+      accreditations: [
+        {src: 'londonLivingWage.jpg'},
+        {src: 'MRS.png'}
       ],
       closedClients: true,
       closedInsights: true,
