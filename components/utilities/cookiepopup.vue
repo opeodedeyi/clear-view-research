@@ -6,11 +6,11 @@
                 <img src="~/assets/svg/cancel.svg" alt="x" />
             </div>
         </div>
-        <p class="cookie-text">This website use analytics cookies to improve our website and that you have the best experience with us. Please let us know if this is OK. To remember your selection, we'll use a cookie. More information can be found in our <nuxt-link class="cookie-link" to="/cookiepolicy" target="_blank">Cookie Policy.</nuxt-link></p>
+        <p class="cookie-text">This website uses analytics cookies to help us improve it and give you the best possible experience. More information can be found in our <nuxt-link class="cookie-link" to="/cookiepolicy" target="_blank">Cookie Policy.</nuxt-link></p>
         <!-- button comes here -->
         <div class="cookie-options">
-            <button class="cookie-accept" @click.prevent="acceptAnalyticsCookies">I'm OK With Analytics Cookies</button>
-            <button class="cookie-reject" @click.prevent="rejectAnalyticsCookies">Do Not Use Analytics Cookies</button>
+            <button class="cookie-accept" @click.prevent="acceptAnalyticsCookies">Accept Analytics Cookies</button>
+            <button class="cookie-reject" @click.prevent="rejectAnalyticsCookies">Reject Analytics Cookies</button>
         </div>
     </div>
 </template>
@@ -96,20 +96,19 @@ export default {
 
 .cookie-accept,
 .cookie-reject {
-    font-size: 15px;
-    line-height: 18px;
-    padding: 22px 54px;
+    font-size: 12px;
+    line-height: 15px;
     background-color: var(--color-danger);
     color: var(--color-white);
     cursor: pointer;
 }
 
 .cookie-accept {
-    padding: 22px 54px;
+    padding: 16px 40px;
     background-color: var(--color-danger);
     color: var(--color-white);
     border: none;
-    border-radius: 31px;
+    border-radius: 27px;
     margin-right: 20px;
     margin-bottom: 0;
 }
@@ -119,7 +118,7 @@ export default {
 }
 
 .cookie-reject {
-    padding: 21px 53px;
+    padding: 15px 39px;
     background-color: var(--color-gray);
     color: var(--color-danger);
     border: 1px solid var(--color-danger);
