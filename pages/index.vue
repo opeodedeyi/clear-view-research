@@ -36,7 +36,7 @@
           <div class="e-c-line2"></div>
           <div class="e-c-line3"></div>
           <img src="~assets/svg/m&eIcon.svg" alt="">
-          <p class="expertise-card-text">Monitioring & <br>Evaluation</p>
+          <p class="expertise-card-text">Monitoring & <br>Evaluation</p>
         </div>
         <div class="expertise-card e-c-large">
           <div class="e-c-line"></div>
