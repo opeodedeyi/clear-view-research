@@ -16,7 +16,7 @@
             <p><u>We use the following types of cookies:</u><br>
             <b>Necessary cookies</b><br>
             Necessary cookies are placed on our website by default. You can turn off these cookies on your device if you don't want us to use necessary cookies but it might impact your ability to browse our website. We need necessary cookies to help us to run our website, and to help us detect any problems with it. For example, we use a cookie that tells us how busy the server is based on the number of visitors and that tells us if any users experience problems so that we can resolve the problems as soon as possible.</p>
-            <p>We also use cookies to remember our users while they are browsing our website, its pages, links and subdomains. For example,  we use necessary cookies that tracks your cookie privacy preferences so that we do not place analyticscookies, which we'll talk about below, if you don't want us to. This particular type of cookie will remain on your device even after you've stopped browsing the website so we can make sure we comply with our legal and regulatory obligations.</p>
+            <p>We also use cookies to remember our users while they are browsing our website, its pages, links and subdomains. For example,  we use necessary cookies that tracks your cookie privacy preferences so that we do not place analytics cookies, which we'll talk about below, if you don't want us to. This particular type of cookie will remain on your device even after you've stopped browsing the website so we can make sure we comply with our legal and regulatory obligations.</p>
 
             <p><b>Analytics cookies</b><br>
             These allow us to recognise and count the number of visitors to our website, and see how visitors browse our website, so we can understand how our website content is performing and improve it where necessary. We use third party cookies for this purpose and we've explained in the table below the specific cookies we use.</p>
@@ -34,6 +34,27 @@
 
             <p><b>We'll let you know if we change what cookies we use</b><br>
             If we change the cookies we use, we will update this Cookies Policy. You always can find the latest version of this Policy on our website.</p>
+
+            <p><b>How to contact us and exercise your rights</b><br>
+            If you have any queries concerning this policy, our website or our research, or would like to make a subject access request, please contact us.</p>
+            
+            <p>We will do our best to assist with any queries you have about your personal data.  You can contact our Data Protection Officer at any time using the contact details below.  When you do so, please provide your full name, your preferred contact information, and a summary of your query.</p>
+            
+            <p>Burphy Momponga Zumu<br>
+            ClearView Research Limited<br>
+            86-90 Paul Street<br>
+            Shoreditch<br>
+            London<br>
+            EC2A 4NE<br>
+            burphy@clearviewresearch.co.uk</p>
+            
+            <p>If you have concerns regarding how your personal information has been processed by CVR you can make a complaint to the Information Commissioners Office (ICO) via the following options:</p>
+            
+            <p>Website: https://ico.org.uk/concerns Telephone helpline: 0303 123 1113</p>
+            
+            <p>Our policy may be updated periodically and the latest version will always be available here on the CVR website.</p>
+            
+            <p>CVR Privacy Policy last updated 15/05/18.</p>
         </div>
     </div>
 </template>

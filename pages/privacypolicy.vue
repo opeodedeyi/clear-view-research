@@ -28,7 +28,7 @@
             <p>In addition, for online surveys or use of our online contact form, we will record your IP address, which type of browser you are using, your screen size and other basic metrics.</p>
             <p>We do not do any invisible processing of data from your computer. We will only collect and use personal information in accordance with this policy to the extent deemed reasonably necessary to serve our legitimate business purposes, and we will maintain appropriate safeguards to ensure the security, integrity, accuracy and privacy of the information you have provided.</p>
             <p><b>Personal data CVR receives from third parties</b><br>
-            We often receive your personal data and sensitive data from thirdpartiesvia;</p>
+            We often receive your personal data and sensitive data from third parties via;</p>
             <ul>
                 <li><p>our survey service providers i.e. SurveyMonkey, Verto, Poll Everywhere etc; and</p></li>
                 <li><p>organisations  that  you  have  given  permission  to  supply  your  details  to  a  third  party  for research purposes.</p></li>
@@ -36,10 +36,10 @@
             <p><b>How and why CVR processes your personal data</b><br>
             The personal information we collect is:</p>
             <ul>
-                <li><p>combined with the responses/views/opinions of others who participated in the same research and reported back anonymously to the client that commissioned the study; or</p></li>
-                <li><p>used on anaggregated basis to determine which groups of people think certain things more than others; or</p></li>
+                <li><p>combined with the responses / views / opinions of others who participated in the same research and reported back anonymously to the client that commissioned the study; or</p></li>
+                <li><p>used on an aggregated basis to determine which groups of people think certain things more than others; or</p></li>
                 <li><p>used to administer andoperate prize draws and incentives; or</p></li>
-                <li><p>occasionally used to re-contact you to validate your responses (if youhave consented to us doing so).</p></li>
+                <li><p>occasionally used to re-contact you to validate your responses (if you have consented to us doing so).</p></li>
             </ul>
             <p>All of your responses to questions posed within surveys, interviews or solution labs are confidential. We will never intentionally disclose your personal information or individual survey responses to the client that commissioned the study or any third parties unless:</p>
             <ul>
@@ -52,7 +52,7 @@
                 <li><p>to invite you to participate in research;</p></li>
                 <li><p>to confirm the details of the research you have agreed to take part in;</p></li>
                 <li><p>to conduct research with you;</p></li>
-                <li><p>to validate answers/views you gave in a recent research we conducted (if you have consented to us doing so);</p></li>
+                <li><p>to validate answers / views you gave in a recent research we conducted (if you have consented to us doing so);</p></li>
                 <li><p>to update and to ensure that our records of your personal information are correct (applicable to those consenting to be part of an ongoing community or panel); and</p></li>
                 <li><p>to notify you if you have won a prize draw that we administered or to provide you with an incentive for taking part.</p></li>
             </ul>
@@ -65,13 +65,13 @@
                 <li><p>you have given permission for a company or organisation to supply your details to a third party for research purposes; or</p></li>
                 <li><p>you have taken part in previous research administered by CVR and given us your permission to contact you in the future for research purposes.</p></li>
             </ul>
-            <p>If you have been contacted by CVRand you do not believe you have given your permission or just wish your name to be removed from the database, let us know and we will remove you from the contact list for that particular research project and inform the relevant organisation who supplied your details.</p>
+            <p>If you have been contacted by CVR and you do not believe you have given your permission or just wish your name to be removed from the database, let us know and we will remove you from the contact list for that particular research project and inform the relevant organisation who supplied your details.</p>
             <p><b>Who CVR shares personal data with</b><br>
             We will not sell your personal information to third parties. From time to time we may employ other companies and individuals to perform functions on our behalf. They will have access to the personal information needed to perform their functions, but will not use it for other purposes. They must also process the personal information as set out in this Privacy Policy and as permitted by the UK’s Data Protection laws. Processing of prizes and incentives from theresult may result in your contact details being passed onto a third party i.e. Amazon etc. This would purely be in order for the prize or incentive to be sent out to you electronically and would not result in any marketing or follow up.</p>
             <p><b>How long CVR retains personal data</b><br>
             CVR makes reasonable efforts to keep personal information in its possession or control, which is used on an ongoing basis, accurate, complete, current and relevant, based on the most recent information available to us. We rely on you to help us keep your personal information accurate, complete and current by answering our questions honestly. Personally identifiable information collected will be kept for no longer than 5 years months from project completion, however, for full details on ourretention policy please contact our Data Protection Officer.</p>
             <p><b>Your Rights</b><br>
-            Your engagementin any CVRsurvey, interview or solution labis voluntary at all times, and we are always thankful for your help. You also have the right to <b>withdraw consent</b> you gave for participation in one of our surveys, interviews and solution lab at any time. In addition to your rights to withdraw your consent, you have the right toask us:</p>
+            Your engagement in any CVR survey, interview or solution lab is voluntary at all times, and we are always thankful for your help. You also have the right to <b>withdraw consent</b> you gave for participation in one of our surveys, interviews and solution lab at any time. In addition to your rights to withdraw your consent, you have the right to ask us:</p>
             <ul>
                 <li><p>for <b>access</b> to information about your personal data or for a copy of your personal data</p></li>
                 <li><p>to <b>correct</b> or <b>delete</b> your personal data</p></li>
@@ -80,7 +80,7 @@
             </ul>
             <p>You  also  have  the  right  to <b>withdraw  consent</b> you  gave  for  participation  in  one  of  our  surveys, interviews and solution lab at any time. </p>
             <p>To do this, please submit your request in writing to the email or postal address detailed below in our Contact Us section.</p>
-            <p>Please note whereby your personal data has been collected via a third party we will reasonably assist you in using your rights with these third parties. We aim to deal with any data requests within 3 working days of receiving the request.</p>
+            <p>Please note where by your personal data has been collected via a third party we will reasonably assist you in using your rights with these third parties. We aim to deal with any data requests within 3 working days of receiving the request.</p>
             <p><b>How to contact us and exercise your rights</b><br>
             If you have any queries concerning this policy, our website or our research, or would like to make a subject access request, please contact us.</p>
             <p>We will do our best to assist with any queries you have about your personal data.  You can contact our Data Protection Officer at any time using the contact details below.  When you do so, please provide your full name, your preferred contact information, and a summary of your query.</p>
