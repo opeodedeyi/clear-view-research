@@ -136,11 +136,11 @@ export default {
     }
 
     .cookie-header {
-        margin-bottom: 20px
+        margin-bottom: 15px
     }
 
     .cookie-text {
-        margin-bottom: 20px
+        margin-bottom: 15px
     }
 
     .cookie-accept,
