@@ -40,6 +40,7 @@
 
 <script>
 export default {
+    layout: 'head',
     head: {
         title: 'ClearView Research Privacy Policy',
     }

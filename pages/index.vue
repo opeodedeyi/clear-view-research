@@ -703,6 +703,12 @@ export default {
   padding: 75px 120px;
 }
 
+.brands-two {
+  background: var(--color-white);
+  width: 100%;
+  padding: 40px 120px 75px;
+}
+
 .brands-title {
   color: var(--color-company);
   font-style: normal;

@@ -3,12 +3,14 @@
     <app-header :menuTrigger="menuTrigger" />
     <Nuxt />
     <app-footer @show-menu="showMenu()"/>
+    <cookiepopup v-if="showCookieWarning" @close-popup="showCookieWarning=false" @accept-analytics-cookie="acceptAnalyticsCookie" @reject-analytics-cookie="rejectAnalyticsCookie"/>
   </div>
 </template>
 
 <script>
 import header from "~/components/header/header";
 import footer from "~/components/footer/footer";
+import cookiepopup from "~/components/utilities/cookiepopup";
 import Cookie from 'js-cookie';
 
 export default {
@@ -26,7 +28,8 @@ export default {
   },
   components: {
     'app-header': header,
-    'app-footer': footer
+    'app-footer': footer,
+    cookiepopup
   },
   props: ['onAppSend'],
   methods: {
@@ -35,13 +38,23 @@ export default {
     },
     getCookies() {
       if (Cookie.get("showCookieWarning")) {
-        return this.showCookieWarning = Cookie.get('showCookieWarning')
+        return this.showCookieWarning = false
       }
-      return this.setCookies()
+      return this.showCookieWarning = true
     },
     setCookies() {
       Cookie.set('showCookieWarning', true);
+      Cookie.set('disableAnalytics', false);
+    },
+    acceptAnalyticsCookie() {
+      Cookie.set('disableAnalytics', false);
+      Cookie.set('showCookieWarning', false);
+      return this.showCookieWarning = false
+    },
+    rejectAnalyticsCookie() {
       Cookie.set('disableAnalytics', true);
+      Cookie.set('showCookieWarning', false);
+      return this.showCookieWarning = false
     }
   },
   mounted() {

@@ -74,6 +74,7 @@ export default {
 
   googleAnalytics: {
     id: process.env.GOOGLE_ANALYTICS_ID,
-    disableScriptLoader: Cookie.get("disableAnalytics")
+    // disableScriptLoader: Cookie.get("disableAnalytics") || false,
+    disabled: Cookie.get("disableAnalytics") || false,
   }
 }
