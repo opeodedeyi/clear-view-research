@@ -54,6 +54,7 @@ export default {
             var response = await this.$contentful.client.getEntries({
                 content_type: 'blog',
                 order: '-sys.createdAt',
+                'fields.slug[nin]': this.$route.params.id,
                 limit,
                 skip
             })
