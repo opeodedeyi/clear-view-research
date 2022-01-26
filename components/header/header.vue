@@ -144,6 +144,7 @@ a {
 
 .extraStyling {
   background-color: var(--color-gray);
+  box-shadow: 0px 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .extraStyling a {

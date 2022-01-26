@@ -43,10 +43,7 @@ export default {
     color: var(--color-dark);
     width: 100%;
     padding: 30px 78px;
-    /* display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    justify-content: space-between; */
+    box-shadow: 0px 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .cookie-header {
