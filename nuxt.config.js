@@ -1,4 +1,5 @@
 require('dotenv').config()
+import Cookie from 'js-cookie';
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -24,6 +25,9 @@ export default {
   publicRuntimeConfig: {
     theSpaceId: process.env.YOUR_SPACE_ID,
     theAccessToken: process.env.CONTENT_DELIVERY_API_ACCESS_TOKEN,
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -42,6 +46,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -65,5 +70,10 @@ export default {
         environment: 'master'
       }
     }
+  },
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
+    disableScriptLoader: Cookie.get("disableAnalytics")
   }
 }
