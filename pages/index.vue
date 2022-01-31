@@ -213,7 +213,8 @@ export default {
       ],
       accreditations: [
         {src: 'londonLivingWage.jpg'},
-        {src: 'MRS.png'}
+        {src: 'MRS.png'},
+        {src: 'bcorp.png'}
       ],
       closedClients: true,
       closedInsights: true,
