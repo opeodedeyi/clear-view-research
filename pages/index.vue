@@ -124,7 +124,7 @@
       </div>
       <div class="brand-center">
         <button @click.prevent="closedClients=!closedClients">
-          {{ closedClients ? 'View All Clients' : 'View Less Clients' }}
+          {{ closedClients ? 'View More Clients' : 'View Less Clients' }}
         </button>
       </div>
     </div>
@@ -144,7 +144,7 @@
 
     <!-- accreditations -->
     <div class="brands-two">
-      <p class="brands-title">WE HAVE RECEIVED ACKNOWLEDGEMENT FROM</p> <!-- WE HAVE BEEN APPROVED BY -->
+      <p class="brands-title">WE ARE PROUD TO BE PARTENRS OF…</p> <!-- WE HAVE BEEN APPROVED BY -->
       <div class="brands-logos">
         <img v-for="(brand, index) in accreditations" :key="index" :src="require(`@/assets/brands/acc/${brand.src}`)" :alt="brand.src">
       </div>

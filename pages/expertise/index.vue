@@ -68,7 +68,7 @@ export default {
         return {
             weSupportWith: [
                 {id: 1, image: 'aIIcon.svg', title: 'Audience Insight', content:"Want to create bold campaigns that make an impact and hit close to home? We help you do just that"},
-                {id: 5, image: 'm&eIcon.svg', title: 'Monitoring & Evaluation', content:"Team work makes the dream work. We collaborate with organizations that are truly about solving problems in the society"},
+                {id: 5, image: 'm&eIcon.svg', title: 'Monitoring & Evaluation', content:"Team work makes the dream work. We collaborate with organisations that are truly about solving problems in the society"},
                 {id: 3, image: 'c&mIcon.svg', title: 'Communications & Marketing', content:"We share our expertise with you to help you in developing effective strategies to make a huge social impact"},
                 {id: 2, image: 'aIcon.svg', title: 'Advisory', content:"Learn more about the audience you seek to understand and gather relevant and culturally informed insight"},
                 {id: 4, image: 'lPIcon.svg', title: 'Learning Partner', content:"We have the experience in monitoring diverse and excluded communities, and evaluating initiatives targeted at them"},
