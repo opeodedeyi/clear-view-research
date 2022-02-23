@@ -144,7 +144,7 @@
 
     <!-- accreditations -->
     <div class="brands-two">
-      <p class="brands-title">WE ARE PROUD TO BE PARTENRS OF…</p> <!-- WE HAVE BEEN APPROVED BY -->
+      <p class="brands-title">WE ARE PROUD TO BE PARTNERS OF…</p> <!-- WE HAVE BEEN APPROVED BY -->
       <div class="brands-logos">
         <img v-for="(brand, index) in accreditations" :key="index" :src="require(`@/assets/brands/acc/${brand.src}`)" :alt="brand.src">
       </div>
@@ -153,7 +153,7 @@
     <!-- closing -->
     <div class="homepage-close">
       <div class="homepage-close-text">
-        <p class="close-title">You can’t make a great decision without, a clear view</p>
+        <p class="close-title">You can’t make a great decision, without a Clear View</p>
         <p class="close-text">ClearView is a research agency that focuses on dealing with people of color, Asians, and other ethnic groups.</p>
         <div><mainbutton type="btn" :onClick="aboutUs" size="medium">Learn More</mainbutton></div>
         <div class="close-line c-l-short"></div>
