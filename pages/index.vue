@@ -7,13 +7,13 @@
       <div class="homepage-about-content">
         <div class="homepage-about-wedo">
           <div class="wedo-header"><p class="wedo-title">WHAT WE DO</p><div class="wedo-hl"></div></div>
-          <p class="wedo-text">We assist corporations, lifestyle brands, charities, and governments in gaining access to unique and trustworthy audience insights, allowing them to make better decisions that solve complicated business challenges while also benefiting society as a whole.</p>
+          <p class="wedo-text">ClearView Research is a B Corp company specialising in working with groups who are typically underrepresented in research. We work best with organisations who give a damn - and want to make a genuine impact.</p>
           <div class="wedo-hl2"></div>
         </div>
         <div class="homepage-about-mission">
           <div class="mission-content">
             <p class="mission-content-title">OUR MISSION</p>
-            <p class="mission-content-text">To provide people from underrepresented and disadvantaged groups a voice in research.</p>
+            <p class="mission-content-text">To empower people, organisations and institutions in society that are striving for social, racial and economic justice.</p>
             <div><mainbutton type="btn" :onClick="aboutUs" size="medium">Learn More</mainbutton></div>
           </div>
           <div class="mission-photo"></div>
@@ -154,7 +154,7 @@
     <div class="homepage-close">
       <div class="homepage-close-text">
         <p class="close-title">You can’t make a great decision, without a Clear View</p>
-        <p class="close-text">ClearView is a research agency that focuses on dealing with people of color, Asians, and other ethnic groups.</p>
+        <p class="close-text">We are specialists in working on research, evaluation and engagement projects with communities who often go unheard.</p>
         <div><mainbutton type="btn" :onClick="aboutUs" size="medium">Learn More</mainbutton></div>
         <div class="close-line c-l-short"></div>
         <div class="close-line c-l-short2"></div>

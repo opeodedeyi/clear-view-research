@@ -1,7 +1,7 @@
 <template>
     <div class="aboutus">
         <div class="aboutus-title">
-            <h4 class="aboutus-title-intro">We assist corporations to make better decisions</h4>
+            <h4 class="aboutus-title-intro">You can’t make a great decision, without a Clear View</h4>
             <div class="aboutus-title-sub">
                 <div class="aboutus-title-hl"></div>
                 <p class="aboutus-title-explain">These decisions solve complicated business challenges while also benefiting society as a whole.</p>
@@ -10,16 +10,17 @@
         <div class="aboutus-image"></div>
         <div class="aboutus-content">
             <div class="aboutus-content-hl mbhl"></div>
-            <p class="aboutus-content-text">Children, Generation Z, millennials, under-represented groups (e.g. those from Black, Asian, or other ethnic minority groups), and vulnerable groups are among the audiences with whom we engage and acquire consumer intelligence.</p>
-            <p class="aboutus-content-subtext">We've worked on projects in Australia, Brazil, and Spain, among other places on four continents. Starbucks UK, NHS England, the Vodafone Foundation, Unicef UK, and Tinder have all given us project briefs.</p>
+            <p class="aboutus-content-text">We are leaders in conducting participatory research and community-based research.</p>
+            <p class="aboutus-content-subtext">We have successfully delivered projects across four continents for public and not-for-profit sectors, government, and businesses. We are a very experienced and knowledgeable agency in using co-creative and collaborative approaches to deliver research projects with, and on the behalf of the people of interest for our projects.</p>
+            <p class="aboutus-content-endtext">We work best with organisations who give a damn - and want to make a genuine impact.</p>
             <div class="aboutus-content-hl mthl"></div>
         </div>
         <div class="aboutus-statement">
             <div class="aboutus-statement-text">
-                <p class="mission-title">OUR MISSION</p>
-                <p class="mission-text">To provide people from underrepresented and disadvantaged groups a voice in research.</p>
-                <p class="vision-title">OUR VISION</p>
-                <p class="vision-text">To use research to empower individuals working for social, racial, and economic justice in society.</p>
+                <p class="mission-title">OUR VISION</p>
+                <p class="mission-text">To empower people, organisations and institutions in society that are striving for social, racial and economic justice.</p>
+                <p class="vision-title">OUR MISSION</p>
+                <p class="vision-text">To shift the power in research</p>
             </div>
             <div class="aboutus-statement-image"></div>
         </div>
@@ -120,6 +121,15 @@ export default {
     font-weight: normal;
     font-size: 20px;
     line-height: 166.5%;
+}
+
+.aboutus-content-endtext {
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 166.5%;
+    margin-top: 46px;
 }
 
 .aboutus-close {
@@ -242,6 +252,12 @@ export default {
     .aboutus-content-subtext {
         font-size: 15px;
         line-height: 181.5%;
+    }
+
+    .aboutus-content-endtext {
+        font-size: 20px;
+        line-height: 175.5%;
+        margin-top: 12px;
     }
 
     .aboutus-statement {

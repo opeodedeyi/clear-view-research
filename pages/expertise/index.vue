@@ -4,14 +4,14 @@
             <h4 class="expertise-title-intro">We provide a platform through research and engagement for the voices and experiences of everyday people, who often go unheard, to be heard, respected and recognised.</h4>
             <div class="expertise-title-sub">
                 <div class="expertise-title-hl"></div>
-                <p class="expertise-title-explain">These decisions solve complicated business challenges while also benefiting society as a whole. Our truly diverse (and experienced) team allows us to connect with people from diverse communities.</p>
+                <p class="expertise-title-explain">Our truly culturally-diverse and experienced team allows us to connect with people from diverse communities in ways that many can’t.</p>
             </div>
         </div>
         <div class="expertise-image"></div>
 
         <div class="expertise-numbers">
-            <div class="numbers-header"><p class="numbers-title">IN THE PAST COUPLE OF YEARS</p><div class="numbers-hl"></div></div>
-                <p class="numbers-text">We have had over 1,000 conversations in a diverse mix of communities across the UK and internationally.</p>
+            <div class="numbers-header"><p class="numbers-title">IN THE PAST 6 MONTHS</p><div class="numbers-hl"></div></div>
+                <p class="numbers-text">Our research has taken us around the world where we’ve had over 1000 conversations with a diverse mix of communities</p>
             <div class="numbers-hl2"></div>
         </div>
 
@@ -67,18 +67,18 @@ export default {
     data() {
         return {
             weSupportWith: [
-                {id: 1, image: 'aIIcon.svg', title: 'Audience Insight', content:"Want to create bold campaigns that make an impact and hit close to home? We help you do just that"},
-                {id: 5, image: 'm&eIcon.svg', title: 'Monitoring & Evaluation', content:"Team work makes the dream work. We collaborate with organisations that are truly about solving problems in the society"},
-                {id: 3, image: 'c&mIcon.svg', title: 'Communications & Marketing', content:"We share our expertise with you to help you in developing effective strategies to make a huge social impact"},
-                {id: 2, image: 'aIcon.svg', title: 'Advisory', content:"Learn more about the audience you seek to understand and gather relevant and culturally informed insight"},
-                {id: 4, image: 'lPIcon.svg', title: 'Learning Partner', content:"We have the experience in monitoring diverse and excluded communities, and evaluating initiatives targeted at them"},
-                {id: 6, image: 'sPIcon.svg', title: 'Strategic Planning', content:"Crush those business goals with our actionable strategies based on relevant insights"},
+                {id: 1, image: 'aIIcon.svg', title: 'Audience Insight', content:"Want to better understand a community or a group of people you do not know too well? We can help you do just that!"},
+                {id: 5, image: 'm&eIcon.svg', title: 'Monitoring & Evaluation', content:"You ever wondered how much of an impact your service / programme / intervention is making on your intended beneficiaries? No need to look further, we can support you to figure out this and even more."},
+                {id: 3, image: 'c&mIcon.svg', title: 'Communications & Marketing', content:"We have all seen how costly it can be for brands who get communication or campaigns wrong, so we understand the importance of communicating effectively with audiences. We can share our expertise with you and culturally-sensitive insights to execute bold campaigns that cut through and land well with people from the communities we specialise in."},
+                {id: 2, image: 'aIcon.svg', title: 'Advisory', content:"If you are seeking a critical friend to support you in developing your current and future strategies then you’ve found the right agency."},
+                {id: 4, image: 'lPIcon.svg', title: 'Learning Partner', content:"Collaboration is a key part of our organisation’s success and we are committed to working in partnership with funders and influential organisations to solve pressing issues in our society."},
+                {id: 6, image: 'sPIcon.svg', title: 'Strategic Planning', content:"Crush your business goals with our actionable strategies based on both evidence-based and culturally-relevant insights (plus a sprinkle of creative imagination)"},
             ],
             weknow: [
                 {id: 1, content:"Public health & community engagement"},
                 {id: 2, content:"Peer & community research"},
                 {id: 3, content:"Children and young people"},
-                {id: 4, content:"Students and Campaigns"},
+                {id: 4, content:"Students"},
                 {id: 5, content:"People facing hardships and multiple challenges"},
                 {id: 6, content:"Diverse consumers (and their habits)"},
                 {id: 7, content:"People with protected characteristics"},
