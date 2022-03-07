@@ -109,6 +109,7 @@
                 <li :class="[testimonyNo===2 ? 'testimony-active' : 'testimony-controls-item' ]" @click="testimonyNo=2"></li>
                 <li :class="[testimonyNo===3 ? 'testimony-active' : 'testimony-controls-item' ]" @click="testimonyNo=3"></li>
                 <li :class="[testimonyNo===4 ? 'testimony-active' : 'testimony-controls-item' ]" @click="testimonyNo=4"></li>
+                <li :class="[testimonyNo===5 ? 'testimony-active' : 'testimony-controls-item' ]" @click="testimonyNo=5"></li>
               </ul>
             </div>
           </div>
@@ -267,12 +268,12 @@ export default {
     },
     swipeLeft() {
       if (this.testimonyNo==1) {
-        return this.testimonyNo = 4
+        return this.testimonyNo = 5
       }
       return this.testimonyNo--
     },
     swipeRight() {
-      if (this.testimonyNo==4) {
+      if (this.testimonyNo==5) {
         return this.testimonyNo = 1
       }
       return this.testimonyNo++
@@ -690,8 +691,8 @@ export default {
 
 .testimony-active {
   list-style: none;
-  width: 21px;
-  height: 21px;
+  width: 19px;
+  height: 19px;
   border-radius: 50%;
   background: var(--color-danger);
   cursor: pointer;
