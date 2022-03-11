@@ -6,7 +6,7 @@
         <div class="video-jumbotron-overlay">
             <div class="jumbo-over-empty mb"></div>
             <h1 class="jumbo-over-header">Leverage <br> the power of <br> <span class="special-header">Research</span></h1>
-            <div class="jumbo-over-explanation">Giving minority audiences and those who often go unheard a voice, <br> and providing organisations the opportunity to hear them</div>
+            <div class="jumbo-over-explanation">Giving minority audiences and those who often go unheard a voice, <br class="desk"> and providing organisations the opportunity to hear them</div>
             <mainbutton type="link" to="/expertise" size="medium">Learn More</mainbutton>
         </div>
     </div>
@@ -87,6 +87,10 @@ export default {
 
 /* small screen */
 @media only screen and (max-width: 1080px) {
+    .desk {
+        display: none;
+    }
+
     .video-jumbotron {
         height: 617px;
     }
