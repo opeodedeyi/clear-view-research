@@ -393,7 +393,7 @@ export default {
 .mission-photo {
   width: 50%;
   height: cover;
-  background-image: url('~assets/images/homepage1.png');
+  background-image: url('~assets/images/homepage1.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -855,7 +855,7 @@ export default {
 .homepage-close-image {
   height: cover;
   width: 45%;
-  background-image: url('~assets/images/homepage2.png');
+  background-image: url('~assets/images/homepage2.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1087,7 +1087,7 @@ export default {
   .homepage-close-image {
     width: 100%;
     height: 342px;
-    background-image: url('~assets/images/homepage2-mobile.png');
+    background-image: url('~assets/images/homepage2-mobile.jpeg');
   }
 }
 
@@ -1159,8 +1159,8 @@ export default {
 
 /* small screen */
 @media only screen and (max-width: 600px) {
-  .mission-photo {
+  /* .mission-photo {
     background-image: url('~assets/images/homepage1-mobile.png');
-  }
+  } */
 }
 </style>

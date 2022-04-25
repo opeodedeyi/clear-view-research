@@ -4,7 +4,7 @@
             <h4 class="aboutus-title-intro">You can’t make a great decision, without a Clear View</h4>
             <div class="aboutus-title-sub">
                 <div class="aboutus-title-hl"></div>
-                <p class="aboutus-title-explain">These decisions solve complicated business challenges while also benefiting society as a whole.</p>
+                <p class="aboutus-title-explain">Our insights solve complicated business challenges while also benefiting society as a whole.</p>
             </div>
         </div>
         <div class="aboutus-image"></div>

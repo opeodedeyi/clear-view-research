@@ -140,7 +140,7 @@ export default {
 }
 
 .contact-image {
-    background-image: url('~assets/images/contactus.png');
+    background-image: url('~assets/images/contactus.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -307,8 +307,8 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
-    .contact-image {
+    /* .contact-image {
         background-image: url('~assets/images/contactus-mobile.png');
-    }
+    } */
 }
 </style>
