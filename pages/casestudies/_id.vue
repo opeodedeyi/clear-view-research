@@ -9,10 +9,11 @@
             </div>
             <div class="project-main-content" v-html="projectDetails[0].details"></div>
  
-            <div class="project-learn-more" v-if="projectDetails[0].learnMore!=null">
+            <div class="project-learn-more" v-if="projectDetails[0].learnMore!=null || mainPdf!=null">
                 <div class="project-hl"></div>
                 <p class="project-learn-more-title">Click to find out more about {{projectDetails[0].title}}</p>
-                <div class="project-readmore"><mainbutton size="more" type="btn" :onClick="readMore">Read More</mainbutton></div>
+                <div class="project-readmore" v-if="projectDetails[0].learnMore!=null"><mainbutton size="more" type="btn" :onClick="readMore">Read More</mainbutton></div>
+                <div class="project-readmore" v-else><mainbutton size="more" type="btn" :onClick="openPdf">Read More</mainbutton></div>
             </div>
 
             <div class="project-read-more" v-if="moreProjects!=null">
@@ -44,6 +45,7 @@ export default {
     data() {
         return {
             projectDetails: null,
+            mainPdf: null,
             title: 'case study',
             moreProjects: null,
             limit: 2,
@@ -168,11 +170,33 @@ export default {
             })
             this.pageTitle = project.title
             this.projectDetails = project
-            console.log(project);
+        },
+        async getPdf(slug) {
+            var response = await this.$contentful.client.getEntries({
+                content_type: 'caseStudies', //caseStudies,
+                'fields.slug': slug
+            })
+            let pdf = response.items;
+
+            pdf = await pdf.map((item) => {
+                const attachedPdf = item.fields.attachedPdf.fields.file.url
+
+                return{
+                    attachedPdf
+                }
+            })
+            this.mainPdf = pdf[0].attachedPdf
+            console.log(this.mainPdf);
         },
         async readMore() {
             var anchor = document.createElement('a');
             anchor.href = this.projectDetails[0].learnMore;
+            anchor.target="_blank";
+            anchor.click();
+        },
+        async openPdf() {
+            var anchor = document.createElement('a');
+            anchor.href = this.mainPdf;
             anchor.target="_blank";
             anchor.click();
         },
@@ -192,6 +216,7 @@ export default {
     },
     mounted() {
         this.getOneProject(this.$route.params.id)
+        this.getPdf(this.$route.params.id)
         this.getTwoProjects()
     }
 }

@@ -9,6 +9,12 @@
                 <img :src="blogDetails[0].featuredImage" alt="">
             </div>
             <div class="blog-main-content" v-html="blogDetails[0].details"></div>
+            
+            <div class="blog-learn-more" v-if="mainPdf!=null">
+                <div class="blog-hl"></div>
+                <p class="blog-learn-more-title">Click to find out more about {{blogDetails[0].title}}</p>
+                <div class="blog-readmore"><mainbutton size="more" type="btn" :onClick="openPdf">Read More</mainbutton></div>
+            </div>
         </div>
         <loadingb v-else-if="blogDetails===null"/>
 
@@ -35,17 +41,20 @@ import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import blogcard from "@/components/utilities/blogcard";
 import loadingb from "@/components/utilities/loadingb";
+import mainbutton from "@/components/utilities/mainbutton";
 
 export default {
     data() {
         return {
             blogDetails: null,
+            mainPdf: null,
             moreblogs: null,
             limit: 2
         }
     },
     components: {
         loadingb,
+        mainbutton,
         blogcard
     },
     methods: {
@@ -68,7 +77,6 @@ export default {
                     id, slug, title, description, featuredImage, createdAt
                 }
             })
-            console.log(blogs);
             return this.moreblogs = blogs;
         },
         getCustomDate(passedDate) {
@@ -151,7 +159,6 @@ export default {
                 const featuredImage = item.fields.featuredImage.fields.file.url
                 const content = item.fields.details;
                 const details = documentToHtmlString(content, renderOptions)
-                
                 const customDate = this.getCustomDate(createdAt)
 
                 return{
@@ -159,10 +166,34 @@ export default {
                 }
             })
             this.blogDetails = blog
+        },
+        async getPdf(slug) {
+            var response = await this.$contentful.client.getEntries({
+                content_type: 'blog',
+                'fields.slug': slug
+            })
+            let pdf = response.items;
+
+            pdf = await pdf.map((item) => {
+                const attachedPdf = item.fields.attachedPdf.fields.file.url
+
+                return{
+                    attachedPdf
+                }
+            })
+            this.mainPdf = pdf[0].attachedPdf
+            console.log(this.mainPdf);
+        },
+        async openPdf() {
+            var anchor = document.createElement('a');
+            anchor.href = this.mainPdf;
+            anchor.target="_blank";
+            anchor.click();
         }
     },
     mounted() {
         this.getOneBlog(this.$route.params.id)
+        this.getPdf(this.$route.params.id)
         this.getTwoBlogs()
     }
 }
@@ -265,6 +296,43 @@ export default {
     margin-bottom: 96px;
 }
 
+.blog-learn-more {
+    width: 100%;
+    padding: 0 200px;
+    margin-bottom: 76px;
+}
+
+.blog-hl {
+    height: 1px;
+    background-color: var(--color-danger);
+    width: 100%;
+    margin-bottom: 91px;
+}
+
+.blog-learn-more-title {
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 118%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.blog-readmore {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.blog-read-more {
+    padding: 0 78px;
+}
+
+
 /* small screen */
 @media only screen and (max-width: 1080px) {
     .blog-main {
@@ -318,6 +386,25 @@ export default {
 
     .blog-more-cards {
         margin-bottom: 82px;
+    }
+
+    .blog-learn-more {
+        padding: 0 30px;
+        margin-bottom: 66px;
+    }
+
+    .blog-hl {
+        margin-bottom: 53px;
+    }
+
+    .blog-learn-more-title {
+        font-size: 20px;
+        line-height: 168.5%;
+        margin-bottom: 26px;
+    }
+
+    .blog-read-more {
+        padding: 0 30px;
     }
 }
 
