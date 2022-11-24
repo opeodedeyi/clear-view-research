@@ -13,7 +13,7 @@
         <div class="homepage-about-mission">
           <div class="mission-content">
             <p class="mission-content-title">OUR MISSION</p>
-            <p class="mission-content-text">To empower people, organisations and institutions in society that are striving for social, racial and economic justice.</p>
+            <p class="mission-content-text">To provide decision makers with the insights and expertise they need to make better decisions through research, evaluation, strategy, and engagement.</p>
             <div><mainbutton type="btn" :onClick="aboutUs" size="medium">Learn More</mainbutton></div>
           </div>
           <div class="mission-photo"></div>

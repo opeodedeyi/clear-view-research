@@ -20,7 +20,7 @@
                 <p class="mission-title">OUR VISION</p>
                 <p class="mission-text">To empower people, organisations and institutions in society that are striving for social, racial and economic justice.</p>
                 <p class="vision-title">OUR MISSION</p>
-                <p class="vision-text">To shift the power in research</p>
+                <p class="vision-text">A world where communities that have been traditionally marginalised or underrepresented are equitably represented in research and have the power and agency to influence decision-making.</p>
             </div>
             <div class="aboutus-statement-image"></div>
         </div>
