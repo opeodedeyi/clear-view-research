@@ -46,7 +46,8 @@ export default {
             this.loading = true
             var response = await this.$contentful.client.getEntries({
                 content_type: 'blog',
-                order: 'fields.id',
+                // order: 'fields.id', // Order by fields ID
+                order: '-sys.createdAt', // Order by date created in descending order
                 limit,
                 skip
             })
@@ -69,7 +70,7 @@ export default {
             this.loading = true
             var response = await this.$contentful.client.getEntries({
                 content_type: 'blog',
-                order: 'fields.id',
+                order: '-sys.createdAt',
                 limit,
                 skip
             })

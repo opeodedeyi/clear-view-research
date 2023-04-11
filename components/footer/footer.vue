@@ -36,7 +36,7 @@
             </div>
             <div class="footer-hl-two desk"></div>
             <div class="footer-outro">
-                <div class="footer-outro-pp">ClearView Research Ltd © 2021 All Rights <br class="mob"> Reserved | <nuxt-link to="/privacypolicy"> Privacy Policy</nuxt-link> | <nuxt-link to="/cookiepolicy"> Cookie Policy</nuxt-link></div>
+                <div class="footer-outro-pp">ClearView Research Ltd © {{ currentYear }} All Rights <br class="mob"> Reserved | <nuxt-link to="/privacypolicy"> Privacy Policy</nuxt-link> | <nuxt-link to="/cookiepolicy"> Cookie Policy</nuxt-link></div>
                 <div class="footer-outro-connect">
                     <p class="footer-outro-con">Connect with us</p>
                     <div class="footer-outro-hl"></div>
@@ -56,6 +56,16 @@
 import mainbutton from "@/components/utilities/mainbutton";
 
 export default {
+    data() {
+        return {
+            currentDate: new Date(),
+        };
+    },
+    computed: {
+        currentYear() {
+            return this.currentDate.getFullYear();
+        },
+    },
     components: {
         mainbutton
     },

@@ -199,7 +199,8 @@ export default {
         {src: 'mandc.png', link: '/blog/'},
         {src: 'ms.png', link: '/blog/'},
         {src: 'ygam.png', link: '/blog/'},
-        {src: 'youth.png', link: '/blog/'}
+        {src: 'youth.png', link: '/blog/'},
+        {src: 'adidas.png', link: '/blog/'}
       ],
       insights: [
         {src: 'bbc.png'},

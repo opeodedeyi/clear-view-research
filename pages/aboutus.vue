@@ -18,9 +18,9 @@
         <div class="aboutus-statement">
             <div class="aboutus-statement-text">
                 <p class="mission-title">OUR VISION</p>
-                <p class="mission-text">To empower people, organisations and institutions in society that are striving for social, racial and economic justice.</p>
+                <p class="mission-text">A world where communities that have been traditionally marginalised or underrepresented are equitably represented in research & have the power and agency to influence decision making</p>
                 <p class="vision-title">OUR MISSION</p>
-                <p class="vision-text">A world where communities that have been traditionally marginalised or underrepresented are equitably represented in research and have the power and agency to influence decision-making.</p>
+                <p class="vision-text">To provide decision makers with the insights and expertise they need to make better decisions through research, evaluation, strategy and engagement.</p>
             </div>
             <div class="aboutus-statement-image"></div>
         </div>
