@@ -52,6 +52,11 @@ export default {
             limit: 2
         }
     },
+    // async asyncData(context) {
+    //     // added this line
+    //     const blog = await context.app.$getOneBlog(context.params.slug);
+    //     return { blogDetails: blog };
+    // },
     components: {
         loadingb,
         mainbutton,
@@ -191,6 +196,17 @@ export default {
             anchor.click();
         }
     },
+    // head() {
+    //     return {
+    //         title: this.blogDetails[0].title,
+    //         meta: [
+    //             { hid: 'description', name: 'description', content: this.blogDetails[0].details },
+    //             { hid: 'og:title', property: 'og:title', content: this.blogDetails[0].title },
+    //             { hid: 'og:description', property: 'og:description', content: this.blogDetails[0].details },
+    //             { hid: 'og:image', property: 'og:image', content: this.blogDetails[0].featuredImage },
+    //         ],
+    //     };
+    // },
     mounted() {
         this.getOneBlog(this.$route.params.id)
         this.getPdf(this.$route.params.id)
