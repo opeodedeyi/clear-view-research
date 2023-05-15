@@ -37,8 +37,8 @@ export default {
             title: 'About Us / ClearView Research',
             meta: [
                 {
-                    hid: 'About ClearView Research',
-                    name: 'About ClearView Research',
+                    hid: 'description',
+                    name: 'description',
                     content: 'You can’t make a great decision, without a Clear View',
                 }
             ]

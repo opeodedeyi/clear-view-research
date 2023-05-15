@@ -59,8 +59,8 @@ export default {
             title: 'Contact Us / ClearView Research',
             meta: [
                 {
-                    hid: 'Contact Us',
-                    name: 'Contact Us',
+                    hid: 'description',
+                    name: 'description',
                     content: 'Whether you’d like to discuss a project or say hi, we always love to hear from you',
                 }
             ]

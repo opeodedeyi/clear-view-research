@@ -254,8 +254,8 @@ export default {
       title: 'Home / ClearView Research',
       meta: [
         {
-          hid: 'Leverage the power of Research',
-          name: 'Leverage the power of Research',
+          hid: 'description',
+          name: 'description',
           content: 'Giving minority audiences and those who often go unheard a voice, and providing organisations the opportunity to hear them'
         }
       ]

@@ -106,8 +106,9 @@ export default {
             title: 'Privacy Policy / ClearView Research',
             meta: [
                 {
-                    hid: 'ClearView Research privacy policy',
-                    name: 'ClearView Research privacy policy'
+                    hid: 'description',
+                    name: 'description',
+                    content: 'Our privacy policy',
                 }
             ]
         }

@@ -67,8 +67,9 @@ export default {
             title: 'Cookie Policy / ClearView Research',
             meta: [
                 {
-                    hid: 'ClearView Research cookie policy',
-                    name: 'ClearView Research cookie policy'
+                    hid: 'description',
+                    name: 'description',
+                    content: 'Our cookie policy',
                 }
             ]
         }
