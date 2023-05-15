@@ -11,8 +11,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      // { hid: 'description', name: 'description', content: 'Leverage the power of research. Giving minority audiences a voice and providing organizations the opportunity to hear them' },
-      { hid: 'keywords', name: 'keywords', content: 'research, minority, clearview' }
+      { hid: 'keywords', name: 'keywords', content: 'ClearView Research, Minority Audiences Research, Inclusive Research, Equity in Research, Social Impact Research, Youth Violence Research, Media Representation Studies, Healthcare Accessibility Research, Education Equity Research, Workplace Diversity Studies, Public Opinion Research, Social Policy Research, Market Research, Data Analysis, Survey Research, Qualitative Research, Quantitative Research, Research Consultancy, Data-Driven Decision Making, Community Engagement Research' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
@@ -37,6 +36,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~plugins/getBlogDetails.js',
     '~plugins/shorten-text.js',
     '~plugins/swiper.js'
   ],
