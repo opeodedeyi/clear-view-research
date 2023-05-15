@@ -68,12 +68,12 @@ export default {
         } else {
             // Default values if blogDetails is not available yet
             return {
-                title: 'Loading...',
+                title: 'Blog / ClearView Research',
                 meta: [
                     {
                         hid: 'description',
                         name: 'description',
-                        content: 'Loading...',
+                        content: "this.$route.params.id.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());",
                     },
                 ],
             }
