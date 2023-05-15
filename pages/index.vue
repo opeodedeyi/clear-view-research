@@ -751,7 +751,7 @@ export default {
 }
 
 .brands-logos {
-  max-height: 1000px;
+  max-height: 3000px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
