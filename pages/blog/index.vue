@@ -34,8 +34,8 @@ export default {
             title: 'Blog / ClearView Research',
             meta: [
                 {
-                    hid: 'Our Blog',
-                    name: 'Our Blog',
+                    hid: 'description',
+                    name: 'description',
                     content: ' Our blog serves as an extension of our commitment to sharing these insights and fostering informed conversations.',
                 }
             ]

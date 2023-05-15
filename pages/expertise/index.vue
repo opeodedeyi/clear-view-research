@@ -66,8 +66,8 @@ export default {
             title: 'Our Expertise / ClearView Research',
             meta: [
                 {
-                    hid: 'Our Expertise',
-                    name: 'Our Expertise',
+                    hid: 'description',
+                    name: 'description',
                     content: 'We provide a platform through research and engagement for the voices and experiences of everyday people, who often go unheard, to be heard, respected and recognised',
                 }
             ]
