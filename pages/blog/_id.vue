@@ -53,30 +53,15 @@ export default {
         }
     },
     head() {
-        // Check if blogDetails is available and has at least one item
-        if (this.blogDetails && this.blogDetails.length > 0) {
-            return {
-                title: this.blogDetails[0].title,
-                meta: [
-                    {
-                        hid: 'description',
-                        name: 'description',
-                        content: this.blogDetails[0].description, // Use description instead of details if you want to set meta description
-                    },
-                ],
-            }
-        } else {
-            // Default values if blogDetails is not available yet
-            return {
-                title: 'Blog / ClearView Research',
-                meta: [
-                    {
-                        hid: 'description',
-                        name: 'description',
-                        content: "this.$route.params.id.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());",
-                    },
-                ],
-            }
+        return {
+            title: 'Blog / ClearView Research',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: this.$route.params.id.replace(/-/g, ' '),
+                },
+            ],
         }
     },
     components: {

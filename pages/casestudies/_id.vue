@@ -52,6 +52,18 @@ export default {
             pageTitle: "Clearview research casestudy"
         }
     },
+    head() {
+        return {
+            title: 'Case Studies / ClearView Research',
+            meta: [
+                {
+                    hid: 'description',
+                    name: 'description',
+                    content: this.$route.params.id.replace(/-/g, ' '),
+                },
+            ],
+        }
+    },
     components: {
         loadingb,
         mainbutton,
