@@ -2,6 +2,7 @@
     <div class="video-jumbotron">
         <video autoplay loop muted playsinline>
             <source src="~/assets/videos/main-video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
         <div class="video-jumbotron-overlay">
             <div class="jumbo-over-empty mb"></div>
