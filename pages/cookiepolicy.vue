@@ -62,9 +62,17 @@
 <script>
 export default {
     layout: 'head',
-    head: {
-        title: 'ClearView Research Privacy Policy',
-    }
+    head() {
+        return {
+            title: 'Cookie Policy / ClearView Research',
+            meta: [
+                {
+                    hid: 'ClearView Research cookie policy',
+                    name: 'ClearView Research cookie policy'
+                }
+            ]
+        }
+    },
 }
 </script>
 

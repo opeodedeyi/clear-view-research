@@ -28,8 +28,17 @@ export default {
         mainbutton,
         loadingb
     },
-    head: {
-        title: 'ClearView Research Case Studies',
+    head() {
+        return {
+            title: 'Case Studies / ClearView Research',
+            meta: [
+                {
+                    hid: 'Case Studies',
+                    name: 'Case Studies',
+                    content: 'ClearView Research is a pioneering organization that has been at the forefront of impactful research studies, each with the aim of giving voice to underrepresented communities and empowering organizations with insights that spark positive change.',
+                }
+            ]
+        }
     },
     data() {
         return {

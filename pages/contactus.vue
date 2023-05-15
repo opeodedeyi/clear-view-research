@@ -54,8 +54,17 @@ export default {
         mainbutton,
         maininput
     },
-    head: {
-        title: 'Contact ClearView Research',
+    head() {
+        return {
+            title: 'Contact Us / ClearView Research',
+            meta: [
+                {
+                    hid: 'Contact Us',
+                    name: 'Contact Us',
+                    content: 'Whether you’d like to discuss a project or say hi, we always love to hear from you',
+                }
+            ]
+        }
     },
     data() {
         return {

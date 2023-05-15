@@ -29,8 +29,17 @@ export default {
         mainbutton,
         loadingb
     },
-    head: {
-        title: 'ClearView Research Blogs',
+    head() {
+        return {
+            title: 'Blog / ClearView Research',
+            meta: [
+                {
+                    hid: 'Our Blog',
+                    name: 'Our Blog',
+                    content: ' Our blog serves as an extension of our commitment to sharing these insights and fostering informed conversations.',
+                }
+            ]
+        }
     },
     data() {
         return {

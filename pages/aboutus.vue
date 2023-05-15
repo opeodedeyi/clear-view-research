@@ -32,9 +32,18 @@ export default {
     components: {
         
     },
-    head: {
-        title: 'About ClearView Research',
-    }
+    head() {
+        return {
+            title: 'About Us / ClearView Research',
+            meta: [
+                {
+                    hid: 'About ClearView Research',
+                    name: 'About ClearView Research',
+                    content: 'You can’t make a great decision, without a Clear View',
+                }
+            ]
+        }
+    },
 }
 </script>
 

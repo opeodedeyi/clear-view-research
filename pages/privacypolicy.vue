@@ -101,9 +101,17 @@
 
 <script>
 export default {
-    head: {
-        title: 'ClearView Research Privacy Policy',
-    }
+    head() {
+        return {
+            title: 'Privacy Policy / ClearView Research',
+            meta: [
+                {
+                    hid: 'ClearView Research privacy policy',
+                    name: 'ClearView Research privacy policy'
+                }
+            ]
+        }
+    },
 }
 </script>
 

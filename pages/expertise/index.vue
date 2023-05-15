@@ -61,8 +61,17 @@ export default {
     components: {
         teampopup
     },
-    head: {
-        title: 'ClearView Research Expertise',
+    head() {
+        return {
+            title: 'Our Expertise / ClearView Research',
+            meta: [
+                {
+                    hid: 'Our Expertise',
+                    name: 'Our Expertise',
+                    content: 'We provide a platform through research and engagement for the voices and experiences of everyday people, who often go unheard, to be heard, respected and recognised',
+                }
+            ]
+        }
     },
     data() {
         return {
