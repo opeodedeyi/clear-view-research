@@ -257,7 +257,33 @@ export default {
           hid: 'description',
           name: 'description',
           content: 'Giving minority audiences and those who often go unheard a voice, and providing organisations the opportunity to hear them'
-        }
+        },
+        // These are specific to Twitter
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        {
+          hid: 'twitter:url',
+          name: 'twitter:url',
+          content: `https://www.clearviewresearch.co.uk`,
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: 'Leverage the power of Research',
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: 'Giving minority audiences and those who often go unheard a voice, and providing organisations the opportunity to hear them', // Change to your dynamic blog description
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: 'https://www.clearviewresearch.co.uk/_nuxt/img/logo.b70d1d2.svg',
+        },
       ]
     }
   },
