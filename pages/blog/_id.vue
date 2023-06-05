@@ -166,18 +166,18 @@ export default {
                 {
                     hid: 'twitter:title',
                     name: 'twitter:title',
-                    content: this.$route.params.id.replace(/-/g, ' '),
+                    content: this.blogDetails[0].title,
                 },
                 {
                     hid: 'twitter:description',
                     name: 'twitter:description',
-                    content: this.$route.params.id.replace(/-/g, ' '), // Change to your dynamic blog description
+                    content: this.blogDetails[0].details, // Change to your dynamic blog description
                 },
-                // {
-                //     hid: 'twitter:image',
-                //     name: 'twitter:image',
-                //     content: `https://yourwebsite.com${this.blogDetails[0].featuredImage}`,
-                // },
+                {
+                    hid: 'twitter:image',
+                    name: 'twitter:image',
+                    content: this.blogDetails[0].featuredImage,
+                },
             ],
         }
     },
