@@ -61,6 +61,32 @@ export default {
                     name: 'description',
                     content: this.$route.params.id.replace(/-/g, ' '),
                 },
+                // These are specific to Twitter
+                {
+                    hid: 'twitter:card',
+                    name: 'twitter:card',
+                    content: 'summary_large_image', // This type of card shows a large image
+                },
+                {
+                    hid: 'twitter:url',
+                    name: 'twitter:url',
+                    content: `https://www.clearviewresearch.co.uk/${this.$route.params.id}`,
+                },
+                {
+                    hid: 'twitter:title',
+                    name: 'twitter:title',
+                    content: this.$route.params.id.replace(/-/g, ' '),
+                },
+                {
+                    hid: 'twitter:description',
+                    name: 'twitter:description',
+                    content: this.$route.params.id.replace(/-/g, ' '), // Change to your dynamic blog description
+                },
+                // {
+                //     hid: 'twitter:image',
+                //     name: 'twitter:image',
+                //     content: `https://yourwebsite.com${this.blogDetails[0].featuredImage}`,
+                // },
             ],
         }
     },
